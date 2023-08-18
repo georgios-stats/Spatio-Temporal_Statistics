@@ -37,9 +37,11 @@
 
 ------------------------------------------------------------------------
 
-### Lecture handouts
+#### Lecture handouts (complete)
 
 + [Lecture_handouts_ST4.pdf](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/master/Lecture_handouts/Lecture_handouts_ST4.pdf)  
+
+#### Individual topics
 
 Topic 1: Introduction to regional statistical concepts        
 
