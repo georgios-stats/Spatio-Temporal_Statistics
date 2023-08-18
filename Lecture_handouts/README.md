@@ -39,17 +39,14 @@
 
 ### Lecture handouts
 
--   [Lecture_handouts_ST4.pdf](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/master/Lecture_handouts/Lecture_handouts_ST4.pdf):
++ [Lecture_handouts_ST4.pdf](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/master/Lecture_handouts/Lecture_handouts_ST4.pdf)  
 
-### Individual handouts
+Topic 1: Introduction to regional statistical concepts        
 
-#### Regional concepts 
++ Handout 1: [01.Regional_statistical_concepts.pdf](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/master/Lecture_handouts/01.Regional_statistical_concepts.pdf)  
 
-Learning problem: Definitions, notation, and formulation -A recap  
++ Handout 1: [01.Regional_statistical_concepts.xhtml](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/01.Regional_statistical_concepts_xhtml/01.Regional_statistical_concepts.xhtml) 
 
-+ [00.Statistical_learning_framework_recap.pdf](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2023/blob/master/Lecture_handouts/00.Statistical_learning_framework_recap.pdf)  
-
-<!--+ [PDF](https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2023/blob/master/Lecture_handouts/00.Statistical_learning_framework_recap.pdf) ; [HTML](https://htmlpreview.github.io/?https://github.com/georgios-stats/Machine_Learning_and_Neural_Networks_III_Epiphany_2023/blob/main/Lecture_handouts/00.Statistical_learning_framework_recap_xhtml/00.Statistical_learning_framework_recap.xhtml)  -->
 
 
 
