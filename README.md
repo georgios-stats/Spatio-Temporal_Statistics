@@ -45,7 +45,11 @@ This repository contains the teaching material for the module ***MATH4341: Spati
 
 ### Lectures
 
--   '[Lecture_handouts](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/tree/main/Lecture_handouts#details-about-lecture-material)' folder contains the material used in your lectures and problem classes
+-   '[Lecture_handouts](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/tree/main/Lecture_handouts#details)' folder contains the material used in your lectures
+
+### Problem classes  
+
+-   '[Problem_class_sheets](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/tree/main/Problem_class_sheets#details)' folder contains the material used in your problem classes
 
 <!--
 ### Computer practicals
