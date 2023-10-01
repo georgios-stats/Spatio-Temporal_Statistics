@@ -43,11 +43,11 @@
 
 #### Individual topics
 
-Topic 1: Introduction to regional statistical concepts        
+Topic 0: Types of spatial data       
 
-+ Handout 1: [01.Regional_statistical_concepts.pdf](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/master/Lecture_handouts/01.Regional_statistical_concepts.pdf)  
++ Handout 1: [01.Types_of_spatial_data.pdf](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/master/Lecture_handouts/01.Types_of_spatial_data.pdf)  
 
-+ Handout 1: [01.Regional_statistical_concepts.xhtml](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/01.Regional_statistical_concepts_xhtml/01.Regional_statistical_concepts.xhtml) 
++ Handout 1: [01.Types_of_spatial_data.xhtml](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/01.Types_of_spatial_data_xhtml/01.Types_of_spatial_data.xhtml) 
 
 
 
