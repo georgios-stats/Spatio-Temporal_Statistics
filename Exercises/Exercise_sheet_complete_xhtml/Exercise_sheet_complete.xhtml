@@ -71,6 +71,13 @@ font-variant: normal;
 font-size: medium;
 
 }
+ol.enumerate {
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+margin-left: 3ex;
+text-align: left;
+
+}
 div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; border-right: solid black 1ex; padding: 0.5ex; }
 div.float {
 	border: 2px solid black;
@@ -82,6 +89,7 @@ div.float-caption {
 	padding: 1ex;
 	margin: 1ex;
 }
+div.Frameless { margin: 1em; }
 
 
 </style>
@@ -105,13 +113,13 @@ div.float-caption {
  <mrow><mo> &starf; </mo>
  </mrow></math>)<div class="standard" id='magicparlabel-13'>(Columbus Columbus OH data set) Figure <a href="#fig_The_colours_indicate">a</a> shows the Property crime (number per thousand households) in 49 districts in Columbus in 1980, as well as the average value of the house in USD. Figure <a href="#fig_The_colours_indicate_1">b</a> presents the corresponding average house value. This is the R dataset <span style='font-family:monospace;'>columbus{spdep}</span>. Interest may lie to find whether high rates of crime are clusterd in a particular areas, and if yes, perhaps what is the association of it with the value of the houses in the area. To which principal spatial statistical are would you associate this problem?  </div>
 <div class='float-figure'><div class="plain_layout" id='magicparlabel-21'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2:  Columbus Columbus OH spatial analysis dataset</span></div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-25'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Exercises/pool/figures/columbus.crime.counts.pdf' alt='image: ' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-25'><img style='width:45%;' src='6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____xercises_pool_figures_columbus_crime_counts.png' alt='image: 6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____xercises_pool_figures_columbus_crime_counts.png' />
 </div>
 
 <div class="plain_layout" id='magicparlabel-26'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  Property crime (number per thousand households)<a id="fig_The_colours_indicate" />
 </span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-34'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Exercises/pool/figures/columbus.crime.HOVAL.pdf' alt='image: ' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-34'><img style='width:45%;' src='7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Exercises_pool_figures_columbus_crime_HOVAL.png' alt='image: 7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Exercises_pool_figures_columbus_crime_HOVAL.png' />
 </div>
 
 <div class="plain_layout" id='magicparlabel-35'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  Average value of the house in USD<a id="fig_The_colours_indicate_1" />
@@ -139,13 +147,13 @@ Aerial unit data / spatial data on lattices</div>
  <mrow><mo> &starf; </mo>
  </mrow></math>)<div class="standard" id='magicparlabel-13'>(Columbus Columbus OH data set) Figure <a href="#fig_The_colours_indicate">a</a> shows the Property crime (number per thousand households) in 49 districts in Columbus in 1980, as well as the average value of the house in USD. Figure <a href="#fig_The_colours_indicate_1">b</a> presents the corresponding average house value. This is the R dataset <span style='font-family:monospace;'>columbus{spdep}</span>. Interest may lie to find whether high rates of crime are clusterd in a particular areas, and if yes, perhaps what is the association of it with the value of the houses in the area. To which principal spatial statistical are would you associate this problem?  </div>
 <div class='float-figure'><div class="plain_layout" id='magicparlabel-21'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2:  Columbus Columbus OH spatial analysis dataset</span></div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-25'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Exercises/pool/figures/columbus.crime.counts.pdf' alt='image: ' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-25'><img style='width:45%;' src='6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____xercises_pool_figures_columbus_crime_counts.png' alt='image: 6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____xercises_pool_figures_columbus_crime_counts.png' />
 </div>
 
 <div class="plain_layout" id='magicparlabel-26'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  Property crime (number per thousand households)<a id="fig_The_colours_indicate" />
 </span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-34'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Exercises/pool/figures/columbus.crime.HOVAL.pdf' alt='image: ' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-34'><img style='width:45%;' src='7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Exercises_pool_figures_columbus_crime_HOVAL.png' alt='image: 7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Exercises_pool_figures_columbus_crime_HOVAL.png' />
 </div>
 
 <div class="plain_layout" id='magicparlabel-35'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  Average value of the house in USD<a id="fig_The_colours_indicate_1" />
@@ -172,7 +180,7 @@ Aerial unit data / spatial data on lattices</div>
 (<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &starf; </mo>
  </mrow></math>)<div class="standard" id='magicparlabel-68'>(Soil chemistry properties data set.) It contains measurements of various chemical properties of soil samples collected at different locations in a field. These properties include: the acidity or alkalinity of the soil (PH), the salt concentration in the soil (Salinity), and others. It is the R dataset <span style='font-family:monospace;'>soil250{geoR}</span>. Figure <a href="#fig_Soil_chemistry_data">3</a> presents the locations these measurements are taken. The data (measurements) are in fixed locations at a regular grid of points. The domain scientist would be interested in the nutrient levels and pH to assess soil fertility and make recommendations for agricultural practices. The statistician could (i.) estimate/predict values of soil properties at unsampled locations based on measurements at sampled locations; and (ii.) assess the spatial variability of soil properties (nutrient levels and pH) to identify regions with high or low variability. To which principal spatial statistical are would you associate this problem? </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-72'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Exercises/pool/figures/soil250.pdf' alt='image: ' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-72'><img style='width:35%;' src='8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tatistics_IV_Exercises_pool_figures_soil250.png' alt='image: 8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tatistics_IV_Exercises_pool_figures_soil250.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Figure 3:  <a id="fig_Soil_chemistry_data" />
 Soil chemistry data set</span></div>
 </div>
@@ -197,7 +205,7 @@ Point referenced data, or geostatistcal data</div>
  </mrow></math>)<div class="standard" id='magicparlabel-95'>(Scallop abundance data) Figure <a href="#fig_Scallop_abundance_data">4</a> presents <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mn>148</mn>
  </mrow></math> locations (degrees of longitude &amp; latitude) in the Atlantic waters off the coasts of New Jersey and Long Island New York as coordinates and the size of scallop catch at the corresponding location as the dot size. The sites are at fixed locations within an irregular grid of points. Sustainable scallop abundance is critical for the long-term economic viability of the fishing industry. A healthy and stable scallop population supports a consistent source of income for fishermen and related businesses. To which principal spatial statistical are would you associate this problem? </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-99'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Exercises/pool/figures/scallop.pdf' alt='image: ' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-99'><img style='width:35%;' src='9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tatistics_IV_Exercises_pool_figures_scallop.png' alt='image: 9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tatistics_IV_Exercises_pool_figures_scallop.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Figure 4:  <a id="fig_Scallop_abundance_data" />
 Scallop abundance data</span></div>
 </div>
@@ -224,7 +232,7 @@ Point referenced data, or geostatistcal data</div>
  </mrow></math> remained. There is interest to find where the radionuclide contamination would flow from the site in Deaf Smith County, Texas. Beneath Deaf Smith County is a deep brine aquifer known as the Wolfcamp aquifer, a potential pathway for any radionuclides leaking from the repository. The predicted direction of flow can be used to determine locations of downgradient and upgradient wells for a groundwater monitoring system. A first direction in analyzing this spatial data set is to draw a map of a predicted surface based on the (irregularly located) <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mn>85</mn>
  </mrow></math> data. To which principal spatial statistical are would you associate this problem? </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-126'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Exercises/pool/figures/wolfcamp-aquifer-original.pdf' alt='image: ' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-126'><img style='width:40%;' src='10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___ises_pool_figures_wolfcamp-aquifer-original.png' alt='image: 10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___ises_pool_figures_wolfcamp-aquifer-original.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Figure 5:  <a id="fig_Wolfcamp_aquifer_data" />
 Wolfcamp-aquifer data. Piezometric-head levels (feet above sea level) vs coordinates.</span></div>
 </div>
@@ -251,7 +259,7 @@ Point referenced data, or geostatistcal data</div>
  </mrow></math> locations in Switzerland as dots whose size and color indicates the amount of the corresponding rainfall measurements (in <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mn>10</mn>
  </mrow></math>th of mm) taken on May 8, 1986. This is the R data set <span style='font-family:monospace;'>SIC{geoR}</span>. Observation sites are irregularly spaced, and fixed. A scientific objective may be to analyzing rainfall patterns with purpose to optimize crop planting and irrigation schedules. A statistician is able to estimate rainfall values at unsampled locations based on available measurements, create maps that represent the spatial distribution of rainfall, or quantify the uncertainty associated with rainfall estimates and predictions, which are important for risk assessment and decision-making. To which principal spatial statistical are would you associate this problem?</div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-161'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Exercises/pool/figures/sic.100.pdf' alt='image: ' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-161'><img style='width:35%;' src='11_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tatistics_IV_Exercises_pool_figures_sic_100.png' alt='image: 11_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tatistics_IV_Exercises_pool_figures_sic_100.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Figure 6:  <a id="fig_Swiss_rainfall_data" />
 Swiss rainfall data</span></div>
 </div>
@@ -266,6 +274,267 @@ Point referenced data, or geostatistcal data</div>
 </div>
 </div>
 <div class="standard" id='magicparlabel-186'><hr />
+
+</div>
+<h1 class="part" id='magicparlabel-191'><span class="part_label">Part II</span> INLA</h1>
+
+<div class="exercise" id='magicparlabel-192'><div class="exercise_item"><span class="exercise_label">Exercise 7.</span>
+<a id="exer____4_1_1" />
+(<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo> &starf; </mo>
+ </mrow></math>)<div class="standard" id='magicparlabel-194'>Consider the model <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
+  <mtable>
+   <mtr>
+    <mtd>
+     <mrow>
+      <msub>
+       <mrow><mi>z</mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mo>|</mo>
+      <msub>
+       <mrow><mi> &eta; </mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mo> &sim; </mo>
+      <mstyle mathvariant='normal'>
+       <mrow><mi>P</mi><mi>o</mi><mi>i</mi><mi>s</mi><mi>s</mi><mi>o</mi><mi>n</mi>
+       </mrow>
+      </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+       <msub>
+        <mrow><mi> &eta; </mi>
+        </mrow>
+        <mrow><mi>i</mi>
+        </mrow>
+       </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     </mrow>
+    </mtd>
+    <mtd>
+     <mrow><mi>i</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>...</mn><mo>,</mo><mi>n</mi>
+     </mrow>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow>
+      <msub>
+       <mrow><mi> &eta; </mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mo>=</mo>
+      <msub>
+       <mrow><mi> &beta; </mi>
+       </mrow>
+       <mrow><mn>0</mn>
+       </mrow>
+      </msub><mo>+</mo>
+      <msub>
+       <mrow><mi> &beta; </mi>
+       </mrow>
+       <mrow><mn>1</mn>
+       </mrow>
+      </msub>
+      <msub>
+       <mrow><mi>w</mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mo>+</mo>
+      <msub>
+       <mrow><mi>u</mi>
+       </mrow>
+       <mrow>
+        <mrow><mi>j</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>i</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+        </mrow>
+       </mrow>
+      </msub>
+     </mrow>
+    </mtd>
+    <mtd><mrow/>
+    </mtd>
+   </mtr>
+   <mtr>
+    <mtd>
+     <mrow><mi>u</mi><mo> &sim; </mo>
+      <msub>
+       <mrow>
+        <mstyle mathvariant='normal'><mi>N</mi>
+        </mstyle>
+       </mrow>
+       <mrow><mi>m</mi>
+       </mrow>
+      </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow><mn>0</mn><mo>,</mo><mi>I</mi>
+       <msup>
+        <mrow><mi> &tau; </mi>
+        </mrow>
+        <mrow>
+         <mrow><mo>-</mo><mn>1</mn>
+         </mrow>
+        </mrow>
+       </msup>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     </mrow>
+    </mtd>
+    <mtd><mrow/>
+    </mtd>
+   </mtr>
+  </mtable>
+ </mrow></math> where <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
+
+  <msub>
+   <mrow><mi>w</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
+
+ </mrow></math> are covariates, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>j</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>i</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> is a known mapping from <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>1</mn><mo>:</mo><mi>n</mi>
+  </mrow>
+ </mrow></math> to <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>1</mn><mo>:</mo><mi>m</mi>
+  </mrow>
+ </mrow></math> (given below in the dataset as idx).</div>
+
+<div class="standard" id='magicparlabel-195'>For training use the following data set <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msubsup>
+   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+    <mrow>
+     <msub>
+      <mrow><mi>z</mi>
+      </mrow>
+      <mrow><mi>i</mi>
+      </mrow>
+     </msub><mo>,</mo>
+     <msub>
+      <mrow><mi>w</mi>
+      </mrow>
+      <mrow><mi>i</mi>
+      </mrow>
+     </msub>
+    </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
+
+   </mrow>
+   <mrow>
+    <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
+    </mrow>
+   </mrow>
+   <mrow><mi>n</mi>
+   </mrow>
+  </msubsup>
+ </mrow></math> by running</div>
+
+<div class="standard" id='magicparlabel-196'><div class='Frameless'><div class="plain_layout" id='magicparlabel-200'>rm(list=ls())</div>
+
+<div class="plain_layout" id='magicparlabel-201'># generate the dataset</div>
+
+<div class="plain_layout" id='magicparlabel-202'>set.seed(123456L) </div>
+
+<div class="plain_layout" id='magicparlabel-203'>n = 50; </div>
+
+<div class="plain_layout" id='magicparlabel-204'>m = 10</div>
+
+<div class="plain_layout" id='magicparlabel-205'>w = rnorm(n, sd = 1/3) </div>
+
+<div class="plain_layout" id='magicparlabel-206'>u = rnorm(m, sd = 1/4) </div>
+
+<div class="plain_layout" id='magicparlabel-207'>intercept = 0; </div>
+
+<div class="plain_layout" id='magicparlabel-208'>beta = 1</div>
+
+<div class="plain_layout" id='magicparlabel-209'>idx = sample(1:m, n, replace = TRUE) </div>
+
+<div class="plain_layout" id='magicparlabel-210'>z = rpois(n, lambda = exp(intercept + beta * w + u[idx]))</div>
+
+<div class="plain_layout" id='magicparlabel-211'>table(z, dnn=NULL)</div>
+</div></div>
+
+<div class="standard" id='magicparlabel-212'>Do the following, by using R-INLA</div>
+
+<ol class="enumerate" id='magicparlabel-213'><li class="enumerate_item">Run inla{INLA} in order to train the above model, and generate an inla object (that you will call it out.inla). For the function inla{INLA} specify the formula, data, and family arguments. To approximate the conditional pdf of latent variables of the GMRF use the Gaussian approximation. For the rest parameters just use the default R-INLA options.</li>
+<li class="enumerate_item">Print a summary of the marginal posteriors </li>
+<li class="enumerate_item">Produce and print the marginal posterior pdf of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> Pr </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi> &beta; </mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub><mo>|</mo><mi>z</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math>.</li>
+</ol>
+
+
+<div class="solution_" id='magicparlabel-221'><div class="solution__item"><span class="solution__label">Solution.</span>
+&nbsp;</div>
+
+<ol class="enumerate" id='magicparlabel-222'><li class="enumerate_item">my.data = data.frame(z, w, idx) 
+<div class="standard" id='magicparlabel-223'>formula = z ~ 1 + w + f(idx, model="iid") </div>
+
+<div class="standard" id='magicparlabel-224'>out.inla = inla(formula, data = my.data, </div>
+
+<div class="standard" id='magicparlabel-225'>&emsp;&emsp;&emsp;&emsp;family = "poisson", </div>
+
+<div class="standard" id='magicparlabel-226'>&emsp;&emsp;&emsp;&emsp;control.inla = list(strategy = "gaussian")</div>
+
+<div class="standard" id='magicparlabel-227'>&emsp;&emsp;&emsp;&emsp;)</div>
+</li><li class="enumerate_item">summary(out.inla)
+<div class="standard" id='magicparlabel-229'><img style='width:100%;' src='12_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___rcises_pool_figures_inla_example_output_101.png' alt='image: 12_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___rcises_pool_figures_inla_example_output_101.png' />
+</div>
+</li><li class="enumerate_item">b_1_pdf = out.inla$marginals.fixed$w 
+<div class="standard" id='magicparlabel-231'>plot(b_1_pdf[,1], b_1_pdf[,2], type ="l")</div>
+
+<div class="standard" id='magicparlabel-232'><img style='width:50%;' src='13_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___ercises_pool_figures_inla_example_1_b_1_pdf.png' alt='image: 13_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___ercises_pool_figures_inla_example_1_b_1_pdf.png' />
+</div>
+</li></ol>
+</div>
+
+</div>
+</div>
+<div class="standard" id='magicparlabel-238'><hr />
 
 </div>
 </body>
