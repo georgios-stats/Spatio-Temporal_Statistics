@@ -35,44 +35,19 @@
 
 # Details
 
-This repository contains the teaching material for the module ***MATH4341: Spatio-Temporal Statistics*** in MIchaelmas term in 2023 @ Durham University.
+This repository contains the data sets used for demonstration reasons in the module ***MATH4341: Spatio-Temporal Statistics*** in Michaelmas term in 2023 @ Durham University.  
 
 ------------------------------------------------------------------------
 
-### Description
+## Coal ash dataset in Pennsylvania  
 
--   '[Description.pdf](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/master/Description.pdf)' contains the ILOs, sylabus, and bibliography
+This is an R data set coalash{gstat}.  
 
-### Lectures
-
--   '[Lecture_handouts](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/tree/main/Lecture_handouts#details)' folder contains the material used in your lectures
-
-### Problem classes  
-
--   '[Problem_class_sheets](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/tree/main/Problem_class_sheets#details)' folder contains the material used in your problem classes
-
-<!--
-### Computer practicals
-
--   '[Computer_practicals](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/tree/main/Computer_practical#aim)' folder contains the material for your computer practical classes
--->
-
-### Excercises
-
--   '[Exercises](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/tree/main/Exercises#details-about-exercise-material)' folder contains the material used for your practice at home
-
-### Datasets
-
--   '[Datasets](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/tree/main/Datasets)' folder contains the data sets used in the course
+library("gstat")  
+data("coalash")  
+?coalash
 
 ------------------------------------------------------------------------
 
-# How to download the repository:  
-
-Please visit:  
-
-+ [Download instructions](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Download_instructions.md#how-to-download-and-use-it)
-
-
-------------------------------------------------------------------------
+For the rest, navigate the folders.  
 

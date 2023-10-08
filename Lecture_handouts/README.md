@@ -49,7 +49,9 @@ Topic 0: Types of spatial data
 
 + Handout 1: [01.Types_of_spatial_data.xhtml](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/01.Types_of_spatial_data_xhtml/01.Types_of_spatial_data.xhtml) 
 
+Topic 1: Computations with INLA       
 
++ Handout 1: [02.Introduction_to_INLA.pdf](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/02.Introduction_to_INLA.pdf)  
 
-
++ Handout 1: [02.Introduction_to_INLA.xhtml](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/02.Introduction_to_INLA_xhtml/02.Introduction_to_INLA.xhtml) 
 
