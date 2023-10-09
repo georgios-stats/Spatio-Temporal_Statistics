@@ -85,16 +85,6 @@ font-weight: normal;
 font-size: medium;
 
 }
-h4.subsubsection {
-font-weight: normal;
-font-style: italic;
-font-variant: normal;
-font-size: medium;
-margin-top: 0.7ex;
-margin-bottom: 0.4ex;
-text-align: left;
-
-}
 div.example {
 font-style: normal;
 font-variant: normal;
@@ -673,7 +663,7 @@ Mathematically speaking,  the spatial domain <math xmlns="http://www.w3.org/1998
 </div>
 
 <div class="note" id='magicparlabel-142'><div class="note_item"><span class="note_label">Note 14.</span>
-Geostatistics tries to answer questions about modeling, identification and separation of small and large scale variations, prediction at unobserved locations and reconstruction of the spatial process <math xmlns="http://www.w3.org/1998/Math/MathML">
+Geostatistics aims to answer questions about modeling, identification and separation of small and large scale variations, prediction at unobserved locations and reconstruction of the spatial process <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
@@ -684,71 +674,127 @@ Geostatistics tries to answer questions about modeling, identification and separ
  <mrow><mi>S</mi>
  </mrow></math>.</div>
 </div>
-<h4 class="subsubsection" id='magicparlabel-143'><span class="subsubsection_label">2.1.1</span> Examples</h4>
 
-<div class="example" id='magicparlabel-144'><div class="example_item"><span class="example_label">Example 15.</span>
+<div class="example" id='magicparlabel-143'><div class="example_item"><span class="example_label">Example 15.</span>
 <a id="exa__Ground_water_pollution" />
-(Ground water pollution in the Central Valley of California<div class="foot"><span class="foot_label">1</span><div class="foot_inner"><div class="plain_layout" id='magicparlabel-148'>Fakhreddine, S., Babbitt, C., Sherris, A., et al. (2019). Protecting Groundwater Quality in California, Management Considerations for Avoiding Naturally Occurring and Emerging Contaminants. Environmental Defense Fund. <span class="flex_url">www.edf.org/sites/default/files/documents/groundwater-contaminants-report.pdf</span></div>
+(Ground water pollution in the Central Valley of California<div class="foot"><span class="foot_label">1</span><div class="foot_inner"><div class="plain_layout" id='magicparlabel-147'>Fakhreddine, S., Babbitt, C., Sherris, A., et al. (2019). Protecting Groundwater Quality in California, Management Considerations for Avoiding Naturally Occurring and Emerging Contaminants. Environmental Defense Fund. <span class="flex_url">www.edf.org/sites/default/files/documents/groundwater-contaminants-report.pdf</span></div>
 </div></div>) California’s Central Valley is one of the most productive agricultural regions in the world. With an increase in population, groundwater consumption is expected to increase. Agricultural irrigation heavily draws on the groundwater system. Pumping from increasingly deeper parts of the aquifer has increased the rate of downward groundwater flow, which have been linked to the release of, for example, uranium. The question therefore concerns how we can maintain groundwater quality while dealing with this increased need for it. Understanding this trade-off is key to sustainable groundwater management. Simply increasing groundwater by supply, for example through a process of recharge (e.g., flooding a field), may affect its quality. It may lead to an increased introduction of contaminants such as pesticides. In other words, groundwater management actions may have unintended consequences. It is important to understand how groundwater quality is affected by any management actions on, for example, seawater intrusion, land subsidence, or declining water levels. A substantial amount of geochemical analysis has been collected from existing wells. Interest lies in understanding the important processes, either natural or anthropogenic, that cause variation in these data. We may find a certain “signature” or “patterns” in the data that can determine the process of contamination in a particular area.  For example, the Central Valley has what are termed “geogenic” contaminants, which means it has arsenic (As), chromium (Cr), uranium (U), which you don’t want to drink, naturally occurring. A simple analysis could look for high levels of these elements, indicating possible anthropogenic contamination, although they may be naturally occurring. The point we wish to make is that a signature of a feature is more than a single high value. What we are looking for is a combination of elements and of a certain composition. Some scientific questions involve:</div>
 
-<ol class="enumerate" id='magicparlabel-177'><li class="enumerate_item">What combination of elements are indicative of a human impact in water quality versus a natural occurrence? </li>
+<ol class="enumerate" id='magicparlabel-176'><li class="enumerate_item">What combination of elements are indicative of a human impact in water quality versus a natural occurrence? </li>
 <li class="enumerate_item">What caused this impact? Agriculture? Pollution? </li>
 <li class="enumerate_item">Where in the Central Valley can we find these combinations of elements, thereby informing mitigation action?</li>
 </ol>
-<div class="standard" id='magicparlabel-180'>Figure <a href="#fig_U_vs_As">c</a> presents the scatter plot of As and U in a naive manner as it ignores spatial dependency. Figures <a href="#fig_Cr__ppb_">d</a>, <a href="#fig_Fe__ppb_">b</a>, and <a href="#fig_Cr__ppb__1">a</a> show the Groundwater concentration (parts per billion [ppb]) of chromium (Cr), Arsenic (As), Uranium (U) from January 2018 to January 2019. The point coordinates are the geographical locations, and the color denotes the value of the corresponding values of Cr, As, U in ppb. The locations are fixed/known and hence part of the training observations. The locations are irregularly scattered/spaced and hence not on a regular grid of points. The spatial statistician's task may involve producing statistical models able to provide predictive inference for quantities Cr, As, U (and others) at unseen/unobserved locations. Obviously, special dependencies should be taken into account in the model, e.g. the concentration of U in two neighboring cities is expected to be more similar than two far distant cities. As seen latter this gives rise to a `regionalized statistical analysis'. Along with the spatial dependency, and in the same model, it would be wise to take into account the dependency (e.g. correlation) between different variables, such as As and U. As seen latter this gives rise to a `co-regionalized statistical analysis'. </div>
+<div class="standard" id='magicparlabel-179'>Figure <a href="#fig_U_vs_As">c</a> presents the scatter plot of As and U in a naive manner as it ignores spatial dependency. Figures <a href="#fig_Cr__ppb_">d</a>, <a href="#fig_Fe__ppb_">b</a>, and <a href="#fig_Cr__ppb__1">a</a> show the Groundwater concentration (parts per billion [ppb]) of chromium (Cr), Arsenic (As), Uranium (U) from January 2018 to January 2019. The point coordinates are the geographical locations, and the color denotes the value of the corresponding values of Cr, As, U in ppb. The locations are <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>2</mn>
+   <mstyle mathvariant='normal'><mi>D</mi>
+   </mstyle>
+  </mrow>
+ </mrow></math>, fixed/known and hence part of the training observations. The locations are irregularly scattered/spaced and hence not on a regular grid of points. As <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>s</mi>
+ </mrow></math> are coordinates, they vary continuously over the spatial domain which is Central Valley in CA/USA. The quantity of interest <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
 
-<div class='float-figure'><div class='float-figure'><div class="plain_layout" id='magicparlabel-188'><img style='width:45%;' src='0_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____es_Central_Valley_Groundwater_Jan2019_U_obs.png' alt='image: 0_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____es_Central_Valley_Groundwater_Jan2019_U_obs.png' />
+  <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi>s</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
+
+ </mrow></math> is a random vector whose elements are the concentrations of As, U, Cr, etc. labeled by the coordinates <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>s</mi>
+ </mrow></math> (locations). The spatial statistician's task may involve producing statistical models able to provide predictive inference for quantities Cr, As, U (and others) at unseen/unobserved locations. Obviously, special dependencies should be taken into account in the model, e.g. the concentration of U in two neighboring cities is expected to be more similar than two far distant cities. As seen latter this gives rise to a `regionalized statistical analysis'. Along with the spatial dependency, and in the same model, it would be wise to take into account the dependency (e.g. correlation) between different variables, such as As and U. As seen latter this gives rise to a `co-regionalized statistical analysis'. </div>
+
+<div class='float-figure'><div class='float-figure'><div class="plain_layout" id='magicparlabel-187'><img style='width:45%;' src='0_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____es_Central_Valley_Groundwater_Jan2019_U_obs.png' alt='image: 0_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____es_Central_Valley_Groundwater_Jan2019_U_obs.png' />
 </div>
 
-<div class="plain_layout" id='magicparlabel-189'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  U (ppb) <a id="fig_Cr__ppb__1" />
+<div class="plain_layout" id='magicparlabel-188'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  U (ppb) <a id="fig_Cr__ppb__1" />
 </span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-197'><img style='width:45%;' src='1_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_Central_Valley_Groundwater_Jan2019_As_obs.png' alt='image: 1_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_Central_Valley_Groundwater_Jan2019_As_obs.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-196'><img style='width:45%;' src='1_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_Central_Valley_Groundwater_Jan2019_As_obs.png' alt='image: 1_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_Central_Valley_Groundwater_Jan2019_As_obs.png' />
 </div>
 
-<div class="plain_layout" id='magicparlabel-198'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  As (ppb)<a id="fig_Fe__ppb_" />
+<div class="plain_layout" id='magicparlabel-197'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  As (ppb)<a id="fig_Fe__ppb_" />
 </span></div>
 </div>
 
 
 
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-207'><img style='width:45%;' src='2_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____y_Groundwater_Jan2019_U_As_obs_scatter_plot.png' alt='image: 2_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____y_Groundwater_Jan2019_U_As_obs_scatter_plot.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-206'><img style='width:45%;' src='2_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____y_Groundwater_Jan2019_U_As_obs_scatter_plot.png' alt='image: 2_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____y_Groundwater_Jan2019_U_As_obs_scatter_plot.png' />
 </div>
 
-<div class="plain_layout" id='magicparlabel-208'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  U vs As (log ppb)<a id="fig_U_vs_As" />
+<div class="plain_layout" id='magicparlabel-207'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  U vs As (log ppb)<a id="fig_U_vs_As" />
 </span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-216'><img style='width:45%;' src='3_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_Central_Valley_Groundwater_Jan2019_Cr_obs.png' alt='image: 3_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_Central_Valley_Groundwater_Jan2019_Cr_obs.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-215'><img style='width:45%;' src='3_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_Central_Valley_Groundwater_Jan2019_Cr_obs.png' alt='image: 3_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_Central_Valley_Groundwater_Jan2019_Cr_obs.png' />
 </div>
 
-<div class="plain_layout" id='magicparlabel-217'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure d:  Cr (ppb) <a id="fig_Cr__ppb_" />
+<div class="plain_layout" id='magicparlabel-216'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure d:  Cr (ppb) <a id="fig_Cr__ppb_" />
 </span></div>
 </div>
 
 
-<div class="plain_layout" id='magicparlabel-222'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.1:  Ground water pollution in the Central Valley of California </span></div>
+<div class="plain_layout" id='magicparlabel-221'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.1:  Ground water pollution in the Central Valley of California </span></div>
 </div>
 
 </div>
 
-<div class="standard" id='magicparlabel-227'><br />
+<div class="standard" id='magicparlabel-226'><br />
 
 </div>
 
-<div class="example" id='magicparlabel-228'><div class="example_item"><span class="example_label">Example 16.</span>
-(Coal ash dataset in Pennsylvania) Figure <a href="#fig_Coal_ash_data">2.2</a> shows 208 coal ash core measurements/samples collected on a regular grid of points in the Robena Mine in Greene County, Pennsylvania. The percentage of coal ash at the sampled locations is denoted by the colorbar. The sampled locations are fixed, and regularly spaced in a grid. A mining engineer could be interested in predicting the ash distributions and the washability characteristics of coal along a seam in advance of mining. A spatial statistician would be able to produce a statistical model to predict ash concentrations between sampled points. Once a reasonable model that accounts for both the global trends and the local dependencies in the data is found and validated, the mining engineer could proceed to try and fill in the gaps, in other words, to estimate the percentage of coal ash at missing grid points based on the sampled percentages. <div class='float-figure'><div class="plain_layout" id='magicparlabel-232'><img style='width:35%;' src='4_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____oral_statistics_IV_Handouts_figures_ashcoal.png' alt='image: 4_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____oral_statistics_IV_Handouts_figures_ashcoal.png' />
+<div class="example" id='magicparlabel-227'><div class="example_item"><span class="example_label">Example 16.</span>
+(Coal ash dataset in Pennsylvania) Figure <a href="#fig_Coal_ash_data">2.2</a> shows <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mn>208</mn>
+ </mrow></math> coal ash core measurements/samples collected on a regular grid of points in the Robena Mine in Greene County, Pennsylvania. The percentage of coal ash at the sampled locations is denoted by the colorbar. The sampled locations <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
+
+  <msub>
+   <mrow><mi>s</mi>
+   </mrow>
+   <mrow><mi>i</mi>
+   </mrow>
+  </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
+
+ </mrow></math> are fixed, and regularly spaced in a grid. As <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>s</mi>
+ </mrow></math> are coordinates, they vary continuously over the spatial domain which is Robena Mine. The quantity of interest is the percentage of ash coal at these locations <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
+
+  <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi>s</mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
+
+ </mrow></math>. A mining engineer could be interested in predicting the ash distributions and the washability characteristics of coal along a seam in advance of mining. A spatial statistician would be able to produce a statistical model to predict ash concentrations between sampled points as well as quantify related uncertainties. Once a reasonable model that accounts for both the global trends and the local dependencies in the data is found and validated, the mining engineer could proceed to try and fill in the gaps, in other words, to estimate the percentage of coal ash at missing grid points based on the sampled percentages. <div class='float-figure'><div class="plain_layout" id='magicparlabel-231'><img style='width:35%;' src='4_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____oral_statistics_IV_Handouts_figures_ashcoal.png' alt='image: 4_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____oral_statistics_IV_Handouts_figures_ashcoal.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.2:  <a id="fig_Coal_ash_data" />
 (Coal ash data set) Percentage of coal ash at 208 locations. </span></div>
 </div>
 </div>
 </div>
 
-<div class="standard" id='magicparlabel-237'><br />
+<div class="standard" id='magicparlabel-236'><br />
 
 </div>
 
-<div class="example" id='magicparlabel-238'><div class="example_item"><span class="example_label">Example 17.</span>
-(Air pollution in Piemonte.)  Figure <a href="#fig_Air_pollution_data">2.3</a> presents the Average PM10 (<math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="example" id='magicparlabel-237'><div class="example_item"><span class="example_label">Example 17.</span>
+(Air pollution in Piemonte.)  Figure <a href="#fig_Air_pollution_data">2.3</a> presents the average PM10 (<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi> &mu; </mi><mi>g</mi><mo>/</mo>
    <msup>
@@ -758,7 +804,7 @@ Geostatistics tries to answer questions about modeling, identification and separ
     </mrow>
    </msup>
   </mrow>
- </mrow></math>) concentration during October 2005–March 2006 for the 24 monitoring stations in the Piemonte region (Northern Italy). The data (measurements) are at fixed locations at irregular grid points. PM10 is one of the most troublesome pollutants in the area. Environmental agencies need models to predict PM10 at unmonitored sites in order to assess PM10 concentration over an entire region. A geostatistician can build a model which is satisfactory in terms of goodness of fit, interpretability, parsimony, prediction capability and computational costs with purpose to build reliable PM10 concentration maps, equipped with the corresponding uncertainty measure.<div class='float-figure'><div class="plain_layout" id='magicparlabel-246'><img style='width:35%;' src='5_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____douts_figures_air_pollution_Piermonte_sites.png' alt='image: 5_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____douts_figures_air_pollution_Piermonte_sites.png' />
+ </mrow></math>) concentration during October 2005–March 2006 for the 24 monitoring stations in the Piemonte region (Northern Italy). The data (measurements) are at fixed locations at irregular grid points. PM10 is one of the most troublesome pollutants in the area. Environmental agencies need models to predict PM10 at unmonitored sites in order to assess PM10 concentration over an entire region. A geostatistician can build a model which is satisfactory in terms of goodness of fit, interpretability, parsimony, prediction capability and computational costs with purpose to build reliable PM10 concentration maps, equipped with the corresponding uncertainty measure.<div class='float-figure'><div class="plain_layout" id='magicparlabel-245'><img style='width:35%;' src='5_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____douts_figures_air_pollution_Piermonte_sites.png' alt='image: 5_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____douts_figures_air_pollution_Piermonte_sites.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.3:  <a id="fig_Air_pollution_data" />
 (Air pollution data) Average PM10 (<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -775,12 +821,12 @@ Geostatistics tries to answer questions about modeling, identification and separ
 </div>
 </div>
 
-<div class="standard" id='magicparlabel-251'><br />
+<div class="standard" id='magicparlabel-250'><br />
 
 </div>
-<h3 class="subsection" id='magicparlabel-252'><span class="subsection_label">2.2</span> Aerial unit data / spatial data on lattices </h3>
+<h3 class="subsection" id='magicparlabel-251'><span class="subsection_label">2.2</span> Aerial unit data / spatial data on lattices </h3>
 
-<div class="note" id='magicparlabel-253'><div class="note_item"><span class="note_label">Note 18.</span>
+<div class="note" id='magicparlabel-252'><div class="note_item"><span class="note_label">Note 18.</span>
 Sometimes observations are collected over areal units such as pixels, census districts, or tomographic bins. In such cases, the random field models <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
 
@@ -796,11 +842,11 @@ Sometimes observations are collected over areal units such as pixels, census dis
  </mrow></math>. The aims are usually, noise removal from an image and smoothing rather than interpolation.</div>
 </div>
 
-<div class="standard" id='magicparlabel-254'><br />
+<div class="standard" id='magicparlabel-253'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-255'><div class="note_item"><span class="note_label">Note 19.</span>
+<div class="note" id='magicparlabel-254'><div class="note_item"><span class="note_label">Note 19.</span>
 Mathematically speaking, the index set <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>S</mi>
  </mrow></math> of the data  <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -839,21 +885,21 @@ Mathematically speaking, the index set <math xmlns="http://www.w3.org/1998/Math/
  </mrow></math>. </div>
 </div>
 
-<div class="standard" id='magicparlabel-260'><br />
+<div class="standard" id='magicparlabel-259'><br />
 
 </div>
 
-<div class="example" id='magicparlabel-261'><div class="example_item"><span class="example_label">Example 20.</span>
+<div class="example" id='magicparlabel-260'><div class="example_item"><span class="example_label">Example 20.</span>
 In image processing, <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>S</mi>
  </mrow></math> may be a grid of pixels (locations are fixed and regular). </div>
 </div>
 
-<div class="standard" id='magicparlabel-262'><br />
+<div class="standard" id='magicparlabel-261'><br />
 
 </div>
 
-<div class="example" id='magicparlabel-263'><div class="example_item"><span class="example_label">Example 21.</span>
+<div class="example" id='magicparlabel-262'><div class="example_item"><span class="example_label">Example 21.</span>
 In a UK epidemological study, <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>S</mi>
  </mrow></math> may be the centroids of the UK counties, and <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -868,21 +914,21 @@ In a UK epidemological study, <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math>.</div>
 </div>
 
-<div class="standard" id='magicparlabel-264'><br />
+<div class="standard" id='magicparlabel-263'><br />
 
 </div>
 
-<div class="example" id='magicparlabel-265'><div class="example_item"><span class="example_label">Example 22.</span>
+<div class="example" id='magicparlabel-264'><div class="example_item"><span class="example_label">Example 22.</span>
 In statistical physics, <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>S</mi>
  </mrow></math> may be a collection of atoms and genuinely finite (locations are fixed and regular).</div>
 </div>
 
-<div class="standard" id='magicparlabel-266'><br />
+<div class="standard" id='magicparlabel-265'><br />
 
 </div>
 
-<div class="example" id='magicparlabel-267'><div class="example_item"><span class="example_label">Example 23.</span>
+<div class="example" id='magicparlabel-266'><div class="example_item"><span class="example_label">Example 23.</span>
 (Image restoration data) Figure <a href="#fig_Noised_Ferrite_Pearlite_steel">a</a> shows an (observed) image from a gray-scale photo-micrograph of the micro-structure of the Ferrite-Pearlite steel obtained by PNNL's project supported by DoE.  The lighter part is ferrite while the darker part is pearlite. We focus our analysis on the first quarter fragment of size <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mn>240</mn><mo> &times; </mo><mn>320</mn>
@@ -896,12 +942,18 @@ In statistical physics, <math xmlns="http://www.w3.org/1998/Math/MathML">
   </mrow>
  </mrow></math> is the color of a pixel <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>s</mi>
- </mrow></math>.<div class='float-figure'><div class="plain_layout" id='magicparlabel-291'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.4:  Ferrite-Pearlite steel image (Image restoration)</span></div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-295'><img style='width:49%;' src='6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____cs_IV_Handouts_figures_FPphotomicro_240x320.png' alt='image: 6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____cs_IV_Handouts_figures_FPphotomicro_240x320.png' />
+ </mrow></math>; here it is scalar as the observed pixels are in tones of grey, however it could be a <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mn>3</mn>
+   <mstyle mathvariant='normal'><mi>D</mi>
+   </mstyle>
+  </mrow>
+ </mrow></math> if the pixels were colored. <div class='float-figure'><div class="plain_layout" id='magicparlabel-290'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.4:  Ferrite-Pearlite steel image (Image restoration)</span></div>
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-294'><img style='width:49%;' src='6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____cs_IV_Handouts_figures_FPphotomicro_240x320.png' alt='image: 6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____cs_IV_Handouts_figures_FPphotomicro_240x320.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  <a id="fig_Noised_Ferrite_Pearlite_steel" />
 Noised image</span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-303'><img style='width:49%;' src='7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1_____figures_FPphotomicro_240x320_MAP_bw_croped.png' alt='image: 7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1_____figures_FPphotomicro_240x320_MAP_bw_croped.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-302'><img style='width:49%;' src='7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1_____figures_FPphotomicro_240x320_MAP_bw_croped.png' alt='image: 7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1_____figures_FPphotomicro_240x320_MAP_bw_croped.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  Reconstructed image<a id="fig_Reconstructed_Ferrite_Pearlite_s" />
 </span></div>
 </div>
@@ -914,20 +966,20 @@ Noised image</span></div>
 
 
 
-<div class="standard" id='magicparlabel-360'><br />
+<div class="standard" id='magicparlabel-359'><br />
 
 </div>
 
-<div class="example" id='magicparlabel-361'><div class="example_item"><span class="example_label">Example 24.</span>
+<div class="example" id='magicparlabel-360'><div class="example_item"><span class="example_label">Example 24.</span>
 <a id="exa__North_Carolina_SIDS" />
-(North Carolina SIDS data set) Figure <a href="#fig_Numbers_of_SIDS">a</a> shows the total number of deaths from Sudden Infant Death Syndrome (SIDS) in 1974 for each of the 100 counties in North Carolina. Figure <a href="#fig_Live_birth_counts">b</a> shows the corresponding live births in each county and same period. This is the R data set <span style='font-family:monospace;'>nc{spdep}</span>. The centroids of the counties do not lie on a regular grid. The sizes and shapes of the counties vary and can be quite irregular. The recorded counts are not tied to a precise location but tallied up county-wise. This kind of accumulation over administrative units is usual for privacy-sensitive data in, for instance, the crime or public health domains. A public health official could be interested in spatial patterns; e.g., whether or not there are clusters of counties with a high incidence of SIDS, or areas where the SIDS counts are higher than what would be expected based on the number of live births in the area. Perhaps, we can eyeball the figures and see that there is a higher SIDS rate in the north-east areas compared to the north-west with similar birth numbers. A statistician can develop a statistical model providing inference about such questions.<div class='float-figure'><div class="plain_layout" id='magicparlabel-365'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.5:  North Carolina SIDS data (Aerial unit data)</span></div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-369'><img style='width:45%;' src='8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____l_statistics_IV_Handouts_figures_sids_SID74.png' alt='image: 8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____l_statistics_IV_Handouts_figures_sids_SID74.png' />
+(North Carolina SIDS data set) Figure <a href="#fig_Numbers_of_SIDS">a</a> shows the total number of deaths from Sudden Infant Death Syndrome (SIDS) in 1974 for each of the 100 counties in North Carolina. Figure <a href="#fig_Live_birth_counts">b</a> shows the corresponding live births in each county and same period. This is the R data set <span style='font-family:monospace;'>nc{spdep}</span>. The centroids of the counties do not lie on a regular grid. The sizes and shapes of the counties vary and can be quite irregular. The recorded counts are not tied to a precise location but tallied up county-wise. This kind of accumulation over administrative units is usual for privacy-sensitive data in, for instance, the crime or public health domains. A public health official could be interested in spatial patterns; e.g., whether or not there are clusters of counties with a high incidence of SIDS, or areas where the SIDS counts are higher than what would be expected based on the number of live births in the area. Perhaps, we can eyeball the figures and see that there is a higher SIDS rate in the north-east areas compared to the north-west with similar birth numbers. A statistician can develop a statistical model providing inference about such questions.<div class='float-figure'><div class="plain_layout" id='magicparlabel-364'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.5:  North Carolina SIDS data (Aerial unit data)</span></div>
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-368'><img style='width:45%;' src='8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____l_statistics_IV_Handouts_figures_sids_SID74.png' alt='image: 8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____l_statistics_IV_Handouts_figures_sids_SID74.png' />
 </div>
 
-<div class="plain_layout" id='magicparlabel-370'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  Numbers of SIDS <a id="fig_Numbers_of_SIDS" />
+<div class="plain_layout" id='magicparlabel-369'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  Numbers of SIDS <a id="fig_Numbers_of_SIDS" />
 </span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-378'><img style='width:45%;' src='9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_sids_NWBIR74.png' alt='image: 9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_sids_NWBIR74.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-377'><img style='width:45%;' src='9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_sids_NWBIR74.png' alt='image: 9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_sids_NWBIR74.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  Live birth counts<a id="fig_Live_birth_counts" />
 </span></div>
 </div>
@@ -936,25 +988,25 @@ Noised image</span></div>
 </div>
 </div>
 
+<div class="standard" id='magicparlabel-386'><br />
+
+</div>
+
+
 <div class="standard" id='magicparlabel-387'><br />
 
 </div>
+<h3 class="subsection" id='magicparlabel-388'><span class="subsection_label">2.3</span> Spatial point pattern data </h3>
 
-
-<div class="standard" id='magicparlabel-388'><br />
-
-</div>
-<h3 class="subsection" id='magicparlabel-389'><span class="subsection_label">2.3</span> Spatial point pattern data </h3>
-
-<div class="note" id='magicparlabel-390'><div class="note_item"><span class="note_label">Note 25.</span>
+<div class="note" id='magicparlabel-389'><div class="note_item"><span class="note_label">Note 25.</span>
 Sometimes the locations at which events occur are random. Typical examples include outbreaks of forest fires, or the epicentres of earthquakes. Such random patterns of locations are said to form a point process.</div>
 </div>
 
-<div class="standard" id='magicparlabel-391'><br />
+<div class="standard" id='magicparlabel-390'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-392'><div class="note_item"><span class="note_label">Note 26.</span>
+<div class="note" id='magicparlabel-391'><div class="note_item"><span class="note_label">Note 26.</span>
 Rigorously, the spatial domain <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>S</mi>
  </mrow></math> is a random set of points; specifically a point process, in <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -970,11 +1022,11 @@ Rigorously, the spatial domain <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math> at which some events happened. </div>
 </div>
 
-<div class="standard" id='magicparlabel-397'><br />
+<div class="standard" id='magicparlabel-396'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-398'><div class="note_item"><span class="note_label">Note 27.</span>
+<div class="note" id='magicparlabel-397'><div class="note_item"><span class="note_label">Note 27.</span>
 In the most general case, <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -991,11 +1043,11 @@ In the most general case, <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math>); these covariates are called marked variables. We will refer to it as a Marked spatial point process.</div>
 </div>
 
-<div class="standard" id='magicparlabel-405'><br />
+<div class="standard" id='magicparlabel-404'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-406'><div class="note_item"><span class="note_label">Note 28.</span>
+<div class="note" id='magicparlabel-405'><div class="note_item"><span class="note_label">Note 28.</span>
 In the simplest case, no covariate for <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>Z</mi>
  </mrow></math> is specified, and hence <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1028,39 +1080,39 @@ In the simplest case, no covariate for <math xmlns="http://www.w3.org/1998/Math/
  </mrow></math>. We will refer to it as a spatial point process</div>
 </div>
 
-<div class="standard" id='magicparlabel-407'><br />
+<div class="standard" id='magicparlabel-406'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-408'><div class="note_item"><span class="note_label">Note 29.</span>
+<div class="note" id='magicparlabel-407'><div class="note_item"><span class="note_label">Note 29.</span>
 Questions in the spatial point pattern problems are mainly whether the pattern of locations is exhibiting complete spatial randomness, clustering, or regularity. In the marked spatial point process where additional covariates are measured, we could possibly investigate the factors/variables associated to this behavior as well. A statistical approach to address such questions is needed as different observers may disagree on the amount of clustering or randomness. Usually patters from a completely random process may appear to be wrongly clustered when just eyeballed by an individual. </div>
 </div>
 
-<div class="standard" id='magicparlabel-413'><br />
+<div class="standard" id='magicparlabel-412'><br />
 
 </div>
 
-<div class="example" id='magicparlabel-414'><div class="example_item"><span class="example_label">Example 30.</span>
+<div class="example" id='magicparlabel-413'><div class="example_item"><span class="example_label">Example 30.</span>
 (Tropical rain forest trees in Barro/Colorado) Figure <a href="#fig_Tropical_rain_forest">2.6</a> shows the positions (dots) of <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mn>3605</mn>
  </mrow></math> Beilschmiedia trees in a <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mn>1000</mn><mo> &times; </mo><mn>5000</mn>
   </mrow>
- </mrow></math> meter rectangular stand in a tropical rain forest at Barro Colorado Island, Panama. All spatial coordinates are in the Cartesian coordinate system and in meters. Dataset is available from the R package <span style='font-family:monospace;'>bei{spatstat}</span>. The scientific question may be if the trees are distributed over the area in a uniform way, they form clusters, or they are arrange in a specific pattern. Here, the locations of the dots/trees are not fixed but random/uncertain and of course they are matter of inference. This is a point process as each location is associated to an occurrence only and not any other covariate. The statistician's task is to design models able to test and quantify heterogeneity/homogeneity. <div class='float-figure'><div class="plain_layout" id='magicparlabel-422'><img style='width:45%;' src='10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___oral_statistics_IV_Handouts_figures_bei_obs.png' alt='image: 10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___oral_statistics_IV_Handouts_figures_bei_obs.png' />
+ </mrow></math> meter rectangular stand in a tropical rain forest at Barro Colorado Island, Panama. All spatial coordinates are in the Cartesian coordinate system and in meters. Dataset is available from the R package <span style='font-family:monospace;'>bei{spatstat}</span>. The scientific question may be if the trees are distributed over the area in a uniform way, they form clusters, or they are arrange in a specific pattern. Here, the locations of the dots/trees are not fixed but random/uncertain and of course they are matter of inference. This is a point process as each location is associated to an occurrence only and not any other covariate. The statistician's task is to design models able to test and quantify heterogeneity/homogeneity. <div class='float-figure'><div class="plain_layout" id='magicparlabel-421'><img style='width:45%;' src='10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___oral_statistics_IV_Handouts_figures_bei_obs.png' alt='image: 10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___oral_statistics_IV_Handouts_figures_bei_obs.png' />
 </div>
 
-<div class="plain_layout" id='magicparlabel-423'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.6:  Locations of tropical rain forest trees in Barro/Colorado (Spatial point pattern data)<a id="fig_Tropical_rain_forest" />
+<div class="plain_layout" id='magicparlabel-422'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.6:  Locations of tropical rain forest trees in Barro/Colorado (Spatial point pattern data)<a id="fig_Tropical_rain_forest" />
 </span></div>
 </div>
 </div>
 </div>
 
-<div class="standard" id='magicparlabel-428'><br />
+<div class="standard" id='magicparlabel-427'><br />
 
 </div>
 
-<div class="example" id='magicparlabel-429'><div class="example_item"><span class="example_label">Example 31.</span>
+<div class="example" id='magicparlabel-428'><div class="example_item"><span class="example_label">Example 31.</span>
 (Longleaf Pines Point Pattern) Figure <a href="#fig_Longleaf_Pines_Point">2.7</a> shows locations (as Cartesian coordinates) and relative diameters at breast height in dbh (as the size of the dot) of all longleaf pine trees in the <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mn>24</mn>
@@ -1071,22 +1123,22 @@ Questions in the spatial point pattern problems are mainly whether the pattern o
   </mrow>
  </mrow></math> region of the Wade Tract, an old-growth forest in Thomas County, Georgia in <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mn>1979</mn>
- </mrow></math>. Dataset is available from R package <span style='font-family:monospace;'>bei{spatstat}</span>. Longleaf pine is a fire-adapted species of trees. The domain scientist is interested in knowing whether the spatial locations are spatially random, or clustered, if large (small) trees cluster and how do large and small trees interact. A statistician can design models able to quantify such notions and provide inference. Here, the locations are random (not fixed) and in fact an object of inference. The diameter at breast height recorded along with the tree's location is the marked variable, and hence, the whole process is a marked process.  <div class='float-figure'><div class="plain_layout" id='magicparlabel-437'><img style='width:45%;' src='11_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___statistics_IV_Handouts_figures_longleaf_obs.png' alt='image: 11_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___statistics_IV_Handouts_figures_longleaf_obs.png' />
+ </mrow></math>. Dataset is available from R package <span style='font-family:monospace;'>bei{spatstat}</span>. Longleaf pine is a fire-adapted species of trees. The domain scientist is interested in knowing whether the spatial locations are spatially random, or clustered, if large (small) trees cluster and how do large and small trees interact. A statistician can design models able to quantify such notions and provide inference. Here, the locations are random (not fixed) and in fact an object of inference. The diameter at breast height recorded along with the tree's location is the marked variable, and hence, the whole process is a marked process.  <div class='float-figure'><div class="plain_layout" id='magicparlabel-436'><img style='width:45%;' src='11_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___statistics_IV_Handouts_figures_longleaf_obs.png' alt='image: 11_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___statistics_IV_Handouts_figures_longleaf_obs.png' />
 </div>
 
-<div class="plain_layout" id='magicparlabel-438'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.7:  Longleaf Pines Point Pattern (Spatial point data) <a id="fig_Longleaf_Pines_Point" />
+<div class="plain_layout" id='magicparlabel-437'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 2.7:  Longleaf Pines Point Pattern (Spatial point data) <a id="fig_Longleaf_Pines_Point" />
 </span></div>
 </div>
 </div>
 </div>
-<h2 class="section" id='magicparlabel-443'><span class="section_label">3</span> Uncertainty quantification and modeling</h2>
+<h2 class="section" id='magicparlabel-442'><span class="section_label">3</span> Uncertainty quantification and modeling</h2>
 
-<div class="standard" id='magicparlabel-444'><br />
+<div class="standard" id='magicparlabel-443'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-445'><div class="note_item"><span class="note_label">Note 32.</span>
-<div class="marginal"><div class="plain_layout" id='magicparlabel-449'>To be 
+<div class="note" id='magicparlabel-444'><div class="note_item"><span class="note_label">Note 32.</span>
+<div class="marginal"><div class="plain_layout" id='magicparlabel-448'>To be 
 <br />
 
 defined 
@@ -1158,25 +1210,25 @@ later</div>
  <mrow><mi>S</mi>
  </mrow></math> relevant to the scientific study. </div>
 </div>
-<h3 class="subsection_" id='magicparlabel-450'>Spatial process model </h3>
+<h3 class="subsection_" id='magicparlabel-449'>Spatial process model </h3>
 
-<div class="note" id='magicparlabel-451'><div class="note_item"><span class="note_label">Note 33.</span>
+<div class="note" id='magicparlabel-450'><div class="note_item"><span class="note_label">Note 33.</span>
 The scientific uncertainty (i.e. the (known) uncertainty about the scientific problem) is expressed via the spatial process model. E.g., uncertainty about the real picture in Fig. <a href="#fig_Noised_Ferrite_Pearlite_steel">a</a>. </div>
 </div>
 
-<div class="standard" id='magicparlabel-452'><br />
+<div class="standard" id='magicparlabel-451'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-453'><div class="note_item"><span class="note_label">Note 34.</span>
+<div class="note" id='magicparlabel-452'><div class="note_item"><span class="note_label">Note 34.</span>
 This spatial stochastic process can be a: geostatistical process, lattice process, or point process depending on the principal spatial statistical area (Section <a href="#sec_Principal_spatial_statistical">2</a>) the application is associated with.</div>
 </div>
 
-<div class="standard" id='magicparlabel-459'><br />
+<div class="standard" id='magicparlabel-458'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-460'><div class="note_item"><span class="note_label">Note 35.</span>
+<div class="note" id='magicparlabel-459'><div class="note_item"><span class="note_label">Note 35.</span>
 The joint probability model defined by the random <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
 
@@ -1214,11 +1266,11 @@ The joint probability model defined by the random <math xmlns="http://www.w3.org
  </mtable></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-461'><br />
+<div class="standard" id='magicparlabel-460'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-462'><div class="note_item"><span class="note_label">Note 36.</span>
+<div class="note" id='magicparlabel-461'><div class="note_item"><span class="note_label">Note 36.</span>
 The specification of <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo> Pr </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -1272,21 +1324,21 @@ The specification of <math xmlns="http://www.w3.org/1998/Math/MathML">
   </mrow>
  </mrow></math> from the notation.</div>
 </div>
-<h3 class="subsection_" id='magicparlabel-463'>Data model</h3>
+<h3 class="subsection_" id='magicparlabel-462'>Data model</h3>
 
-<div class="standard" id='magicparlabel-464'><br />
+<div class="standard" id='magicparlabel-463'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-465'><div class="note_item"><span class="note_label">Note 37.</span>
+<div class="note" id='magicparlabel-464'><div class="note_item"><span class="note_label">Note 37.</span>
 The measurement uncertainty is quantified via the data model. E.g. the &ldquo;noisy image&rdquo; in Fig. <a href="#fig_Noised_Ferrite_Pearlite_steel">a</a>.</div>
 </div>
 
-<div class="standard" id='magicparlabel-466'><br />
+<div class="standard" id='magicparlabel-465'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-467'><div class="note_item"><span class="note_label">Note 38.</span>
+<div class="note" id='magicparlabel-466'><div class="note_item"><span class="note_label">Note 38.</span>
 The data model is specified to be the conditional distribution of the data <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>Z</mi>
  </mrow></math> given the spatial stochastic process <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1312,11 +1364,11 @@ The data model is specified to be the conditional distribution of the data <math
  </mtable></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-468'><br />
+<div class="standard" id='magicparlabel-467'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-469'><div class="note_item"><span class="note_label">Note 39.</span>
+<div class="note" id='magicparlabel-468'><div class="note_item"><span class="note_label">Note 39.</span>
 If the data are assumed to be conditionally independent, such as <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -1372,11 +1424,11 @@ If the data are assumed to be conditionally independent, such as <math xmlns="ht
  </mtable></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-470'><br />
+<div class="standard" id='magicparlabel-469'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-471'><div class="note_item"><span class="note_label">Note 40.</span>
+<div class="note" id='magicparlabel-470'><div class="note_item"><span class="note_label">Note 40.</span>
 The spatial statistical dependence of in <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>Z</mi>
  </mrow></math>, articulated by the First Law of Geography, follows by <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -1402,13 +1454,13 @@ The spatial statistical dependence of in <math xmlns="http://www.w3.org/1998/Mat
   </mrow>
  </mrow></math></div>
 </div>
-<h3 class="subsection_" id='magicparlabel-472'>The hierarchical statistical model</h3>
+<h3 class="subsection_" id='magicparlabel-471'>The hierarchical statistical model</h3>
 
-<div class="standard" id='magicparlabel-473'><br />
+<div class="standard" id='magicparlabel-472'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-474'><div class="note_item"><span class="note_label">Note 41.</span>
+<div class="note" id='magicparlabel-473'><div class="note_item"><span class="note_label">Note 41.</span>
 To sum up the (known) uncertainty in spatial the statistics problem is expressed via the so called Hierarchical spatial model<a id="eq__3_1" />
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
@@ -1468,13 +1520,13 @@ To sum up the (known) uncertainty in spatial the statistics problem is expressed
   </mrow>
  </mrow></math></div>
 </div>
-<h3 class="subsection_" id='magicparlabel-475'>The Empirical (Bayes) hierarchical model</h3>
+<h3 class="subsection_" id='magicparlabel-474'>The Empirical (Bayes) hierarchical model</h3>
 
-<div class="standard" id='magicparlabel-476'><br />
+<div class="standard" id='magicparlabel-475'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-477'><div class="note_item"><span class="note_label">Note 42.</span>
+<div class="note" id='magicparlabel-476'><div class="note_item"><span class="note_label">Note 42.</span>
 Often the decomposition <a href="#eq__3_1">(3.5)</a> is parametrized with respect to unknown parameters <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi> &theta; </mi><mo> &isin; </mo><mo> &Theta; </mo>
@@ -1540,13 +1592,13 @@ Often the decomposition <a href="#eq__3_1">(3.5)</a> is parametrized with respec
   </mrow>
  </mrow></math> ...more details in the next lecture.</div>
 </div>
-<h5 class="paragraph_" id='magicparlabel-478'>The Bayesian hierarchical model</h5>
+<h5 class="paragraph_" id='magicparlabel-477'>The Bayesian hierarchical model</h5>
 
-<div class="standard" id='magicparlabel-479'><br />
+<div class="standard" id='magicparlabel-478'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-480'><div class="note_item"><span class="note_label">Note 43.</span>
+<div class="note" id='magicparlabel-479'><div class="note_item"><span class="note_label">Note 43.</span>
 In Bayesian statistics, the hierarchical model in <a href="#eq__3_1">(3.5)</a> is completed by the <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi> &theta; </mi><mo> &sim; </mo><mo> Pr </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -1629,8 +1681,8 @@ In Bayesian statistics, the hierarchical model in <a href="#eq__3_1">(3.5)</a> i
  </mrow></math></div>
 </div>
 
-<div class="exercise" id='magicparlabel-481'><div class="exercise_item"><span class="exercise_label">Exercise 44.</span>
-<div class="marginal"><div class="plain_layout" id='magicparlabel-485'>That's a
+<div class="exercise" id='magicparlabel-480'><div class="exercise_item"><span class="exercise_label">Exercise 44.</span>
+<div class="marginal"><div class="plain_layout" id='magicparlabel-484'>That's a
 <br />
 
 snapsot
@@ -1718,17 +1770,6 @@ follows.</div>
     <mrow><mi>i</mi>
     </mrow>
    </msub><mo>=</mo>
-   <msub>
-    <mrow><mi>s</mi>
-    </mrow>
-    <mrow>
-     <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mn>0</mn>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>,</mo><mi>i</mi>
-     </mrow>
-    </mrow>
-   </msub>
    <msub>
     <mrow><mi> &beta; </mi>
     </mrow>
@@ -2325,7 +2366,7 @@ follows.</div>
     </mtd>
    </mtr>
   </mtable>
- </mrow></math><div class='float-figure'><div class="plain_layout" id='magicparlabel-489'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 3.1:  Examples representing the hierarchical spatial model <a href="#eq__3">(3.8)</a> for different values of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math><div class='float-figure'><div class="plain_layout" id='magicparlabel-488'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 3.1:  Examples representing the hierarchical spatial model <a href="#eq__3">(3.8)</a> for different values of <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi> &theta; </mi><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -2342,15 +2383,15 @@ follows.</div>
   </mrow>
  </mrow></math><a id="fig_Examples_representing_the" />
 </span></div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-493'><img style='width:33%;' src='12_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tics_IV_Handouts_figures_pic_hierarchical_3.png' alt='image: 12_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tics_IV_Handouts_figures_pic_hierarchical_3.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-492'><img style='width:33%;' src='12_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tics_IV_Handouts_figures_pic_hierarchical_3.png' alt='image: 12_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tics_IV_Handouts_figures_pic_hierarchical_3.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  &nbsp;</span></div>
 
 
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-502'><img style='width:33%;' src='13_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tics_IV_Handouts_figures_pic_hierarchical_2.png' alt='image: 13_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tics_IV_Handouts_figures_pic_hierarchical_2.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-501'><img style='width:33%;' src='13_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tics_IV_Handouts_figures_pic_hierarchical_2.png' alt='image: 13_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tics_IV_Handouts_figures_pic_hierarchical_2.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  &nbsp;</span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-510'><img style='width:33%;' src='14_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tics_IV_Handouts_figures_pic_hierarchical_1.png' alt='image: 14_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tics_IV_Handouts_figures_pic_hierarchical_1.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-509'><img style='width:33%;' src='14_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tics_IV_Handouts_figures_pic_hierarchical_1.png' alt='image: 14_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tics_IV_Handouts_figures_pic_hierarchical_1.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  &nbsp;</span></div>
 </div>
 
