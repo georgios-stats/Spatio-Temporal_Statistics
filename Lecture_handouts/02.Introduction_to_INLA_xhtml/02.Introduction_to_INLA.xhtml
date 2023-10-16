@@ -224,7 +224,7 @@ div.marginal {
 
 <div class="standard" id='magicparlabel-1'><div class='Shadowbox'><div class="plain_layout" id='magicparlabel-10'>Spatio-temporal statistics (MATH4341)&nbsp;&nbsp;Michaelmas term, 2023<div style='height:3ex'></div></div>
 
-<div class="plain_layout" style='text-align: center;' id='magicparlabel-11'> Handout 2: Introduction to INLA (R-INLA) <div style='height:3ex'></div></div>
+<div class="plain_layout" style='text-align: center;' id='magicparlabel-11'> Handout <a href="#enu_Handout_2__Computational">enu:Handout-2:-Computational</a>: Introduction to INLA &amp; R-INLA <div style='height:3ex'></div></div>
 
 <div class="plain_layout" id='magicparlabel-32'>Lecturer &amp; author: Georgios P. Karagiannis <a href="georgios.karagiannis@durham.ac.uk">georgios.karagiannis@durham.ac.uk</a></div>
 
@@ -5302,7 +5302,7 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
 <ul class="itemize" id='magicparlabel-382'><li class="itemize_item">Post-processing the results from <span style='font-family:monospace;'><span style='font-size:small;'>inla</span></span> object. 
 <div class="standard" id='magicparlabel-383'><div class='Frameless'><div class="plain_layout" id='magicparlabel-387'><span style='font-family:monospace;'><span style='font-size:small;'>summary(result)</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-388'><img style='width:90%;' src='0_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_1.png' alt='image: 0_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_1.png' />
+<div class="plain_layout" id='magicparlabel-388'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Handouts/figures/inla_example_output_1.pdf' alt='image: ' />
 </div>
 </div> </div>
 
@@ -5332,18 +5332,18 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
 
 <div class="plain_layout" id='magicparlabel-396'><span style='font-family:monospace;'><span style='font-size:small;'>plot(beta_1_pdf[,1], beta_1_pdf[,2], type="l")</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-397'><img style='width:40%;' src='1_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____ics_IV_Handouts_figures_beta_1_inla_example.png' alt='image: 1_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____ics_IV_Handouts_figures_beta_1_inla_example.png' />
+<div class="plain_layout" id='magicparlabel-397'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Handouts/figures/beta_1_inla_example.pdf' alt='image: ' />
 </div>
 </div></div>
 </li><li class="itemize_item">Summary of the above marginal posteriors can be obtained by using <span style='font-family:monospace;'>result$summary.fixed</span>, <span style='font-family:monospace;'>result$summary.random</span>, <span style='font-family:monospace;'>result$summary.hyperpar </span>
 <div class="standard" id='magicparlabel-399'><div class='Frameless'><div class="plain_layout" id='magicparlabel-403'>result$marginals.fixed</div>
 
-<div class="plain_layout" id='magicparlabel-404'><img style='width:90%;' src='2_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_2.png' alt='image: 2_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_2.png' />
+<div class="plain_layout" id='magicparlabel-404'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Handouts/figures/inla_example_output_2.pdf' alt='image: ' />
 </div>
 
 <div class="plain_layout" id='magicparlabel-405'>result$summary.hyperpar</div>
 
-<div class="plain_layout" id='magicparlabel-406'><img style='width:90%;' src='3_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_3.png' alt='image: 3_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_3.png' />
+<div class="plain_layout" id='magicparlabel-406'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Handouts/figures/inla_example_output_3.pdf' alt='image: ' />
 </div>
 </div></div>
 </li><li class="itemize_item">To get the posterior summary of a function of the parameters, e.g. the posterior mean and standard deviation of <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5394,7 +5394,7 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
 
 <div class="plain_layout" id='magicparlabel-419'>print(c(mean=E[1], sd=mysd))</div>
 
-<div class="plain_layout" id='magicparlabel-420'><img src='4_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_4.png' alt='image: 4_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_4.png' />
+<div class="plain_layout" id='magicparlabel-420'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Handouts/figures/inla_example_output_4.pdf' alt='image: ' />
 </div>
 </div></div>
 </li><li class="itemize_item">To compute the marginal posterior distribution of <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5423,7 +5423,7 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
 
 <div class="plain_layout" id='magicparlabel-431'>plot(my.sigma[,1], my.sigma[,2], type="l")</div>
 
-<div class="plain_layout" id='magicparlabel-432'><img style='width:45%;' src='5_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____stics_IV_Handouts_figures_sig2_inla_example.png' alt='image: 5_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____stics_IV_Handouts_figures_sig2_inla_example.png' />
+<div class="plain_layout" id='magicparlabel-432'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Handouts/figures/sig2_inla_example.pdf' alt='image: ' />
 </div>
 </div></div>
 </li><li class="itemize_item">Other R-INLA functions providing operations on posterior marginals can be found in R help documentation, 
@@ -5564,7 +5564,7 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
 
 <div class="plain_layout" id='magicparlabel-470'><span style='font-family:monospace;'><span style='font-size:small;'>eta7 = res.predict$marginals.linear.predictor[[7]]</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-471'><span style='font-size:small;'><img style='width:49%;' src='6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____ndouts_figures_pred_distr_eta7_inla_example.png' alt='image: 6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____ndouts_figures_pred_distr_eta7_inla_example.png' />
+<div class="plain_layout" id='magicparlabel-471'><span style='font-size:small;'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Handouts/figures/pred_distr_eta7_inla_example.pdf' alt='image: ' />
 </span></div>
 </div></div>
 </li><li class="itemize_item">Summary about is <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5593,7 +5593,7 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
  </mrow></math> taken by 
 <div class="standard" id='magicparlabel-473'><div class='Frameless'><div class="plain_layout" id='magicparlabel-477'><span style='font-family:monospace;'><span style='font-size:small;'># some summary statistics round(res.predict$summary.linear.predictor[7,], 3)</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-478'><span style='font-size:small;'><img style='width:100%;' src='7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____uts_R_scripts_figures_inla_example_output_5.png' alt='image: 7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____uts_R_scripts_figures_inla_example_output_5.png' />
+<div class="plain_layout" id='magicparlabel-478'><span style='font-size:small;'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Handouts/R_scripts/figures/inla_example_output_5.pdf' alt='image: ' />
 </span></div>
 </div></div>
 </li><li class="itemize_item">We can compute <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5638,7 +5638,7 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
 
 <div class="plain_layout" id='magicparlabel-492'><span style='font-family:monospace;'><span style='font-size:small;'>plot(lambda7[,1], lambda7[,2], type="l")</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-493'><span style='font-size:small;'><img style='width:49%;' src='8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____uts_figures_pred_distr_lambda7_inla_example.png' alt='image: 8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____uts_figures_pred_distr_lambda7_inla_example.png' />
+<div class="plain_layout" id='magicparlabel-493'><span style='font-size:small;'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Handouts/figures/pred_distr_lambda7_inla_example.pdf' alt='image: ' />
 </span></div>
 </div></div>
 </li><li class="itemize_item">To compute <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5831,7 +5831,7 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
 
 <div class="plain_layout" id='magicparlabel-511'><span style='font-family:monospace;'><span style='font-size:small;'>plot(z_tick_vec,z7_pdf, type="l")</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-512'><span style='font-size:small;'><img style='width:49%;' src='9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Handouts_figures_pred_distr_z7_inla_example.png' alt='image: 9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Handouts_figures_pred_distr_z7_inla_example.png' />
+<div class="plain_layout" id='magicparlabel-512'><span style='font-size:small;'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Handouts/figures/pred_distr_z7_inla_example.pdf' alt='image: ' />
 </span></div>
 </div></div>
 </li><li class="itemize_item">alternatively one approximate <a href="#eq_">(3.1)</a> by Monte Carlo integration <a id="eq__3" />
@@ -6045,7 +6045,7 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
 
 <div class="plain_layout" id='magicparlabel-523'><span style='font-family:monospace;'><span style='font-size:small;'>predDist = rpois(n.samples, lambda = samples_lambda)</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-524'><span style='font-size:small;'><img style='width:49%;' src='10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___douts_figures_pred_distr_z7_MC_inla_example.png' alt='image: 10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___douts_figures_pred_distr_z7_MC_inla_example.png' />
+<div class="plain_layout" id='magicparlabel-524'><span style='font-size:small;'><img src='/home/georgios/Dropbox/Teaching/2023.term1.Spatio-Temporal_statistics_IV/Handouts/figures/pred_distr_z7_MC_inla_example.pdf' alt='image: ' />
 </span></div>
 </div></div>
 </li></ul>
