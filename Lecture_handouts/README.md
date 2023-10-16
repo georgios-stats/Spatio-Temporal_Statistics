@@ -51,7 +51,14 @@ Topic 0: Types of spatial data
 
 Topic 1: Computations with INLA       
 
-+ Handout 1: [02.Introduction_to_INLA.pdf](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/02.Introduction_to_INLA.pdf)  
++ Handout 2: [02.Introduction_to_INLA.pdf](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/02.Introduction_to_INLA.pdf)  
 
-+ Handout 1: [02.Introduction_to_INLA.xhtml](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/02.Introduction_to_INLA_xhtml/02.Introduction_to_INLA.xhtml) 
++ Handout 2: [02.Introduction_to_INLA.xhtml](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/02.Introduction_to_INLA_xhtml/02.Introduction_to_INLA.xhtml)
+
+Topic 3: Geostatistical data modeling       
+
++ Handout 3: [03.Geostatistical_data.pdf](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/03.Geostatistical_data.pdf)   
+
++ Handout 3: [03.Geostatistical_data.xhtml](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/03.Geostatistical_data_xhtml/03.Geostatistical_data.xhtml) 
+
 
