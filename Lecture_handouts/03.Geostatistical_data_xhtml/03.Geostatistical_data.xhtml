@@ -2421,54 +2421,50 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
 
 <div class="plain_layout" style='text-align: left;' id='magicparlabel-157'><span style='font-family:monospace;'><span style='font-size:small;'>mu_fun &lt;- function(s) { return (0) } </span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-158'><span style='font-family:monospace;'><span style='font-size:small;'>cov_fun_exp &lt;- function(s,t,sig2,beta) { return ( sig2*exp(-beta*abs(s-t)) ) }</span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-158'><span style='font-family:monospace;'><span style='font-size:small;'>cov_fun_gauss &lt;- function(s,t,sig2,beta) { return ( sig2*exp(-beta*norm(c(s-t),type="2")**2) ) } </span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-159'><span style='font-family:monospace;'><span style='font-size:small;'>cov_fun_gauss &lt;- function(s,t,sig2,beta) { return ( sig2*exp(-beta*norm(c(s-t),type="2")**2) ) } </span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-163'><span style='font-family:monospace;'><span style='font-size:small;'># discretaize the problem in n = 100 spatial points</span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-164'><span style='font-family:monospace;'><span style='font-size:small;'>cov_fun_nugget &lt;- function(s,t,sig2) { return ( sig2*(s==t) ) } </span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-164'><span style='font-family:monospace;'><span style='font-size:small;'>n &lt;- 100 </span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-165'><span style='font-family:monospace;'><span style='font-size:small;'># discretaize the problem in n = 100 spatial points</span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-165'><span style='font-family:monospace;'><span style='font-size:small;'>s_vec &lt;- seq(from = 0, to = 5, length = n) </span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-166'><span style='font-family:monospace;'><span style='font-size:small;'>n &lt;- 100 </span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-166'><span style='font-family:monospace;'><span style='font-size:small;'>mu_vec &lt;- matrix(nrow = n, ncol = 1) </span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-167'><span style='font-family:monospace;'><span style='font-size:small;'>s_vec &lt;- seq(from = 0, to = 5, length = n) </span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-167'><span style='font-family:monospace;'><span style='font-size:small;'>Cov_mat &lt;- matrix(nrow = n, ncol = n) </span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-168'><span style='font-family:monospace;'><span style='font-size:small;'>mu_vec &lt;- matrix(nrow = n, ncol = 1) </span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-168'><span style='font-family:monospace;'><span style='font-size:small;'># compute the associated mean vector and covariance matrix of the fidi for n=100</span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-169'><span style='font-family:monospace;'><span style='font-size:small;'>Cov_mat &lt;- matrix(nrow = n, ncol = n) </span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-169'><span style='font-family:monospace;'><span style='font-size:small;'>sig2_val &lt;- 1.0 ; </span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-170'><span style='font-family:monospace;'><span style='font-size:small;'># compute the associated mean vector and covariance matrix of the fidi for n=100</span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-170'><span style='font-family:monospace;'><span style='font-size:small;'>beta_val &lt;- 5 </span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-171'><span style='font-family:monospace;'><span style='font-size:small;'>sig2_val &lt;- 1.0 ; </span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-171'><span style='font-family:monospace;'><span style='font-size:small;'>for (i in 1:n) { </span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-172'><span style='font-family:monospace;'><span style='font-size:small;'>beta_val &lt;- 5 </span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-172'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;mu_vec[i] &lt;- mu_fun(s_vec[i])</span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-173'><span style='font-family:monospace;'><span style='font-size:small;'>for (i in 1:n) { </span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-173'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;for (j in 1:n) {</span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-174'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;mu_vec[i] &lt;- mu_fun(s_vec[i])</span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-174'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;&emsp;&emsp;Cov_mat[i,j] &lt;- cov_fun_gauss(s_vec[i],s_vec[j],sig2_val,beta_val) </span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-175'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;for (j in 1:n) {</span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-175'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;} </span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-176'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;&emsp;&emsp;Cov_mat[i,j] &lt;- cov_fun_gauss(s_vec[i],s_vec[j],sig2_val,beta_val) </span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-176'><span style='font-family:monospace;'><span style='font-size:small;'>}</span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-177'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;} </span></span></div>
+<div class="plain_layout" id='magicparlabel-177'># simulate from the associated distribution</div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-178'><span style='font-family:monospace;'><span style='font-size:small;'>}</span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-178'><span style='font-family:monospace;'><span style='font-size:small;'>z_vec &lt;- mu_vec + t(chol(Cov_mat))%*%rnorm(n, mean=0, sd=1) </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-179'># simulate from the associated distribution</div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-179'><span style='font-family:monospace;'><span style='font-size:small;'># plot the path (R produces a line plot)</span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-180'><span style='font-family:monospace;'><span style='font-size:small;'>z_vec &lt;- mu_vec + t(chol(Cov_mat))%*%rnorm(n, mean=0, sd=1) </span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-180'><span style='font-family:monospace;'><span style='font-size:small;'>plot(s_vec, z_vec, type="l") </span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-181'><span style='font-family:monospace;'><span style='font-size:small;'># plot the path (R produces a line plot)</span></span></div>
+<div class="plain_layout" style='text-align: left;' id='magicparlabel-181'><span style='font-family:monospace;'><span style='font-size:small;'>abline(h=0,col="red")</span></span></div>
 
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-182'><span style='font-family:monospace;'><span style='font-size:small;'>plot(s_vec, z_vec, type="l") </span></span></div>
-
-<div class="plain_layout" style='text-align: left;' id='magicparlabel-183'><span style='font-family:monospace;'><span style='font-size:small;'>abline(h=0,col="red")</span></span></div>
-
-<div class="plain_layout" id='magicparlabel-184'><span class='float-caption-Standard float-caption float-caption-standard'>Algorithm 1:  R script for simulating from a GP</span></div>
+<div class="plain_layout" id='magicparlabel-182'><span class='float-caption-Standard float-caption float-caption-standard'>Algorithm 1:  R script for simulating from a GP</span></div>
 </div>
 
-<div class='float-figure'><div class='float-figure'><div class="plain_layout" id='magicparlabel-200'><img style='width:20%;' src='0_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tatistics_IV_Handouts_figures_RMnugget_1D_1.png' alt='image: 0_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tatistics_IV_Handouts_figures_RMnugget_1D_1.png' />
+<div class='float-figure'><div class='float-figure'><div class="plain_layout" id='magicparlabel-198'><img style='width:20%;' src='0_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tatistics_IV_Handouts_figures_RMnugget_1D_1.png' alt='image: 0_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tatistics_IV_Handouts_figures_RMnugget_1D_1.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  Nugget c.f 
 <br />
 
@@ -2485,7 +2481,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
  </mrow></math>)<a id="fig_Nugget_c_f____2" />
 </span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-208'><img style='width:20%;' src='1_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tistics_IV_Handouts_figures_RMnugget_1D_100.png' alt='image: 1_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tistics_IV_Handouts_figures_RMnugget_1D_100.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-206'><img style='width:20%;' src='1_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tistics_IV_Handouts_figures_RMnugget_1D_100.png' alt='image: 1_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tistics_IV_Handouts_figures_RMnugget_1D_100.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  Nugget c.f 
 <br />
 
@@ -2505,7 +2501,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
 
 
 
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-217'><img style='width:20%;' src='2_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____istics_IV_Handouts_figures_RMgauss_1D_1_0_5.png' alt='image: 2_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____istics_IV_Handouts_figures_RMgauss_1D_1_0_5.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-215'><img style='width:20%;' src='2_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____istics_IV_Handouts_figures_RMgauss_1D_1_0_5.png' alt='image: 2_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____istics_IV_Handouts_figures_RMgauss_1D_1_0_5.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  Gauss c.f
 <br />
 
@@ -2526,7 +2522,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
  </mrow></math>)<a id="fig_Gauss_c_f_____2_1" />
 </span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-225'><img style='width:20%;' src='3_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tics_IV_Handouts_figures_RMgauss_1D_100_0_5.png' alt='image: 3_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tics_IV_Handouts_figures_RMgauss_1D_100_0_5.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-223'><img style='width:20%;' src='3_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tics_IV_Handouts_figures_RMgauss_1D_100_0_5.png' alt='image: 3_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____tics_IV_Handouts_figures_RMgauss_1D_100_0_5.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure d:  Gauss c.f 
 <br />
 
@@ -2547,7 +2543,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
  </mrow></math>)<a id="fig_Gauss_c_f_____3_1" />
 </span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-233'><img style='width:20%;' src='4_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____atistics_IV_Handouts_figures_RMgauss_1D_1_5.png' alt='image: 4_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____atistics_IV_Handouts_figures_RMgauss_1D_1_5.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-231'><img style='width:20%;' src='4_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____atistics_IV_Handouts_figures_RMgauss_1D_1_5.png' alt='image: 4_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____atistics_IV_Handouts_figures_RMgauss_1D_1_5.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure e:  Gauss c.f 
 <br />
 
@@ -2571,7 +2567,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
 
 
 
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-242'><img style='width:20%;' src='5_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____atistics_IV_Handouts_figures_RMexp_1D_1_0_5.png' alt='image: 5_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____atistics_IV_Handouts_figures_RMexp_1D_1_0_5.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-240'><img style='width:20%;' src='5_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____atistics_IV_Handouts_figures_RMexp_1D_1_0_5.png' alt='image: 5_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____atistics_IV_Handouts_figures_RMexp_1D_1_0_5.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure f:  Exp c.f 
 <br />
 
@@ -2592,7 +2588,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
  </mrow></math>)<a id="fig_Gauss_c_f_____5" />
 </span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-250'><img style='width:20%;' src='6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____istics_IV_Handouts_figures_RMexp_1D_100_0_5.png' alt='image: 6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____istics_IV_Handouts_figures_RMexp_1D_100_0_5.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-248'><img style='width:20%;' src='6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____istics_IV_Handouts_figures_RMexp_1D_100_0_5.png' alt='image: 6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____istics_IV_Handouts_figures_RMexp_1D_100_0_5.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure g:  Exp c.f 
 <br />
 
@@ -2613,7 +2609,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
  </mrow></math>)<a id="fig_Gauss_c_f_____4_2" />
 </span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-258'><img style='width:20%;' src='7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMexp_1D_1_5.png' alt='image: 7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMexp_1D_1_5.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-256'><img style='width:20%;' src='7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMexp_1D_1_5.png' alt='image: 7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMexp_1D_1_5.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure h:  Exp c.f 
 <br />
 
@@ -2636,7 +2632,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
 </div>
 
 
-<div class="plain_layout" id='magicparlabel-263'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 3.1:  Realizations of GRF <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="plain_layout" id='magicparlabel-261'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 3.1:  Realizations of GRF <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mo> &sdot; </mo>
@@ -2673,7 +2669,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
 </span></div>
 </div>
 
-<div class='float-figure'><div class='float-figure'><div class="plain_layout" id='magicparlabel-275'><img style='width:20%;' src='8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____l_statistics_IV_Handouts_figures_RMnugget_1.png' alt='image: 8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____l_statistics_IV_Handouts_figures_RMnugget_1.png' />
+<div class='float-figure'><div class='float-figure'><div class="plain_layout" id='magicparlabel-273'><img style='width:20%;' src='8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____l_statistics_IV_Handouts_figures_RMnugget_1.png' alt='image: 8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____l_statistics_IV_Handouts_figures_RMnugget_1.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  Nugget c.f 
 <br />
 
@@ -2692,7 +2688,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
 
 
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-284'><img style='width:20%;' src='9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMnugget_100.png' alt='image: 9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMnugget_100.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-282'><img style='width:20%;' src='9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMnugget_100.png' alt='image: 9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMnugget_100.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  Nugget c.f 
 <br />
 
@@ -2712,7 +2708,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
 
 
 
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-293'><img style='width:20%;' src='10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tatistics_IV_Handouts_figures_RMgauss_1_0_5.png' alt='image: 10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tatistics_IV_Handouts_figures_RMgauss_1_0_5.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-291'><img style='width:20%;' src='10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tatistics_IV_Handouts_figures_RMgauss_1_0_5.png' alt='image: 10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tatistics_IV_Handouts_figures_RMgauss_1_0_5.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  Gauss c.f
 <br />
 
@@ -2733,7 +2729,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
  </mrow></math>)<a id="fig_Gauss_c_f_____2" />
 </span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-301'><img style='width:20%;' src='11_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tistics_IV_Handouts_figures_RMgauss_100_0_5.png' alt='image: 11_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tistics_IV_Handouts_figures_RMgauss_100_0_5.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-299'><img style='width:20%;' src='11_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tistics_IV_Handouts_figures_RMgauss_100_0_5.png' alt='image: 11_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tistics_IV_Handouts_figures_RMgauss_100_0_5.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure d:  Gauss c.f 
 <br />
 
@@ -2754,7 +2750,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
  </mrow></math>)<a id="fig_Gauss_c_f_____3" />
 </span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-309'><img style='width:20%;' src='12_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMgauss_1_5.png' alt='image: 12_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMgauss_1_5.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-307'><img style='width:20%;' src='12_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMgauss_1_5.png' alt='image: 12_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMgauss_1_5.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure e:  Gauss c.f 
 <br />
 
@@ -2778,7 +2774,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
 
 
 
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-318'><img style='width:20%;' src='13_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMexp_1_0_5.png' alt='image: 13_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMexp_1_0_5.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-316'><img style='width:20%;' src='13_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMexp_1_0_5.png' alt='image: 13_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_RMexp_1_0_5.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure f:  Exp c.f 
 <br />
 
@@ -2799,7 +2795,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
  </mrow></math>)<a id="fig_Gauss_c_f____" />
 </span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-326'><img style='width:20%;' src='14_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tatistics_IV_Handouts_figures_RMexp_100_0_5.png' alt='image: 14_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tatistics_IV_Handouts_figures_RMexp_100_0_5.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-324'><img style='width:20%;' src='14_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tatistics_IV_Handouts_figures_RMexp_100_0_5.png' alt='image: 14_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tatistics_IV_Handouts_figures_RMexp_100_0_5.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure g:  Exp c.f 
 <br />
 
@@ -2820,7 +2816,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
  </mrow></math>)<a id="fig_Gauss_c_f_____4" />
 </span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-334'><img style='width:20%;' src='15_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___al_statistics_IV_Handouts_figures_RMexp_1_5.png' alt='image: 15_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___al_statistics_IV_Handouts_figures_RMexp_1_5.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-332'><img style='width:20%;' src='15_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___al_statistics_IV_Handouts_figures_RMexp_1_5.png' alt='image: 15_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___al_statistics_IV_Handouts_figures_RMexp_1_5.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure h:  Exp c.f 
 <br />
 
@@ -2843,7 +2839,7 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
 </div>
 
 
-<div class="plain_layout" id='magicparlabel-339'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 3.2:  Realizations of GRF <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="plain_layout" id='magicparlabel-337'><span class='float-caption-Standard float-caption float-caption-standard'>Figure 3.2:  Realizations of GRF <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mo> &sdot; </mo>
@@ -2887,9 +2883,9 @@ Figs. <a href="#fig_Realizations_of_GRF_1D">3.1</a> &amp; <a href="#fig_Realizat
 </div>
 </div>
 </div>
-<h2 class="section" id='magicparlabel-344'><span class="section_label">4</span> Strong stationarity </h2>
+<h2 class="section" id='magicparlabel-342'><span class="section_label">4</span> Strong stationarity </h2>
 
-<div class="note" id='magicparlabel-345'><div class="note_item"><span class="note_label">Note 20.</span>
+<div class="note" id='magicparlabel-343'><div class="note_item"><span class="note_label">Note 20.</span>
 Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -2904,7 +2900,7 @@ Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
     </mrow>
    </msup>
   </mrow>
- </mrow></math> for simplicity. <div class="foot"><span class="foot_label">1</span><div class="foot_inner"><div class="plain_layout" id='magicparlabel-349'>Otherwise, we should set <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math> for simplicity. <div class="foot"><span class="foot_label">1</span><div class="foot_inner"><div class="plain_layout" id='magicparlabel-347'>Otherwise, we should set <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>s</mi><mo>,</mo><mi>s</mi><mo>'</mo><mo> &isin; </mo>
    <mstyle mathvariant='script'><mi>S</mi>
@@ -2941,7 +2937,7 @@ Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
 </div></div></div>
 </div>
 
-<div class="definition" id='magicparlabel-350'><div class="definition_item"><span class="definition_label">Definition 21.</span>
+<div class="definition" id='magicparlabel-348'><div class="definition_item"><span class="definition_label">Definition 21.</span>
 <a id="def_A_random_field" />
 A random field <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -3113,12 +3109,12 @@ A random field <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-351'><br />
+<div class="standard" id='magicparlabel-349'><br />
 
 </div>
-<h2 class="section" id='magicparlabel-352'><span class="section_label">5</span> Weak stationarity (or second order stationarity)</h2>
+<h2 class="section" id='magicparlabel-350'><span class="section_label">5</span> Weak stationarity (or second order stationarity)</h2>
 
-<div class="note" id='magicparlabel-353'><div class="note_item"><span class="note_label">Note 22.</span>
+<div class="note" id='magicparlabel-351'><div class="note_item"><span class="note_label">Note 22.</span>
 Yuh... strong stationary may be a too &ldquo;restricting&rdquo; a characteristic for our modeling... Perhaps, we could only restrict the first two moments them properly; notice Def. <a href="#def_A_random_field">21</a> implies that, given <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -3252,11 +3248,11 @@ Yuh... strong stationary may be a too &ldquo;restricting&rdquo; a characteristic
  </mrow></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-354'><br />
+<div class="standard" id='magicparlabel-352'><br />
 
 </div>
 
-<div class="definition" id='magicparlabel-355'><div class="definition_item"><span class="definition_label">Definition 23.</span>
+<div class="definition" id='magicparlabel-353'><div class="definition_item"><span class="definition_label">Definition 23.</span>
 <a id="def_A_random_field_1" />
 A random field <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -3301,7 +3297,7 @@ A random field <math xmlns="http://www.w3.org/1998/Math/MathML">
   </mrow>
  </mrow></math>, </div>
 
-<ol class="enumerate" id='magicparlabel-356'><li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-354'><li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <mstyle mathvariant='normal'><mi>E</mi>
@@ -3385,24 +3381,24 @@ A random field <math xmlns="http://www.w3.org/1998/Math/MathML">
 </ol>
 </div>
 
-<div class="standard" id='magicparlabel-359'><br />
+<div class="standard" id='magicparlabel-357'><br />
 
 </div>
 
-<div class="definition" id='magicparlabel-360'><div class="definition_item"><span class="definition_label">Definition 24.</span>
+<div class="definition" id='magicparlabel-358'><div class="definition_item"><span class="definition_label">Definition 24.</span>
 Weakly (or second order) stationary covariance function is called the c.f. of a weakly stationary stochastic process.</div>
 </div>
-<h2 class="section" id='magicparlabel-361'><span class="section_label">6</span> Covariogram</h2>
+<h2 class="section" id='magicparlabel-359'><span class="section_label">6</span> Covariogram</h2>
 
-<div class="note" id='magicparlabel-362'><div class="note_item"><span class="note_label">Note 25.</span>
+<div class="note" id='magicparlabel-360'><div class="note_item"><span class="note_label">Note 25.</span>
 The definition of the covariogram function requires the random field to be weakly stationary.</div>
 </div>
 
-<div class="standard" id='magicparlabel-363'><br />
+<div class="standard" id='magicparlabel-361'><br />
 
 </div>
 
-<div class="definition" id='magicparlabel-364'><div class="definition_item"><span class="definition_label">Definition 26.</span>
+<div class="definition" id='magicparlabel-362'><div class="definition_item"><span class="definition_label">Definition 26.</span>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo>=</mo>
@@ -3516,11 +3512,11 @@ Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-373'><br />
+<div class="standard" id='magicparlabel-371'><br />
 
 </div>
 
-<div class="example" id='magicparlabel-374'><div class="example_item"><span class="example_label">Example 27.</span>
+<div class="example" id='magicparlabel-372'><div class="example_item"><span class="example_label">Example 27.</span>
 <a id="exa_For_the_Gaussian" />
 For the Gaussian c.f. <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -3609,11 +3605,11 @@ For the Gaussian c.f. <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math>in the c.f. </div>
 </div>
 
-<div class="standard" id='magicparlabel-375'><br />
+<div class="standard" id='magicparlabel-373'><br />
 
 </div>
 
-<div class="proposition" id='magicparlabel-376'><div class="proposition_item"><span class="proposition_label">Proposition 28.</span>
+<div class="proposition" id='magicparlabel-374'><div class="proposition_item"><span class="proposition_label">Proposition 28.</span>
 If <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>c</mi><mo>:</mo>
@@ -3659,7 +3655,7 @@ If <math xmlns="http://www.w3.org/1998/Math/MathML">
   </mrow>
  </mrow></math> then:</div>
 
-<ol class="enumerate" id='magicparlabel-377'><li class="enumerate_item"><i><math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-375'><li class="enumerate_item"><i><math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mn>0</mn>
@@ -3836,19 +3832,19 @@ If <math xmlns="http://www.w3.org/1998/Math/MathML">
 </ol>
 </div>
 
+<div class="standard" id='magicparlabel-379'><br />
+
+</div>
+
+<div class="note" id='magicparlabel-380'><div class="note_item"><span class="note_label">Note 29.</span>
+The following helps in the specification of cavariograms by considering properties of characteristic functions.</div>
+</div>
+
 <div class="standard" id='magicparlabel-381'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-382'><div class="note_item"><span class="note_label">Note 29.</span>
-The following helps in the specification of cavariograms by considering properties of characteristic functions.</div>
-</div>
-
-<div class="standard" id='magicparlabel-383'><br />
-
-</div>
-
-<div class="theorem" id='magicparlabel-384'><div class="theorem_item"><span class="theorem_label">Theorem 30.</span>
+<div class="theorem" id='magicparlabel-382'><div class="theorem_item"><span class="theorem_label">Theorem 30.</span>
 <a id="thm_Let__be" />
 A continuous even real-valued function <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -3922,7 +3918,7 @@ A continuous even real-valued function <math xmlns="http://www.w3.org/1998/Math/
   </msup>
  </mrow></math>.</i></div>
 
-<ul class="itemize" id='magicparlabel-433'><li class="itemize_item"><i>Here, we will focus on cases of the form <math xmlns="http://www.w3.org/1998/Math/MathML">
+<ul class="itemize" id='magicparlabel-431'><li class="itemize_item"><i>Here, we will focus on cases of the form <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <mstyle mathvariant='normal'><mi>d</mi>
@@ -4006,11 +4002,11 @@ A continuous even real-valued function <math xmlns="http://www.w3.org/1998/Math/
 </ul>
 </div>
 
-<div class="standard" id='magicparlabel-434'><br />
+<div class="standard" id='magicparlabel-432'><br />
 
 </div>
 
-<div class="theorem" id='magicparlabel-435'><div class="theorem_item"><span class="theorem_label">Theorem 31.</span>
+<div class="theorem" id='magicparlabel-433'><div class="theorem_item"><span class="theorem_label">Theorem 31.</span>
 If <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -4106,7 +4102,7 @@ If <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math></div>
 </div>
 
-<div class="example" id='magicparlabel-436'><div class="example_item"><span class="example_label">Example 32.</span>
+<div class="example" id='magicparlabel-434'><div class="example_item"><span class="example_label">Example 32.</span>
 Consider the Gaussian c.f. <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -4461,12 +4457,12 @@ Consider the Gaussian c.f. <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mtable></math> i.e. of a Gaussian form.</div>
 </div>
 
-<div class="standard" id='magicparlabel-437'><br />
+<div class="standard" id='magicparlabel-435'><br />
 
 </div>
-<h2 class="section" id='magicparlabel-438'><span class="section_label">7</span> Intrinsic stationarity </h2>
+<h2 class="section" id='magicparlabel-436'><span class="section_label">7</span> Intrinsic stationarity </h2>
 
-<div class="note" id='magicparlabel-439'><div class="note_item"><span class="note_label">Note 33.</span>
+<div class="note" id='magicparlabel-437'><div class="note_item"><span class="note_label">Note 33.</span>
 Getting greedier, we can further weaken the weak stationarity by considering lag dependent variance in the increments with purpose to be able to use more inclusive models; Def <a href="#def_A_random_field_1">23</a> implies that <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -4554,11 +4550,11 @@ Getting greedier, we can further weaken the weak stationarity by considering lag
  </mrow></math>.</div>
 </div>
 
-<div class="standard" id='magicparlabel-440'><br />
+<div class="standard" id='magicparlabel-438'><br />
 
 </div>
 
-<div class="definition" id='magicparlabel-441'><div class="definition_item"><span class="definition_label">Definition 34.</span>
+<div class="definition" id='magicparlabel-439'><div class="definition_item"><span class="definition_label">Definition 34.</span>
 A random field <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo>=</mo>
@@ -4639,7 +4635,7 @@ A random field <math xmlns="http://www.w3.org/1998/Math/MathML">
   </msub>
  </mrow></math> is weakly stationary; i.e.</div>
 
-<ol class="enumerate" id='magicparlabel-442'><li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-440'><li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <mstyle mathvariant='normal'><mi>E</mi>
@@ -4745,19 +4741,19 @@ A random field <math xmlns="http://www.w3.org/1998/Math/MathML">
 </ol>
 </div>
 
+<div class="standard" id='magicparlabel-443'><br />
+
+</div>
+
+<div class="definition" id='magicparlabel-444'><div class="definition_item"><span class="definition_label">Definition 35.</span>
+Intrinsically stationary covariance function is called the c.f. of an intrinsically stationary stochastic process.</div>
+</div>
+
 <div class="standard" id='magicparlabel-445'><br />
 
 </div>
 
-<div class="definition" id='magicparlabel-446'><div class="definition_item"><span class="definition_label">Definition 35.</span>
-Intrinsically stationary covariance function is called the c.f. of an intrinsically stationary stochastic process.</div>
-</div>
-
-<div class="standard" id='magicparlabel-447'><br />
-
-</div>
-
-<div class="example" id='magicparlabel-448'><div class="example_item"><span class="example_label">Example 36.</span>
+<div class="example" id='magicparlabel-446'><div class="example_item"><span class="example_label">Example 36.</span>
 The following covariance function is not weakly but intrinsically stationary<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -4997,7 +4993,7 @@ The following covariance function is not weakly but intrinsically stationary<mat
 
 
 
-<div class="standard" id='magicparlabel-600'><br />
+<div class="standard" id='magicparlabel-598'><br />
 
 </div>
 </body>
