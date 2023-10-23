@@ -49,16 +49,24 @@ Topic 0: Types of spatial data
 
 + Handout 1: [01.Types_of_spatial_data.xhtml](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/01.Types_of_spatial_data_xhtml/01.Types_of_spatial_data.xhtml) 
 
++ R code: [01.Types_of_spatial_data.R](https://raw.githubusercontent.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/main/Lecture_handouts/R_scripts/01.Types_of_spatial_data.R)  
+
 Topic 1: Computations with INLA       
 
 + Handout 2: [02.Introduction_to_INLA.pdf](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/02.Introduction_to_INLA.pdf)  
 
 + Handout 2: [02.Introduction_to_INLA.xhtml](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/02.Introduction_to_INLA_xhtml/02.Introduction_to_INLA.xhtml)
 
++ R code: [00.How_to_install_R-INLA.R](https://raw.githubusercontent.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/main/Lecture_handouts/R_scripts/00.How_to_install_R-INLA.R)  
+
++ R code: [02.Introduction_to_INLA.R](https://raw.githubusercontent.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/main/Lecture_handouts/R_scripts/02.Introduction_to_INLA.R)  
+
 Topic 3: Geostatistical data modeling       
 
 + Handout 3: [03.Geostatistical_data.pdf](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/03.Geostatistical_data.pdf)   
 
 + Handout 3: [03.Geostatistical_data.xhtml](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/03.Geostatistical_data_xhtml/03.Geostatistical_data.xhtml) 
+
++ R code: [03.Geostatistical_data.R](https://raw.githubusercontent.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/main/Lecture_handouts/R_scripts/03.Geostatistical_data.R)  
 
 
