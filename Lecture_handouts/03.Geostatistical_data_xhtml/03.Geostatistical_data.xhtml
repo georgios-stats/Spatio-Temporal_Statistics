@@ -6262,18 +6262,11 @@ Nugget effect is often mathematically described by considering a decomposition ;
     <mrow><mn>2</mn>
     </mrow>
    </msubsup>
-   <msub>
-    <mrow>
-     <mstyle mathvariant='normal'><mn>1</mn>
-     </mstyle>
-    </mrow>
-    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
-<mn>0</mn>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
+   <mstyle mathvariant='normal'><mn>1</mn>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-    </mrow>
-   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>h</mi>
+   <mrow><mi>h</mi><mo> &ne; </mo><mn>0</mn>
+   </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
@@ -6396,14 +6389,17 @@ Partial sill is <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math> which takes into account the nugget. </div>
 </div>
 <h5 class="paragraph_" id='magicparlabel-561'>Range</h5>
-<div class="standard" id='magicparlabel-562'>Range is the distance at which the semivariogram reaches the Sill; it can be infinite.</div>
+
+<div class="definition" id='magicparlabel-562'><div class="definition_item"><span class="definition_label">Definition 53.</span>
+Range is the distance at which the semivariogram reaches the Sill; it can be infinite.</div>
+</div>
 <h5 class="paragraph_" id='magicparlabel-563'>Other</h5>
 
 <div class="standard" id='magicparlabel-564'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-565'><div class="note_item"><span class="note_label">Note 53.</span>
+<div class="note" id='magicparlabel-565'><div class="note_item"><span class="note_label">Note 54.</span>
 An abrupt change in slope indicates the passage to a different structuration of the values in space. This is often modeled via decompoditions of processes with different semivariograms as in <a href="#eq__5">(8.2)</a>.</div>
 </div>
 
@@ -6412,7 +6408,7 @@ An abrupt change in slope indicates the passage to a different structuration of 
 </div>
 <h2 class="section" id='magicparlabel-567'><span class="section_label">9</span> Isotropy </h2>
 
-<div class="note" id='magicparlabel-568'><div class="note_item"><span class="note_label">Note 54.</span>
+<div class="note" id='magicparlabel-568'><div class="note_item"><span class="note_label">Note 55.</span>
 Isotropy as a notion imposes the assumption of &ldquo;rotation invariance&rdquo; in the stochastic process. </div>
 </div>
 
@@ -6420,7 +6416,7 @@ Isotropy as a notion imposes the assumption of &ldquo;rotation invariance&rdquo;
 
 </div>
 
-<div class="definition" id='magicparlabel-570'><div class="definition_item"><span class="definition_label">Definition 55.</span>
+<div class="definition" id='magicparlabel-570'><div class="definition_item"><span class="definition_label">Definition 56.</span>
 An intrinsic stochastic process <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <msub>
@@ -6517,7 +6513,7 @@ An intrinsic stochastic process <math xmlns="http://www.w3.org/1998/Math/MathML"
 
 </div>
 
-<div class="definition" id='magicparlabel-572'><div class="definition_item"><span class="definition_label">Definition 56.</span>
+<div class="definition" id='magicparlabel-572'><div class="definition_item"><span class="definition_label">Definition 57.</span>
 Isotropic semi-variogram <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi> &gamma; </mi><mo>:</mo>
@@ -6592,7 +6588,7 @@ Isotropic semi-variogram <math xmlns="http://www.w3.org/1998/Math/MathML">
 
 </div>
 
-<div class="definition" id='magicparlabel-589'><div class="definition_item"><span class="definition_label">Definition 57.</span>
+<div class="definition" id='magicparlabel-589'><div class="definition_item"><span class="definition_label">Definition 58.</span>
 Isotropic covariance function <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>C</mi><mo>:</mo>
@@ -6610,7 +6606,7 @@ Isotropic covariance function <math xmlns="http://www.w3.org/1998/Math/MathML">
 
 </div>
 
-<div class="definition" id='magicparlabel-591'><div class="definition_item"><span class="definition_label">Definition 58.</span>
+<div class="definition" id='magicparlabel-591'><div class="definition_item"><span class="definition_label">Definition 59.</span>
 Isotropic covariogram <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>c</mi><mo>:</mo>
@@ -6653,7 +6649,7 @@ Isotropic covariogram <math xmlns="http://www.w3.org/1998/Math/MathML">
 </div>
 <h3 class="subsection" id='magicparlabel-597'><span class="subsection_label">9.1</span> Parametric forms of frequently used isotropic covariance functions</h3>
 
-<div class="note" id='magicparlabel-598'><div class="note_item"><span class="note_label">Note 59.</span>
+<div class="note" id='magicparlabel-598'><div class="note_item"><span class="note_label">Note 60.</span>
 Semi-variogrames are recovered from <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -7049,7 +7045,7 @@ Semi-variogrames are recovered from <math xmlns="http://www.w3.org/1998/Math/Mat
 <h2 class="section" id='magicparlabel-662'><span class="section_label">11</span> Estimating the semi-variogram (and covariogram) </h2>
 <h3 class="subsection" id='magicparlabel-663'><span class="subsection_label">11.1</span> Non-parametric estimation</h3>
 
-<div class="note" id='magicparlabel-664'><div class="note_item"><span class="note_label">Note 60.</span>
+<div class="note" id='magicparlabel-664'><div class="note_item"><span class="note_label">Note 61.</span>
 Smoothed Matheron estimator <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -7237,7 +7233,7 @@ Smoothed Matheron estimator <math xmlns="http://www.w3.org/1998/Math/MathML">
 
 </div>
 
-<div class="note" id='magicparlabel-666'><div class="note_item"><span class="note_label">Note 61.</span>
+<div class="note" id='magicparlabel-666'><div class="note_item"><span class="note_label">Note 62.</span>
 The choice of <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi> &epsi; </mi>
  </mrow></math> is an art, and a trade-off between variance and bias, similar to the bin length in histograms. </div>
@@ -7248,7 +7244,7 @@ The choice of <math xmlns="http://www.w3.org/1998/Math/MathML">
 </div>
 <h3 class="subsection" id='magicparlabel-668'><span class="subsection_label">11.2</span> Parametric estimation</h3>
 
-<div class="note" id='magicparlabel-669'><div class="note_item"><span class="note_label">Note 62.</span>
+<div class="note" id='magicparlabel-669'><div class="note_item"><span class="note_label">Note 63.</span>
 Smoothed Matheron estimator <a href="#eq__6">(11.1)</a> does not necessarily satisfies semivariogram properties, such as negative definiteness. To address this we use a parametric family of appropriate semi-variogram functions and tune them against data. </div>
 </div>
 
@@ -7256,7 +7252,7 @@ Smoothed Matheron estimator <a href="#eq__6">(11.1)</a> does not necessarily sat
 
 </div>
 
-<div class="note" id='magicparlabel-671'><div class="note_item"><span class="note_label">Note 63.</span>
+<div class="note" id='magicparlabel-671'><div class="note_item"><span class="note_label">Note 64.</span>
 A parametric family of semivariograms is the Matern semivariogram model<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -7370,7 +7366,7 @@ A parametric family of semivariograms is the Matern semivariogram model<math dis
 
 </div>
 
-<div class="proposition" id='magicparlabel-673'><div class="proposition_item"><span class="proposition_label">Proposition 64.</span>
+<div class="proposition" id='magicparlabel-673'><div class="proposition_item"><span class="proposition_label">Proposition 65.</span>
 (Checking variogram's validity) A continuous function <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mn>2</mn><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -7428,7 +7424,7 @@ A parametric family of semivariograms is the Matern semivariogram model<math dis
 
 </div>
 
-<div class="proposition" id='magicparlabel-676'><div class="proposition_item"><span class="proposition_label">Proposition 65.</span>
+<div class="proposition" id='magicparlabel-676'><div class="proposition_item"><span class="proposition_label">Proposition 66.</span>
 (Checking variogram's validity) A continuous function <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mn>2</mn><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -7466,7 +7462,7 @@ A parametric family of semivariograms is the Matern semivariogram model<math dis
 
 </div>
 
-<div class="example" id='magicparlabel-678'><div class="example_item"><span class="example_label">Example 66.</span>
+<div class="example" id='magicparlabel-678'><div class="example_item"><span class="example_label">Example 67.</span>
 Checking the Gaussian semi-variogram in Ex <a href="#exa_For_the_Gaussian_1">41</a>, it is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -7644,7 +7640,7 @@ Checking the Gaussian semi-variogram in Ex <a href="#exa_For_the_Gaussian_1">41<
 
 </div>
 
-<div class="note" id='magicparlabel-680'><div class="note_item"><span class="note_label">Note 67.</span>
+<div class="note" id='magicparlabel-680'><div class="note_item"><span class="note_label">Note 68.</span>
 Given a non-parametric estimator <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
