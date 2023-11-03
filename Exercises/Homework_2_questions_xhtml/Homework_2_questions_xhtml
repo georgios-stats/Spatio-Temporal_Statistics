@@ -107,29 +107,29 @@ div.foot:hover div.foot_inner {
 
 </div>
 
-<div class="plain_layout" id='magicparlabel-11'>As formative assessment 1, submit the solutions to all the Exercises</div>
+
 </div></div>
 
-<div class="standard" id='magicparlabel-12'>&nbsp;<div style='height:1ex'></div><div style='height:1ex'></div></div>
+<div class="standard" id='magicparlabel-16'>&nbsp;<div style='height:1ex'></div><div style='height:1ex'></div></div>
 
 
-<div class="standard" id='magicparlabel-13'><br />
-
-</div>
-
-
-<div class="standard" id='magicparlabel-14'><br />
+<div class="standard" id='magicparlabel-17'><br />
 
 </div>
 
-<div class="standard" id='magicparlabel-15'><hr />
+
+<div class="standard" id='magicparlabel-18'><br />
 
 </div>
 
-<div class="exercise" id='magicparlabel-16'><div class="exercise_item"><span class="exercise_label">Exercise 1.</span>
+<div class="standard" id='magicparlabel-19'><hr />
+
+</div>
+
+<div class="exercise" id='magicparlabel-20'><div class="exercise_item"><span class="exercise_label">Exercise 1.</span>
 (<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &starf; </mo>
- </mrow></math>) <div class="standard" id='magicparlabel-18'>Consider we the geostatistical model <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>) <div class="standard" id='magicparlabel-22'>Consider we the geostatistical model <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <msub>
    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -373,7 +373,7 @@ div.foot:hover div.foot_inner {
   </mrow>
  </mrow></math> are independent. </div>
 
-<ol class="enumerate" id='magicparlabel-23'><li class="enumerate_item">Write down the covariogram <math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-27'><li class="enumerate_item">Write down the formula of the covariogram <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -530,7 +530,7 @@ div.foot:hover div.foot_inner {
   </msub>
  </mrow></math>. 
 
-<ol class="enumerate" id='magicparlabel-25'><li class="enumerate_item">Let <math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-29'><li class="enumerate_item">Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &Psi; </mo>
  </mrow></math> be a matrix with <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -636,7 +636,7 @@ div.foot:hover div.foot_inner {
  <mrow><mi> &theta; </mi>
  </mrow></math>. 
 
-<dl class='description' id='magicparlabel-26'><dt class="description_label">Hint:</dt>
+<dl class='description' id='magicparlabel-30'><dt class="description_label">Hint:</dt>
 <dd class="description_item"> You can use convenient notation such as <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -767,7 +767,7 @@ div.foot:hover div.foot_inner {
 
  </mrow></math> as known constants. 
 
-<ol class="enumerate" id='magicparlabel-33'><li class="enumerate_item">Compute the likelihood equations<div class="foot"><span class="foot_label">1</span><div class="foot_inner"><div class="plain_layout" id='magicparlabel-37'>that is, the gradient of the log-likelihood</div>
+<ol class="enumerate" id='magicparlabel-37'><li class="enumerate_item">Compute the likelihood equations<div class="foot"><span class="foot_label">1</span><div class="foot_inner"><div class="plain_layout" id='magicparlabel-41'>that is, the gradient of the log-likelihood</div>
 </div></div> w.r.t. <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -873,7 +873,7 @@ div.foot:hover div.foot_inner {
   </msup>
  </mrow></math>. 
 
-<dl class='description' id='magicparlabel-41'><dt class="description_label">Hint</dt>
+<dl class='description' id='magicparlabel-45'><dt class="description_label">Hint</dt>
 <dd class="description_item"> Consider the fitted values <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>e</mi><mo>=</mo>
@@ -1250,20 +1250,20 @@ div.foot:hover div.foot_inner {
 </ol>
 
 
-<div class="solution_" id='magicparlabel-62'><div class="solution__item"><span class="solution__label">Solution.</span>
+<div class="solution_" id='magicparlabel-66'><div class="solution__item"><span class="solution__label">Solution.</span>
 &nbsp;&nbsp;</div>
 </div>
 
 </div>
 </div>
-<div class="standard" id='magicparlabel-92'><hr />
+<div class="standard" id='magicparlabel-96'><hr />
 
 </div>
 
-<div class="exercise" id='magicparlabel-93'><div class="exercise_item"><span class="exercise_label">Exercise 2.</span>
+<div class="exercise" id='magicparlabel-97'><div class="exercise_item"><span class="exercise_label">Exercise 2.</span>
 (<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &starf; </mo>
- </mrow></math>) <div class="standard" id='magicparlabel-95'>Let <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>) <div class="standard" id='magicparlabel-99'>Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <msub>
    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -1599,7 +1599,7 @@ div.foot:hover div.foot_inner {
   </mrow>
  </mrow></math>.</div>
 
-<ol class="enumerate" id='magicparlabel-96'><li class="enumerate_item">Find sufficient conditions on <math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-100'><li class="enumerate_item">Find sufficient conditions on <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>w</mi><mo>=</mo>
    <msup>
@@ -1989,14 +1989,14 @@ div.foot:hover div.foot_inner {
 </ol>
 
 
-<div class="solution_" id='magicparlabel-105'><div class="solution__item"><span class="solution__label">Solution.</span>
+<div class="solution_" id='magicparlabel-109'><div class="solution__item"><span class="solution__label">Solution.</span>
 &nbsp;&nbsp;</div>
 </div>
 
 </div>
 </div>
 
-<div class="standard" id='magicparlabel-120'><br />
+<div class="standard" id='magicparlabel-124'><br />
 
 </div>
 
