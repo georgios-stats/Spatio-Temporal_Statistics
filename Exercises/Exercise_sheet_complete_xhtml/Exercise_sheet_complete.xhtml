@@ -4835,7 +4835,7 @@ Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
   </mrow>
  </mrow></math> where <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
-  <mrow><mi> &delta; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -4846,7 +4846,7 @@ Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
    <msub>
     <mrow><mi>c</mi>
     </mrow>
-    <mrow><mi> &delta; </mi>
+    <mrow>
     </mrow>
    </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -5263,6 +5263,44 @@ Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>&par;</mo>
 
   </mrow>
+ </mrow></math>. Consider that you can use convenient notation such as <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>D</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> meaning <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+     <mrow><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>D</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+    </mrow>
+    <mrow>
+     <mrow><mi>i</mi><mo>,</mo><mi>j</mi>
+     </mrow>
+    </mrow>
+   </msub><mo>=</mo><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi>D</mi>
+    </mrow>
+    <mrow>
+     <mrow><mi>i</mi><mo>,</mo><mi>j</mi>
+     </mrow>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
  </mrow></math>. Write down the covariance matrix <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -5301,50 +5339,8 @@ Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>D</mi>
  </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi> &theta; </mi>
- </mrow></math>. 
-
-<dl class='description' id='magicparlabel-434'><dt class="description_label">Hint:</dt>
-<dd class="description_item"> You can use convenient notation such as <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>D</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-  </mrow>
- </mrow></math> meaning <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <msub>
-    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
-
-     <mrow><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>D</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-     </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
-
-    </mrow>
-    <mrow>
-     <mrow><mi>i</mi><mo>,</mo><mi>j</mi>
-     </mrow>
-    </mrow>
-   </msub><mo>=</mo><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <msub>
-    <mrow><mi>D</mi>
-    </mrow>
-    <mrow>
-     <mrow><mi>i</mi><mo>,</mo><mi>j</mi>
-     </mrow>
-    </mrow>
-   </msub>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-  </mrow>
- </mrow></math>.</dd>
-</dl>
-</li><li class="enumerate_item">Write down the log likelihood function <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>. </li>
+<li class="enumerate_item">Write down the log likelihood function <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo> log </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -5425,7 +5421,7 @@ Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
- </mrow></math>. For the following, assume that <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>. Assume that <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
   <mrow><mi> &phi; </mi><mo>,</mo><mi> &xi; </mi>
@@ -5434,7 +5430,7 @@ Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
 
  </mrow></math> as known constants. 
 
-<ol class="enumerate" id='magicparlabel-441'><li class="enumerate_item">Compute the likelihood equations<div class="foot"><span class="foot_label">1</span><div class="foot_inner"><div class="plain_layout" id='magicparlabel-445'>that is, the gradient of the log-likelihood</div>
+<ol class="enumerate" id='magicparlabel-440'><li class="enumerate_item">Compute the likelihood equations<div class="foot"><span class="foot_label">1</span><div class="foot_inner"><div class="plain_layout" id='magicparlabel-444'>that is, the gradient of the log-likelihood</div>
 </div></div> w.r.t. <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -5540,7 +5536,7 @@ Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
   </msup>
  </mrow></math>. 
 
-<dl class='description' id='magicparlabel-449'><dt class="description_label">Hint</dt>
+<dl class='description' id='magicparlabel-448'><dt class="description_label">Hint</dt>
 <dd class="description_item"> Consider the fitted values <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>e</mi><mo>=</mo>
@@ -5891,7 +5887,7 @@ Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
- </mrow></math>. Describe how you would compute suitable values for the MLE <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>. Describe how you would compute suitable values <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
   <mrow>
@@ -5906,7 +5902,7 @@ Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
   </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
- </mrow></math> of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math> for the MLE of <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
   <mrow><mi> &phi; </mi><mo>,</mo><mi> &xi; </mi>
@@ -5917,21 +5913,21 @@ Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
 </ol>
 
 
-<div class="solution_" id='magicparlabel-470'><div class="solution__item"><span class="solution__label">Solution.</span>
-&nbsp;&nbsp;</div>
+<div class="solution_" id='magicparlabel-469'><div class="solution__item"><span class="solution__label">Solution.</span>
+&nbsp;&nbsp; </div>
 </div>
 
 </div>
 </div>
-<div class="standard" id='magicparlabel-500'><hr />
+<div class="standard" id='magicparlabel-499'><hr />
 
 </div>
 
-<div class="exercise" id='magicparlabel-505'><div class="exercise_item"><span class="exercise_label">Exercise 15.</span>
+<div class="exercise" id='magicparlabel-504'><div class="exercise_item"><span class="exercise_label">Exercise 15.</span>
 <a id="exer____4_1_1_4_1_1_1_1" />
 (<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &starf; </mo>
- </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-507'>&nbsp;Let <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-506'>&nbsp;Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <msub>
    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -6165,7 +6161,7 @@ Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
 
  </mrow></math> that we need to learn.</div>
 
-<ol class="enumerate" id='magicparlabel-508'><li class="enumerate_item">Find sufficient conditions on <math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-507'><li class="enumerate_item">Find sufficient conditions on <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>w</mi><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -6301,10 +6297,10 @@ Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
 </ol>
 
 
-<div class="solution" id='magicparlabel-517'><div class="solution_item"><span class="solution_label">Solution 16.</span>
+<div class="solution" id='magicparlabel-516'><div class="solution_item"><span class="solution_label">Solution 16.</span>
 The method is called Kriging the Mean, and hence we denote it as KM. </div>
 
-<ol class="enumerate" id='magicparlabel-518'><li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-517'><li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <msub>
@@ -6361,7 +6357,7 @@ The method is called Kriging the Mean, and hence we denote it as KM. </div>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
 
  </mrow></math> is a set of unknown weights to be learned. 
-<div class="standard" id='magicparlabel-519'>We assume that assume zero systematic error (unbiasness), hence <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-518'>We assume that assume zero systematic error (unbiasness), hence <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <mstyle mathvariant='normal'><mi>E</mi>
@@ -6449,7 +6445,7 @@ The method is called Kriging the Mean, and hence we denote it as KM. </div>
   </mrow>
  </mrow></math></div>
 </li><li class="enumerate_item">It is 
-<div class="standard" id='magicparlabel-521'><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-520'><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
    <mtd>
@@ -7364,17 +7360,17 @@ The method is called Kriging the Mean, and hence we denote it as KM. </div>
 
 </div>
 </div>
-<div class="standard" id='magicparlabel-533'><hr />
+<div class="standard" id='magicparlabel-532'><hr />
 
 </div>
 
 
 
-<div class="exercise" id='magicparlabel-543'><div class="exercise_item"><span class="exercise_label">Exercise 17.</span>
+<div class="exercise" id='magicparlabel-542'><div class="exercise_item"><span class="exercise_label">Exercise 17.</span>
 <a id="exer____4_1_1_4_1_1_1_1_1" />
 (<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &starf; </mo>
- </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-545'>Let <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-544'>Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <msub>
    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -7710,7 +7706,7 @@ The method is called Kriging the Mean, and hence we denote it as KM. </div>
   </mrow>
  </mrow></math>.</div>
 
-<ol class="enumerate" id='magicparlabel-546'><li class="enumerate_item">Find sufficient conditions on <math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-545'><li class="enumerate_item">Find sufficient conditions on <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>w</mi><mo>=</mo>
    <msup>
@@ -7845,7 +7841,7 @@ The method is called Kriging the Mean, and hence we denote it as KM. </div>
     <msub>
      <mrow><mi>s</mi>
      </mrow>
-     <mrow><mi>i</mi>
+     <mrow>
      </mrow>
     </msub>
    </mrow>
@@ -8100,21 +8096,21 @@ The method is called Kriging the Mean, and hence we denote it as KM. </div>
 </ol>
 
 
-<div class="solution_" id='magicparlabel-555'><div class="solution__item"><span class="solution__label">Solution.</span>
-&nbsp;&nbsp;</div>
+<div class="solution_" id='magicparlabel-554'><div class="solution__item"><span class="solution__label">Solution.</span>
+&nbsp;&nbsp;&nbsp; </div>
 </div>
 
 </div>
 </div>
-<div class="standard" id='magicparlabel-570'><hr />
+<div class="standard" id='magicparlabel-569'><hr />
 
 </div>
 
-<div class="exercise" id='magicparlabel-575'><div class="exercise_item"><span class="exercise_label">Exercise 18.</span>
+<div class="exercise" id='magicparlabel-574'><div class="exercise_item"><span class="exercise_label">Exercise 18.</span>
 <a id="exer____4_1_1_4_1_1_1_2" />
 (<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &starf; </mo>
- </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-577'>Assume a spatial model <a id="eq__15" />
+ </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-576'>Assume a spatial model <a id="eq__15" />
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
@@ -8233,15 +8229,15 @@ The method is called Kriging the Mean, and hence we denote it as KM. </div>
 
 </div>
 </div>
-<div class="standard" id='magicparlabel-600'><hr />
+<div class="standard" id='magicparlabel-599'><hr />
 
 </div>
 
-<div class="exercise" id='magicparlabel-605'><div class="exercise_item"><span class="exercise_label">Exercise 19.</span>
+<div class="exercise" id='magicparlabel-604'><div class="exercise_item"><span class="exercise_label">Exercise 19.</span>
 <a id="exer____4_1_1_4_1_1_1_2_1" />
 (<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &starf; </mo>
- </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-607'>Let <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-606'>Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <msub>
    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -8529,7 +8525,7 @@ The method is called Kriging the Mean, and hence we denote it as KM. </div>
   </mrow>
  </mrow></math>.</div>
 
-<ol class="enumerate" id='magicparlabel-615'><li class="enumerate_item">Find sufficient conditions on <math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-614'><li class="enumerate_item">Find sufficient conditions on <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>w</mi><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -8984,10 +8980,10 @@ The method is called Kriging the Mean, and hence we denote it as KM. </div>
 </ol>
 
 
-<div class="solution_" id='magicparlabel-624'><div class="solution__item"><span class="solution__label">Solution.</span>
+<div class="solution_" id='magicparlabel-623'><div class="solution__item"><span class="solution__label">Solution.</span>
 The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 
-<ol class="enumerate" id='magicparlabel-625'><li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-624'><li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <msub>
@@ -9069,7 +9065,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
 
  </mrow></math> is a set of unknown weights to be learned. 
-<div class="standard" id='magicparlabel-626'><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-625'><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <mstyle mathvariant='normal'><mi>E</mi>
@@ -10856,7 +10852,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 
 </div>
 </div>
-<div class="standard" id='magicparlabel-639'><hr />
+<div class="standard" id='magicparlabel-638'><hr />
 
 </div>
 </body>
