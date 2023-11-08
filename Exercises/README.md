@@ -58,3 +58,11 @@ Homework 1
 
 ------------------------------------------------------------------------
 
+Homework 2  
+
++ Questions [PDF](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Exercises/Homework_2_questions.pdf) & [HTML](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Exercises/Homework_2_questions_xhtml/Homework_2_questions_xhtml)  
+
++ Complete [PDF](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Exercises/Homework_2_complete.pdf) & [HTML](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Exercises/Homework_2_complete_xhtml/Homework_2_complete.xhtml)   
+
+------------------------------------------------------------------------
+
