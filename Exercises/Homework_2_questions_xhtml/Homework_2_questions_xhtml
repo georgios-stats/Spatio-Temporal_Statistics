@@ -371,7 +371,7 @@ div.foot:hover div.foot_inner {
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
- </mrow></math> are independent. </div>
+ </mrow></math> are independent Gaussian Processes. </div>
 
 <ol class="enumerate" id='magicparlabel-27'><li class="enumerate_item">Write down the formula of the covariogram <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
