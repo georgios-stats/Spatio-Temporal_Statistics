@@ -16172,7 +16172,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
     </mrow>
    </msup>
   </mrow>
- </mrow></math> .</li>
+ </mrow></math>.</li>
 <li class="enumerate_item">Write the marginal process <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -16532,9 +16532,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
     </mrow>
    </msup><mi> &beta; </mi>
   </mrow>
- </mrow></math>. Consider a conjugate prior on <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mi> &beta; </mi>
- </mrow></math> as <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>. Consider a conjugate prior <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi> &beta; </mi><mo> &sim; </mo>
    <mstyle mathvariant='normal'><mi>N</mi>
@@ -16545,13 +16543,15 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
+ </mrow></math> on <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &beta; </mi>
  </mrow></math> where <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>B</mi><mo>&gt;</mo><mn>0</mn>
   </mrow>
  </mrow></math>. 
 
-<ol class="enumerate" id='magicparlabel-710'><li class="enumerate_item">Write down the Bayesian statistical model involving <math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-710'><li class="enumerate_item">Write down the Bayesian statistical model involving layers <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
 
   <mrow><mi>Z</mi><mo>|</mo><mi> &beta; </mi><mo>,</mo><mi> &phiv; </mi>
@@ -16605,7 +16605,10 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
       </mrow>
       <mrow><mi>n</mi>
       </mrow>
-     </msub><mo>=</mo>
+     </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi> &phiv; </mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
     </mrow>
    </mtd>
    <mtd>
@@ -16664,7 +16667,10 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
       </mrow>
       <mrow><mi>n</mi>
       </mrow>
-     </msub><mo>=</mo>
+     </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi> &phiv; </mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
     </mrow>
    </mtd>
    <mtd>
@@ -16675,6 +16681,9 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
       <mrow><mi>n</mi>
       </mrow>
      </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi> &phiv; </mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mspace width="6px" /><mspace width="6px" /><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
      <mrow>
       <msup>
@@ -16717,7 +16726,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
   </mtr>
  </mtable></math> where <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
-  <mrow><mi>R</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
    <mrow><mi>S</mi><mo>,</mo><mi>S</mi><mo>|</mo><mi> &phiv; </mi>
    </mrow>
@@ -16730,7 +16739,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
    <msub>
     <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
 
-     <mrow><mi>R</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+     <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
       <mrow><mi>S</mi><mo>,</mo><mi>S</mi><mo>|</mo><mi> &phiv; </mi>
       </mrow>
@@ -16744,7 +16753,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
      <mrow><mi>i</mi><mo>,</mo><mi>j</mi>
      </mrow>
     </mrow>
-   </msub><mo>=</mo><mi>r</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+   </msub><mo>=</mo><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
    <mrow>
     <msub>
@@ -17096,7 +17105,16 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
      <msup>
       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-       <mrow><mo> &Psi; </mo>
+       <mrow><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>s</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+        <msup>
+         <mrow><mo> &Psi; </mo>
+         </mrow>
+         <mrow><mi> &top; </mi>
+         </mrow>
+        </msup>
         <msup>
          <mrow><mi>C</mi>
          </mrow>
@@ -17104,21 +17122,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
           <mrow><mo>-</mo><mn>1</mn>
           </mrow>
          </mrow>
-        </msup>
-        <msup>
-         <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-          <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>s</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-          </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-         </mrow>
-         <mrow><mi> &top; </mi>
-         </mrow>
-        </msup><mo>-</mo><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+        </msup><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -17199,7 +17203,16 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
       <msup>
        <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-        <mrow><mo> &Psi; </mo>
+        <mrow><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>s</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+         <msup>
+          <mrow><mo> &Psi; </mo>
+          </mrow>
+          <mrow><mi> &top; </mi>
+          </mrow>
+         </msup>
          <msup>
           <mrow><mi>C</mi>
           </mrow>
@@ -17207,21 +17220,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
            <mrow><mo>-</mo><mn>1</mn>
            </mrow>
           </mrow>
-         </msup>
-         <msup>
-          <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-           <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>s</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-           </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-          </mrow>
-          <mrow><mi> &top; </mi>
-          </mrow>
-         </msup><mo>-</mo><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+         </msup><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -17342,7 +17341,16 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
      <msup>
       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-       <mrow><mo> &Psi; </mo>
+       <mrow><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>s</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+        <msup>
+         <mrow><mo> &Psi; </mo>
+         </mrow>
+         <mrow><mi> &top; </mi>
+         </mrow>
+        </msup>
         <msup>
          <mrow><mi>C</mi>
          </mrow>
@@ -17350,21 +17358,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
           <mrow><mo>-</mo><mn>1</mn>
           </mrow>
          </mrow>
-        </msup>
-        <msup>
-         <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-          <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>s</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-          </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-         </mrow>
-         <mrow><mi> &top; </mi>
-         </mrow>
-        </msup><mo>-</mo><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+        </msup><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -17411,7 +17405,18 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
       </mrow>
      </msup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-     <mrow><mo> &Psi; </mo>
+     <mrow><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow><mi>s</mi><mo>'</mo>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+      <msup>
+       <mrow><mo> &Psi; </mo>
+       </mrow>
+       <mrow><mi> &top; </mi>
+       </mrow>
+      </msup>
       <msup>
        <mrow><mi>C</mi>
        </mrow>
@@ -17419,23 +17424,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
         <mrow><mo>-</mo><mn>1</mn>
         </mrow>
        </mrow>
-      </msup>
-      <msup>
-       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-        <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-         <mrow><mi>s</mi><mo>'</mo>
-         </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-        </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-       </mrow>
-       <mrow><mi> &top; </mi>
-       </mrow>
-      </msup><mo>-</mo><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+      </msup><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
       <mrow><mi>s</mi><mo>'</mo>
       </mrow>
@@ -17835,17 +17824,17 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
   </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
 
- </mrow></math> under this new prior. </li>
+ </mrow></math> under this new prior in the limit. </li>
 </ol>
 <div class="standard" id='magicparlabel-730'> </div>
 
 
 
 <div class="solution_" id='magicparlabel-751'><div class="solution__item"><span class="solution__label">Solution.</span>
-&nbsp;&nbsp; </div>
+&nbsp;&nbsp; &nbsp;&nbsp;</div>
 </div>
 
-<ol class="enumerate" id='magicparlabel-752'><li class="enumerate_item">The hierarchical model was<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-752'><li class="enumerate_item">The hierarchical model is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
    <mtd>
@@ -17937,7 +17926,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
    </mtd>
   </mtr>
  </mtable></math></li>
-<li class="enumerate_item">We use the additive property of the Gaussian distribution (Hint-1) it is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<li class="enumerate_item">We use the additive property of the Gaussian distribution (in Hint) it is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mo> &sdot; </mo>
@@ -18334,8 +18323,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
- </mrow></math>. 
-<div class="standard" id='magicparlabel-759'>Using the Normal distribution conditioning, I get <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>. By conditioning the Normal distribution (see Hint), I get <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <msub>
@@ -18400,7 +18388,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
      <msub>
       <mrow><mi>C</mi>
       </mrow>
-      <mrow><mo>*</mo>
+      <mrow><mn>1</mn>
       </mrow>
      </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -18501,7 +18489,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
      <msub>
       <mrow><mi> &mu; </mi>
       </mrow>
-      <mrow><mo>*</mo>
+      <mrow><mn>1</mn>
       </mrow>
      </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -18650,7 +18638,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
    <mtd>
     <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-     <mrow><mi>s</mi><mo>,</mo><mi>s</mi><mo>|</mo><mi> &phiv; </mi>
+     <mrow><mi>s</mi><mo>,</mo><mi>s</mi><mo>'</mo><mo>|</mo><mi> &phiv; </mi>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 <mo>+</mo>
@@ -18766,10 +18754,10 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
     </mrow>
    </mtd>
   </mtr>
- </mtable></math></div>
-</li><li class="enumerate_item">&nbsp;
+ </mtable></math></li>
+<li class="enumerate_item">&nbsp; 
 
-<ol class="enumerate" id='magicparlabel-765'><li class="enumerate_item">the Bayesian model is <a id="eq__47" />
+<ol class="enumerate" id='magicparlabel-764'><li class="enumerate_item">The Bayesian model is <a id="eq__47" />
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
@@ -18797,7 +18785,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
      </mtr>
      <mtr>
       <mtd>
-       <mrow><mi> &beta; </mi><mo>|</mo><mi> &phiv; </mi><mo> &sim; </mo>
+       <mrow><mi> &beta; </mi><mo> &sim; </mo>
         <mstyle mathvariant='normal'><mi>N</mi>
         </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -19024,7 +19012,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
     </mrow>
    </mtd>
   </mtr>
- </mtable></math>By using the hint I have <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ </mtable></math>By using the Hint I have <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <msup>
@@ -19479,14 +19467,11 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
  </mrow></math> for any <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>q</mi><mo> &isin; </mo>
-   <msub>
-    <mrow>
-     <mstyle mathvariant='double-struck'><mi>N</mi>
-     </mstyle>
-    </mrow>
-    <mrow><mn>0</mn>
-    </mrow>
-   </msub>
+   <mstyle mathvariant='double-struck'><mi>N</mi>
+   </mstyle><mo>-</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
+<mn>0</mn>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
+
   </mrow>
  </mrow></math>. Let convenient notation <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -19514,7 +19499,75 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
- </mrow></math>. It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>. I have already computed <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo> Pr </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>Z</mi>
+     </mrow>
+     <mrow><mo>*</mo>
+     </mrow>
+    </msub><mo>|</mo><mi>Z</mi><mo>,</mo><mi> &beta; </mi><mo>,</mo><mi> &phiv; </mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <mstyle mathvariant='normal'><mi>N</mi>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>Z</mi>
+     </mrow>
+     <mrow><mo>*</mo>
+     </mrow>
+    </msub><mo>|</mo>
+    <msub>
+     <mrow><mi> &mu; </mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+    <mrow>
+     <msub>
+      <mrow><mi>S</mi>
+      </mrow>
+      <mrow><mo>*</mo>
+      </mrow>
+     </msub><mo>|</mo><mi> &beta; </mi><mo>,</mo><mi> &phiv; </mi>
+    </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>,</mo>
+    <msub>
+     <mrow><mi>C</mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+    <mrow>
+     <msub>
+      <mrow><mi>S</mi>
+      </mrow>
+      <mrow><mo>*</mo>
+      </mrow>
+     </msub><mo>,</mo>
+     <msub>
+      <mrow><mi>S</mi>
+      </mrow>
+      <mrow><mo>*</mo>
+      </mrow>
+     </msub><mo>|</mo><mi> &phiv; </mi>
+    </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> from the previous part. It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
    <mtd>
@@ -19541,7 +19594,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
        </mrow>
        <mrow><mo>*</mo>
        </mrow>
-      </msub><mo>|</mo><mi>Z</mi><mo>,</mo><mi> &phiv; </mi>
+      </msub><mo>|</mo><mi>Z</mi><mo>,</mo><mi> &beta; </mi><mo>,</mo><mi> &phiv; </mi>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 <mo> Pr </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -19577,12 +19630,14 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
        </mrow>
       </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-      <msub>
-       <mrow><mi>S</mi>
-       </mrow>
-       <mrow><mo>*</mo>
-       </mrow>
-      </msub>
+      <mrow>
+       <msub>
+        <mrow><mi>S</mi>
+        </mrow>
+        <mrow><mo>*</mo>
+        </mrow>
+       </msub><mo>|</mo><mi> &beta; </mi><mo>,</mo><mi> &phiv; </mi>
+      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 <mo>,</mo>
       <msub>
@@ -19604,7 +19659,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
         </mrow>
         <mrow><mo>*</mo>
         </mrow>
-       </msub>
+       </msub><mo>|</mo><mi> &phiv; </mi>
       </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -19635,7 +19690,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
     </mrow>
    </mtd>
   </mtr>
- </mtable></math> Let <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mtable></math> Denote <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <msub>
@@ -19782,7 +19837,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
         <mrow><mo>-</mo><mn>1</mn>
         </mrow>
        </mrow>
-      </msup>
+      </msup><mo> &Psi; </mo>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
 <mi> &beta; </mi><mo>+</mo>
@@ -19851,7 +19906,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
       <mrow><mo>-</mo><mn>1</mn>
       </mrow>
      </mrow>
-    </msup>
+    </msup><mo> &Psi; </mo>
    </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
 <mi> &beta; </mi><mo>+</mo><mi> &zeta; </mi><mo>,</mo><mspace width="20px" /><mi> &zeta; </mi><mo> &sim; </mo>
@@ -20083,7 +20138,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
         <mrow><mo>-</mo><mn>1</mn>
         </mrow>
        </mrow>
-      </msup>
+      </msup><mo> &Psi; </mo>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -20162,7 +20217,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
         <mrow><mo>-</mo><mn>1</mn>
         </mrow>
        </mrow>
-      </msup>
+      </msup><mo> &Psi; </mo>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -20215,7 +20270,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
         <mrow><mo>-</mo><mn>1</mn>
         </mrow>
        </mrow>
-      </msup>
+      </msup><mo> &Psi; </mo>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -20324,7 +20379,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
         <mrow><mo>-</mo><mn>1</mn>
         </mrow>
        </mrow>
-      </msup>
+      </msup><mo> &Psi; </mo>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -20402,7 +20457,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
          <mrow><mo>-</mo><mn>1</mn>
          </mrow>
         </mrow>
-       </msup>
+       </msup><mo> &Psi; </mo>
       </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -20641,7 +20696,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
          <mrow><mo>-</mo><mn>1</mn>
          </mrow>
         </mrow>
-       </msup>
+       </msup><mo> &Psi; </mo>
       </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
 <mi> &beta; </mi>
@@ -20722,7 +20777,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
         <mrow><mo>-</mo><mn>1</mn>
         </mrow>
        </mrow>
-      </msup>
+      </msup><mo> &Psi; </mo>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
 
@@ -20815,7 +20870,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
         <mrow><mo>-</mo><mn>1</mn>
         </mrow>
        </mrow>
-      </msup>
+      </msup><mo> &Psi; </mo>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
 
@@ -20877,7 +20932,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
           <mrow><mo>-</mo><mn>1</mn>
           </mrow>
          </mrow>
-        </msup>
+        </msup><mo> &Psi; </mo>
        </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
 
@@ -20901,6 +20956,20 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
        </mrow>
       </mrow>
      </msub><mo>+</mo>
+     <msub>
+      <mrow><mi>C</mi>
+      </mrow>
+      <mrow><mo>*</mo>
+      </mrow>
+     </msub>
+     <msup>
+      <mrow><mi>C</mi>
+      </mrow>
+      <mrow>
+       <mrow><mo>-</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+     </msup>
      <msup>
       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -20916,24 +20985,51 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
       <mrow><mi> &top; </mi>
       </mrow>
      </msup>
-     <msup>
-      <mrow><mi>C</mi>
-      </mrow>
-      <mrow>
-       <mrow><mo>-</mo><mn>1</mn>
-       </mrow>
-      </mrow>
-     </msup>
-     <msub>
-      <mrow><mi>C</mi>
-      </mrow>
-      <mrow><mo>*</mo>
-      </mrow>
-     </msub>
     </mrow>
    </mtd>
   </mtr>
- </mtable></math> Since this is for any vector <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mtable></math>Recall that <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>s</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow>
+       <msub>
+        <mrow><mi>s</mi>
+        </mrow>
+        <mrow><mn>1</mn>
+        </mrow>
+       </msub><mo>,</mo><mi>s</mi><mo>|</mo><mi> &phiv; </mi>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>,</mo><mn>...</mn><mo>,</mo><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow>
+       <msub>
+        <mrow><mi>s</mi>
+        </mrow>
+        <mrow><mi>n</mi>
+        </mrow>
+       </msub><mo>,</mo><mi>s</mi><mo>|</mo><mi> &phiv; </mi>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow><mi> &top; </mi>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math> is a column vector.
+<div class="standard" id='magicparlabel-767'>Since this is for any vector <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <msub>
    <mrow><mi>S</mi>
@@ -21005,10 +21101,21 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
      <mrow><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>-</mo><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mo>-</mo>
+      <msup>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+       <mrow><mi> &top; </mi>
+       </mrow>
+      </msup>
       <msup>
        <mrow><mi>C</mi>
        </mrow>
@@ -21016,7 +21123,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
         <mrow><mo>-</mo><mn>1</mn>
         </mrow>
        </mrow>
-      </msup>
+      </msup><mo> &Psi; </mo>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -21077,10 +21184,21 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
       <mrow><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>-</mo><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mo>-</mo>
+       <msup>
+        <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+         <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
+         </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+        </mrow>
+        <mrow><mi> &top; </mi>
+        </mrow>
+       </msup>
        <msup>
         <mrow><mi>C</mi>
         </mrow>
@@ -21088,7 +21206,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
          <mrow><mo>-</mo><mn>1</mn>
          </mrow>
         </mrow>
-       </msup>
+       </msup><mo> &Psi; </mo>
       </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -21132,10 +21250,21 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
        </mrow>
        <mrow><mi> &top; </mi>
        </mrow>
-      </msup><mo>+</mo><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+      </msup><mo>+</mo>
+      <msup>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+       <mrow><mi> &top; </mi>
+       </mrow>
+      </msup>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
 
@@ -21150,7 +21279,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
     </mrow>
    </mtd>
   </mtr>
- </mtable></math> and covariance function as <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mtable></math>and covariance function as <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>s</mi>
  </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -21180,10 +21309,21 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
      <mrow><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>-</mo><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mo>-</mo>
+      <msup>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+       <mrow><mi> &top; </mi>
+       </mrow>
+      </msup>
       <msup>
        <mrow><mi>C</mi>
        </mrow>
@@ -21191,7 +21331,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
         <mrow><mo>-</mo><mn>1</mn>
         </mrow>
        </mrow>
-      </msup>
+      </msup><mo> &Psi; </mo>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
 
@@ -21234,12 +21374,27 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
 
        <mrow><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>s</mi>
+
+        <mrow><mi>s</mi><mo>'</mo>
+        </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>-</mo><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>s</mi>
+<mo>-</mo>
+        <msup>
+         <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+          <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+           <mrow><mi>s</mi><mo>'</mo>
+           </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
+          </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+         </mrow>
+         <mrow><mi> &top; </mi>
+         </mrow>
+        </msup>
         <msup>
          <mrow><mi>C</mi>
          </mrow>
@@ -21247,7 +21402,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
           <mrow><mo>-</mo><mn>1</mn>
           </mrow>
          </mrow>
-        </msup>
+        </msup><mo> &Psi; </mo>
        </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
 
@@ -21290,14 +21445,56 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
        </mrow>
       </mrow>
      </msup><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>s</mi>
+
+     <mrow><mi>s</mi><mo>'</mo>
+     </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
     </mrow>
    </mtd>
   </mtr>
- </mtable></math></li>
-<li class="enumerate_item">It is, from Hint-2, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ </mtable></math>Recall that <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>s</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow>
+       <msub>
+        <mrow><mi>s</mi>
+        </mrow>
+        <mrow><mn>1</mn>
+        </mrow>
+       </msub><mo>,</mo><mi>s</mi><mo>|</mo><mi> &phiv; </mi>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>,</mo><mn>...</mn><mo>,</mo><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow>
+       <msub>
+        <mrow><mi>s</mi>
+        </mrow>
+        <mrow><mi>n</mi>
+        </mrow>
+       </msub><mo>,</mo><mi>s</mi><mo>|</mo><mi> &phiv; </mi>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow><mi> &top; </mi>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math> is a column vector.</div>
+</li><li class="enumerate_item">It is, from Hint-2, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
    <mtd>
@@ -21414,9 +21611,9 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
     </mrow>
    </mtd>
   </mtr>
- </mtable></math> where by letting <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mtable></math> By letting <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
-  <mrow><mi>C</mi><mo>=</mo><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow><mi>C</mi><mo>:</mo><mo>=</mo><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
    <mrow><mi>S</mi><mo>,</mo><mi>S</mi><mo>|</mo><mi> &phiv; </mi>
    </mrow>
@@ -21429,14 +21626,25 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
    <msup>
     <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-     <mrow><mi>C</mi><mo>+</mo><mo> &Psi; </mo><mi>B</mi>
-      <msup>
-       <mrow><mo> &Psi; </mo>
+     <msup>
+      <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+       <mrow><mi>C</mi><mo>+</mo><mo> &Psi; </mo><mi>B</mi>
+        <msup>
+         <mrow><mo> &Psi; </mo>
+         </mrow>
+         <mrow><mi> &top; </mi>
+         </mrow>
+        </msup>
        </mrow>
-       <mrow><mi> &top; </mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+      </mrow>
+      <mrow>
+       <mrow><mo>-</mo><mn>1</mn>
        </mrow>
-      </msup>
-     </mrow>
+      </mrow>
+     </msup>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
     </mrow>
@@ -21446,33 +21654,60 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
     </mrow>
    </msup><mo>=</mo>
    <msup>
-    <mrow><mi>C</mi>
-    </mrow>
-    <mrow>
-     <mrow><mo>-</mo><mn>1</mn>
-     </mrow>
-    </mrow>
-   </msup><mo>-</mo>
-   <msup>
-    <mrow><mi>C</mi>
-    </mrow>
-    <mrow>
-     <mrow><mo>-</mo><mn>1</mn>
-     </mrow>
-    </mrow>
-   </msup><mo> &Psi; </mo>
-   <msup>
     <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
      <mrow>
       <msup>
-       <mrow><mi>B</mi>
+       <mrow><mi>C</mi>
        </mrow>
        <mrow>
         <mrow><mo>-</mo><mn>1</mn>
         </mrow>
        </mrow>
-      </msup><mo>+</mo>
+      </msup><mo>-</mo>
+      <msup>
+       <mrow><mi>C</mi>
+       </mrow>
+       <mrow>
+        <mrow><mo>-</mo><mn>1</mn>
+        </mrow>
+       </mrow>
+      </msup><mo> &Psi; </mo>
+      <msup>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow>
+         <msup>
+          <mrow><mi>B</mi>
+          </mrow>
+          <mrow>
+           <mrow><mo>-</mo><mn>1</mn>
+           </mrow>
+          </mrow>
+         </msup><mo>+</mo>
+         <msup>
+          <mrow><mo> &Psi; </mo>
+          </mrow>
+          <mrow><mi> &top; </mi>
+          </mrow>
+         </msup>
+         <msup>
+          <mrow><mi>C</mi>
+          </mrow>
+          <mrow>
+           <mrow><mo>-</mo><mn>1</mn>
+           </mrow>
+          </mrow>
+         </msup><mo> &Psi; </mo>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+       <mrow>
+        <mrow><mo>-</mo><mn>1</mn>
+        </mrow>
+       </mrow>
+      </msup>
       <msup>
        <mrow><mo> &Psi; </mo>
        </mrow>
@@ -21486,24 +21721,10 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
         <mrow><mo>-</mo><mn>1</mn>
         </mrow>
        </mrow>
-      </msup><mo> &Psi; </mo>
+      </msup>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
-    </mrow>
-    <mrow>
-     <mrow><mo>-</mo><mn>1</mn>
-     </mrow>
-    </mrow>
-   </msup>
-   <msup>
-    <mrow><mo> &Psi; </mo>
-    </mrow>
-    <mrow><mi> &top; </mi>
-    </mrow>
-   </msup>
-   <msup>
-    <mrow><mi>C</mi>
     </mrow>
     <mrow>
      <mrow><mo>-</mo><mn>1</mn>
@@ -21613,34 +21834,6 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
    </mtd>
    <mtd>
     <mrow>
-     <msub>
-      <mrow><mo> lim </mo>
-      </mrow>
-      <mrow>
-       <mtable>
-        <mtr>
-         <mtd>
-          <mrow>
-           <msup>
-            <mrow><mi>B</mi>
-            </mrow>
-            <mrow>
-             <mrow><mo>-</mo><mn>1</mn>
-             </mrow>
-            </mrow>
-           </msup><mo> &rarr; </mo><mn>0</mn>
-          </mrow>
-         </mtd>
-        </mtr>
-        <mtr>
-         <mtd>
-          <mrow><mi>b</mi><mo> &rarr; </mo><mn>0</mn>
-          </mrow>
-         </mtd>
-        </mtr>
-       </mtable>
-      </mrow>
-     </msub>
      <mstyle mathvariant='normal'><mi>N</mi>
      </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -21731,7 +21924,11 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
  <mrow>
   <mrow><mi> &beta; </mi><mo>|</mo><mi>Z</mi><mo>,</mo><mi> &phiv; </mi>
   </mrow>
- </mrow></math> is bounded (finite), which implies a proper posterior. It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math> is bounded (finite); this implies that the posterior is proper. The posterior of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi> &beta; </mi><mo>|</mo><mi>Z</mi><mo>,</mo><mi> &phiv; </mi>
+  </mrow>
+ </mrow></math> has density such as<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
    <mtd>
@@ -21797,7 +21994,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
     </mrow>
    </mtd>
   </mtr>
- </mtable></math><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ </mtable></math> then by computing the limit <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
    <mtd>
@@ -22020,7 +22217,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
     </mrow>
    </mtd>
   </mtr>
- </mtable></math> hence the limiting case is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ </mtable></math> Hence the limiting case is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi> &beta; </mi><mo>|</mo><mi>Z</mi><mo>,</mo><mi> &phiv; </mi><mover accent='false'><mo> &sim; </mo>
    <mstyle mathvariant='normal'>
@@ -22103,7 +22300,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
- </mrow></math> The predictive process becomes <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>Hence the predictive process becomes <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mo> &sdot; </mo>
@@ -22171,10 +22368,21 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
       <mrow><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>-</mo><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mo>-</mo>
+       <msup>
+        <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+         <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
+         </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+        </mrow>
+        <mrow><mi> &top; </mi>
+        </mrow>
+       </msup>
        <msup>
         <mrow><mi>C</mi>
         </mrow>
@@ -22182,7 +22390,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
          <mrow><mo>-</mo><mn>1</mn>
          </mrow>
         </mrow>
-       </msup>
+       </msup><mo> &Psi; </mo>
       </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -22218,10 +22426,21 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
        </mrow>
        <mrow><mi> &top; </mi>
        </mrow>
-      </msup><mo>+</mo><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+      </msup><mo>+</mo>
+      <msup>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+       <mrow><mi> &top; </mi>
+       </mrow>
+      </msup>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
 
@@ -22258,10 +22477,21 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
      <mrow><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>-</mo><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mo>-</mo>
+      <msup>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi>s</mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+       <mrow><mi> &top; </mi>
+       </mrow>
+      </msup>
       <msup>
        <mrow><mi>C</mi>
        </mrow>
@@ -22269,7 +22499,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
         <mrow><mo>-</mo><mn>1</mn>
         </mrow>
        </mrow>
-      </msup>
+      </msup><mo> &Psi; </mo>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -22304,12 +22534,27 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
        <mrow><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>s</mi>
+
+        <mrow><mi>s</mi><mo>'</mo>
+        </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>-</mo><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>s</mi>
+<mo>-</mo>
+        <msup>
+         <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+          <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+           <mrow><mi>s</mi><mo>'</mo>
+           </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
+          </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+         </mrow>
+         <mrow><mi> &top; </mi>
+         </mrow>
+        </msup>
         <msup>
          <mrow><mi>C</mi>
          </mrow>
@@ -22317,7 +22562,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
           <mrow><mo>-</mo><mn>1</mn>
           </mrow>
          </mrow>
-        </msup>
+        </msup><mo> &Psi; </mo>
        </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -22360,7 +22605,9 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
        </mrow>
       </mrow>
      </msup><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>s</mi>
+
+     <mrow><mi>s</mi><mo>'</mo>
+     </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
     </mrow>
@@ -23963,6 +24210,41 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
    <mrow><mi>u</mi><mo>|</mo><mi>V</mi>
    </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <mfrac>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </mfrac>
+   <msubsup>
+    <mrow><mo> &sum; </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msubsup>
+   <msubsup>
+    <mrow><mi> &sigma; </mi>
+    </mrow>
+    <mrow><mi>E</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msubsup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>v</mi>
+     </mrow>
+     <mrow><mi>j</mi>
+     </mrow>
+    </msub><mo>,</mo><mi>V</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
  </mrow></math> can be written in term of variogram integrals<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -24247,6 +24529,12 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
    <mstyle mathvariant='double-struck'><mi>R</mi>
    </mstyle>
   </mrow>
+ </mrow></math> and point <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>s</mi><mo> &isin; </mo>
+   <mstyle mathvariant='double-struck'><mi>R</mi>
+   </mstyle>
+  </mrow>
  </mrow></math>.</li>
 <li class="enumerate_item">Compute the block covariance function <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -24418,9 +24706,28 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
- </mrow></math> . What is the name of the distribution and what are the parameter functions define them?</li>
-<li class="enumerate_item">(Bayesian Kriging) Compute the predictive stochastic process at blocks <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mi>v</mi>
+ </mrow></math> . What is the name of the distribution and what are the parameter functions defining it?</li>
+<li class="enumerate_item">(Bayesian Kriging) Compute the predictive stochastic process <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+  <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>|</mo><mi>Z</mi>
+  </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+ </mrow></math> at blocks <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>v</mi><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+   <mrow><mi>a</mi><mo>,</mo><mi>b</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+<mo> &sub; </mo>
+   <mstyle mathvariant='double-struck'><mi>R</mi>
+   </mstyle>
+  </mrow>
  </mrow></math> with <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>

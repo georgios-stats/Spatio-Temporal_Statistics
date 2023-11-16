@@ -129,6 +129,41 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
    <mrow><mi>u</mi><mo>|</mo><mi>V</mi>
    </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <mfrac>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </mfrac>
+   <msubsup>
+    <mrow><mo> &sum; </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+    <mrow><mi>n</mi>
+    </mrow>
+   </msubsup>
+   <msubsup>
+    <mrow><mi> &sigma; </mi>
+    </mrow>
+    <mrow><mi>E</mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msubsup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>v</mi>
+     </mrow>
+     <mrow><mi>j</mi>
+     </mrow>
+    </msub><mo>,</mo><mi>V</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
  </mrow></math> can be written in term of variogram integrals<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -410,6 +445,12 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
    <mstyle mathvariant='double-struck'><mi>R</mi>
    </mstyle>
   </mrow>
+ </mrow></math> and point <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>s</mi><mo> &isin; </mo>
+   <mstyle mathvariant='double-struck'><mi>R</mi>
+   </mstyle>
+  </mrow>
  </mrow></math>.</li>
 <li class="enumerate_item">Compute the block covariance function <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -581,9 +622,28 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
- </mrow></math> . What is the name of the distribution and what are the parameter functions define them?</li>
-<li class="enumerate_item">(Bayesian Kriging) Compute the predictive stochastic process at blocks <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mi>v</mi>
+ </mrow></math> . What is the name of the distribution and what are the parameter functions defining it?</li>
+<li class="enumerate_item">(Bayesian Kriging) Compute the predictive stochastic process <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+  <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>|</mo><mi>Z</mi>
+  </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+ </mrow></math> at blocks <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>v</mi><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+   <mrow><mi>a</mi><mo>,</mo><mi>b</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+<mo> &sub; </mo>
+   <mstyle mathvariant='double-struck'><mi>R</mi>
+   </mstyle>
+  </mrow>
  </mrow></math> with <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
