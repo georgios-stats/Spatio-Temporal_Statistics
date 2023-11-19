@@ -69,4 +69,12 @@ Topic 3: Geostatistical data modeling
 
 + R code: [03.Geostatistical_data.R](https://raw.githubusercontent.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/main/Lecture_handouts/R_scripts/03.Geostatistical_data.R)  
 
+Topic 4: Aerial unit data modeling       
+
++ Handout 4: [04.Aerial_unit_data.pdf](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/04.Aerial_unit_data.pdf)   
+
++ Handout 4: [04.Aerial_unit_data.xhtml](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Lecture_handouts/04.Aerial_unit_data_xhtml/04.Aerial_unit_data.xhtml) 
+
+
+
 
