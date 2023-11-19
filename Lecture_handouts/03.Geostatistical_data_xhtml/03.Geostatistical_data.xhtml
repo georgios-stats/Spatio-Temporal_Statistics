@@ -329,7 +329,7 @@ div.Boxed {
 
 <div style='height:3ex'></div></div>
 <h3 class="subsection_" id='magicparlabel-30'>Aim</h3>
-<div class="plain_layout" id='magicparlabel-31'>To introduce Point referenced data modeling / Geostatistics: regional variables, random field, variogram, </div>
+<div class="plain_layout" id='magicparlabel-31'>To introduce point referenced data modeling (geostatistics) with particular focus on concepts spatial variables, random fields, semi-variogram, kriging, change of support, multivariate geostatistics, for Bayesian and classical inference. </div>
 
 <div class="plain_layout" id='magicparlabel-32'><hr />
 
@@ -354,7 +354,7 @@ Spatial statistics and modeling (Vol. 90). New York: Springer.</li>
 </div></div>
 
 
-<h1 class="part" style='text-align: center;' id='magicparlabel-68'><span class="part_label">Part I</span> Intro to building stochastic models &amp; concepts</h1>
+<h1 class="part" style='text-align: center;' id='magicparlabel-68'><span class="part_label">Part I</span> Basic stochastic models &amp; related concepts for model building</h1>
 
 <div class="note" id='magicparlabel-69'><div class="note_item"><span class="note_label">Note 1.</span>
 We discuss basic stochastic models and concepts for modeling point referenced data in the Geostatistics framework. </div>
@@ -9266,7 +9266,7 @@ The process with Gaussian c.f. <math xmlns="http://www.w3.org/1998/Math/MathML">
   </mrow>
  </mrow></math>. </div>
 </div>
-<h1 class="part" id='magicparlabel-948'><span class="part_label">Part II</span> Model building</h1>
+<h1 class="part" id='magicparlabel-948'><span class="part_label">Part II</span> Model building &amp; related parametric inference</h1>
 <h2 class="section" id='magicparlabel-949'><span class="section_label">12</span> The Geostatistical model<a id="sec_The_Geostatistical_model" />
 </h2>
 <h3 class="subsection" id='magicparlabel-950'><span class="subsection_label">12.1</span> Linear Model of Regionalization </h3>
@@ -13985,8 +13985,7 @@ If the stochastic model is <math xmlns="http://www.w3.org/1998/Math/MathML">
 </div>
 
 
-
-
+<h1 class="part" id='magicparlabel-1509'><span class="part_label">Part III</span> Prediction in geostatistics </h1>
 <h2 class="section" id='magicparlabel-1510'><span class="section_label">14</span> The (traditional) Kriging paradigm</h2>
 
 <div class="note" id='magicparlabel-1511'><div class="note_item"><span class="note_label">Note 129.</span>
@@ -23584,7 +23583,7 @@ The posterior of <math xmlns="http://www.w3.org/1998/Math/MathML">
     </mrow>
    </mtd>
   </mtr>
- </mtable></math><i> [The derivation is the same as in Bayesian linear regression and will be given as a Homework] </i></div>
+ </mtable></math><i> [For the detailed derivation see Exercise </i><a href="#exer____4_1_1_4_1_1_1_2_1_3">exer:()-4-1-1-4-1-1-1-2-1-3</a> in<i> the Exercise sheet.] </i></div>
 </div>
 
 <div class="standard" id='magicparlabel-1885'><br />
@@ -24197,7 +24196,7 @@ The posterior predictive distribution of <math xmlns="http://www.w3.org/1998/Mat
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
- </mrow></math>.<i> [The derivation will be given as a Homework] </i></div>
+ </mrow></math>.<i> [For the detailed derivation see Exercise </i><a href="#exer____4_1_1_4_1_1_1_2_1_3">exer:()-4-1-1-4-1-1-1-2-1-3</a> in<i> the Exercise sheet.] </i></div>
 </div>
 
 <div class="standard" id='magicparlabel-1891'><br />
@@ -24562,26 +24561,25 @@ The estimated &ldquo;Kriging predictor&rdquo; results by plugging <math xmlns="h
    <mrow><mn>2</mn>
    </mrow>
   </msup>
- </mrow></math>. Then we follow the same routine as above... we can get a Students-T predictive process... <i><!-- Output Error: Closing tag `dd' when other tags are open, namely: -->
-<!-- Output Error: i -->
-</i></dd>
+ </mrow></math>. Then we follow the same routine as above... we can get a Students-T predictive process... </dd>
 </dl>
 
-<div class="standard" id='magicparlabel-1910'><br />
+<div class="standard" id='magicparlabel-1906'><br />
 
 </div>
 
 
 
 
-<div class="standard" id='magicparlabel-2016'><br />
+<div class="standard" id='magicparlabel-2012'><br />
 
 </div>
 
 
-<h2 class="section" id='magicparlabel-2022'><span class="section_label">16</span> Intro to spatial misalignment</h2>
+<h1 class="part" id='magicparlabel-2018'><span class="part_label">Part IV</span> Spatial misalignment (special topic)</h1>
+<h2 class="section" id='magicparlabel-2019'><span class="section_label">16</span> Intro to spatial misalignment</h2>
 
-<div class="note" id='magicparlabel-2023'><div class="note_item"><span class="note_label">Note 185.</span>
+<div class="note" id='magicparlabel-2020'><div class="note_item"><span class="note_label">Note 185.</span>
 Consider a stochastic process <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <msub>
@@ -24637,11 +24635,11 @@ Consider a stochastic process <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math>.</div>
 </div>
 
-<div class="standard" id='magicparlabel-2024'><br />
+<div class="standard" id='magicparlabel-2021'><br />
 
 </div>
 
-<div class="definition" id='magicparlabel-2025'><div class="definition_item"><span class="definition_label">Definition 186.</span>
+<div class="definition" id='magicparlabel-2022'><div class="definition_item"><span class="definition_label">Definition 186.</span>
 We define the block average <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -24746,11 +24744,11 @@ We define the block average <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math> .</div>
 </div>
 
-<div class="standard" id='magicparlabel-2026'><br />
+<div class="standard" id='magicparlabel-2023'><br />
 
 </div>
 
-<div class="definition" id='magicparlabel-2027'><div class="definition_item"><span class="definition_label">Definition 187.</span>
+<div class="definition" id='magicparlabel-2024'><div class="definition_item"><span class="definition_label">Definition 187.</span>
 The integral in <a href="#eq__64">(16.1)</a> can be defined by Riemann sums. E.g. in <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mn>2</mn>
  </mrow></math>D if <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -25006,11 +25004,11 @@ The integral in <a href="#eq__64">(16.1)</a> can be defined by Riemann sums. E.g
  </mrow></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-2028'><br />
+<div class="standard" id='magicparlabel-2025'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2029'><div class="note_item"><span class="note_label">Note 188.</span>
+<div class="note" id='magicparlabel-2026'><div class="note_item"><span class="note_label">Note 188.</span>
 Notice that the integral in <a href="#eq__64">(16.1)</a> is a linear operator, hence for <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>A</mi>
  </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -25168,11 +25166,11 @@ Notice that the integral in <a href="#eq__64">(16.1)</a> is a linear operator, h
  </mtable></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-2030'><br />
+<div class="standard" id='magicparlabel-2027'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2031'><div class="note_item"><span class="note_label">Note 189.</span>
+<div class="note" id='magicparlabel-2028'><div class="note_item"><span class="note_label">Note 189.</span>
 A common problem is to predict the block average <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -25213,11 +25211,11 @@ A common problem is to predict the block average <math xmlns="http://www.w3.org/
  </mrow></math>. (See Fig <a href="#fig_Block_Kriging_cartoon">16.2</a>)</div>
 </div>
 
-<div class="standard" id='magicparlabel-2032'><br />
+<div class="standard" id='magicparlabel-2029'><br />
 
 </div>
 
-<div class="definition" id='magicparlabel-2033'><div class="definition_item"><span class="definition_label">Definition 190.</span>
+<div class="definition" id='magicparlabel-2030'><div class="definition_item"><span class="definition_label">Definition 190.</span>
 The support of the block average <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -25229,21 +25227,21 @@ The support of the block average <math xmlns="http://www.w3.org/1998/Math/MathML
  <mrow><mi>B</mi>
  </mrow></math> and involves the geometry, size, and spatial orientation of the line, area, or volume of the input.</div>
 </div>
-<h4 class="subsubsection_" id='magicparlabel-2034'>Change of support problem</h4>
+<h4 class="subsubsection_" id='magicparlabel-2031'>Change of support problem</h4>
 
-<div class="standard" id='magicparlabel-2035'><br />
+<div class="standard" id='magicparlabel-2032'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2036'><div class="note_item"><span class="note_label">Note 191.</span>
+<div class="note" id='magicparlabel-2033'><div class="note_item"><span class="note_label">Note 191.</span>
 Changing the support of a variable creates a new variable related to the original one but with different statistical characteristics: mean, co-variance, dependencies, etc...</div>
 </div>
 
-<div class="standard" id='magicparlabel-2037'><br />
+<div class="standard" id='magicparlabel-2034'><br />
 
 </div>
 
-<div class="definition" id='magicparlabel-2038'><div class="definition_item"><span class="definition_label">Definition 192.</span>
+<div class="definition" id='magicparlabel-2035'><div class="definition_item"><span class="definition_label">Definition 192.</span>
 Change of support problem refers to making inference on block of averages whose supports are different than from those of the data. <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo>=</mo>
@@ -25280,24 +25278,22 @@ Change of support problem refers to making inference on block of averages whose 
  </mrow></math>. Often points have a point support. </div>
 </div>
 
-
-
-<div class="standard" id='magicparlabel-2048'><br />
+<div class="standard" id='magicparlabel-2036'><br />
 
 </div>
 
 
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-2053'>   <span class='float-caption-Standard float-caption float-caption-standard'>Figure 16.1:  Change of support</span></div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-2057'><img style='width:33%;' src='52_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____IV_Handouts_figures_cos-different-supports.png' alt='image: 52_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____IV_Handouts_figures_cos-different-supports.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-2041'>   <span class='float-caption-Standard float-caption float-caption-standard'>Figure 16.1:  Change of support</span></div>
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-2045'><img style='width:33%;' src='52_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____IV_Handouts_figures_cos-different-supports.png' alt='image: 52_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____IV_Handouts_figures_cos-different-supports.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  Different supports</span></div>
 
 
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-2066'><img style='width:33%;' src='53_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Handouts_figures_cos-extension-of-variance.png' alt='image: 53_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Handouts_figures_cos-extension-of-variance.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-2054'><img style='width:33%;' src='53_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Handouts_figures_cos-extension-of-variance.png' alt='image: 53_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Handouts_figures_cos-extension-of-variance.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  Extension of variance<a id="fig_Extension_of_variance" />
 </span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-2074'><img style='width:33%;' src='54_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___Handouts_figures_cos-dispersion-of-variance.png' alt='image: 54_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___Handouts_figures_cos-dispersion-of-variance.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-2062'><img style='width:33%;' src='54_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___Handouts_figures_cos-dispersion-of-variance.png' alt='image: 54_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___Handouts_figures_cos-dispersion-of-variance.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  Dispersion of variance</span></div>
 </div>
 
@@ -25305,17 +25301,17 @@ Change of support problem refers to making inference on block of averages whose 
 
 </div>
 
-<h3 class="subsection" id='magicparlabel-2084'><span class="subsection_label">16.1</span> Extension and Dispersion Variance</h3>
+<h3 class="subsection" id='magicparlabel-2072'><span class="subsection_label">16.1</span> Extension and Dispersion Variance</h3>
 
-<div class="note" id='magicparlabel-2085'><div class="note_item"><span class="note_label">Note 193.</span>
+<div class="note" id='magicparlabel-2073'><div class="note_item"><span class="note_label">Note 193.</span>
 With spatial variables it is necessary to take account of the spatial disposal of points, surfaces or volumes for which the variance of a quantity should be computed.</div>
 </div>
 
-<div class="standard" id='magicparlabel-2086'><br />
+<div class="standard" id='magicparlabel-2074'><br />
 
 </div>
 
-<div class="definition" id='magicparlabel-2087'><div class="definition_item"><span class="definition_label">Definition 194.</span>
+<div class="definition" id='magicparlabel-2075'><div class="definition_item"><span class="definition_label">Definition 194.</span>
 Extension variance <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -25381,11 +25377,11 @@ Extension variance <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-2088'><br />
+<div class="standard" id='magicparlabel-2076'><br />
 
 </div>
 
-<div class="notation" id='magicparlabel-2089'><div class="notation_item"><span class="notation_label">Notation 195.</span>
+<div class="notation" id='magicparlabel-2077'><div class="notation_item"><span class="notation_label">Notation 195.</span>
 Let We define <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>v</mi>
  </mrow></math> be a small volume <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -25447,11 +25443,11 @@ Let We define <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-2090'><br />
+<div class="standard" id='magicparlabel-2078'><br />
 
 </div>
 
-<div class="proposition" id='magicparlabel-2091'><div class="proposition_item"><span class="proposition_label">Proposition 196.</span>
+<div class="proposition" id='magicparlabel-2079'><div class="proposition_item"><span class="proposition_label">Proposition 196.</span>
 Extension variance <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -25518,9 +25514,13 @@ Extension variance <math xmlns="http://www.w3.org/1998/Math/MathML">
 
   </mrow>
  </mrow></math></div>
+
+<div class="proof" id='magicparlabel-2080'><div class="proof_item"><span class="proof_label">Proof.</span>
+...see Exercise <a href="#exer____4_1_1_4_1_1_1_2_1_1_2">exer:()-4-1-1-4-1-1-1-2-1-1-2</a> in the Exercise sheet.</div>
+</div>
 </div>
 
-<div class="definition" id='magicparlabel-2092'><div class="definition_item"><span class="definition_label">Definition 197.</span>
+<div class="definition" id='magicparlabel-2081'><div class="definition_item"><span class="definition_label">Definition 197.</span>
 Suppose a large volume <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>V</mi>
  </mrow></math> is partitioned into <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -25530,11 +25530,11 @@ Suppose a large volume <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math> of equal size (Figure <a href="#fig_Extension_of_variance">b</a>). </div>
 </div>
 
-<div class="standard" id='magicparlabel-2093'><br />
+<div class="standard" id='magicparlabel-2082'><br />
 
 </div>
 
-<div class="definition" id='magicparlabel-2094'><div class="definition_item"><span class="definition_label">Definition 198.</span>
+<div class="definition" id='magicparlabel-2083'><div class="definition_item"><span class="definition_label">Definition 198.</span>
 The dispersion variance of the values <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
 
@@ -25609,11 +25609,11 @@ The dispersion variance of the values <math xmlns="http://www.w3.org/1998/Math/M
  </mrow></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-2095'><br />
+<div class="standard" id='magicparlabel-2084'><br />
 
 </div>
 
-<div class="proposition" id='magicparlabel-2096'><div class="proposition_item"><span class="proposition_label">Proposition 199.</span>
+<div class="proposition" id='magicparlabel-2085'><div class="proposition_item"><span class="proposition_label">Proposition 199.</span>
 The dispersion variance <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -25670,13 +25670,17 @@ The dispersion variance <math xmlns="http://www.w3.org/1998/Math/MathML">
    </mtd>
   </mtr>
  </mtable></math></div>
+
+<div class="proof" id='magicparlabel-2086'><div class="proof_item"><span class="proof_label">Proof.</span>
+...see Exercise <a href="#exer____4_1_1_4_1_1_1_2_1_1_1_2">exer:()-4-1-1-4-1-1-1-2-1-1-1-2</a> in the Exercise sheet.</div>
+</div>
 </div>
 
-<div class="standard" id='magicparlabel-2097'><br />
+<div class="standard" id='magicparlabel-2087'><br />
 
 </div>
 
-<div class="proposition" id='magicparlabel-2098'><div class="proposition_item"><span class="proposition_label">Proposition 200.</span>
+<div class="proposition" id='magicparlabel-2088'><div class="proposition_item"><span class="proposition_label">Proposition 200.</span>
 [Krige's relation] Consider that the domain <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>S</mi>
  </mrow></math> is partitioned into volumes <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -25733,7 +25737,7 @@ The dispersion variance <math xmlns="http://www.w3.org/1998/Math/MathML">
   </mtr>
  </mtable></math></div>
 
-<div class="proof" id='magicparlabel-2099'><div class="proof_item"><span class="proof_label">Proof.</span>
+<div class="proof" id='magicparlabel-2089'><div class="proof_item"><span class="proof_label">Proof.</span>
 (Sketch of the proof) For just a point <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>s</mi>
  </mrow></math>, <a href="#eq__61">(16.2)</a> becomes <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -25922,11 +25926,11 @@ The dispersion variance <math xmlns="http://www.w3.org/1998/Math/MathML">
 </div>
 </div>
 
-<div class="standard" id='magicparlabel-2100'><br />
+<div class="standard" id='magicparlabel-2090'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2101'><div class="note_item"><span class="note_label">Note 201.</span>
+<div class="note" id='magicparlabel-2091'><div class="note_item"><span class="note_label">Note 201.</span>
 The knowledge of the semi-variogram makes the computation of <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -25979,12 +25983,12 @@ The knowledge of the semi-variogram makes the computation of <math xmlns="http:/
  </mrow></math> possible. </div>
 </div>
 
-<div class="standard" id='magicparlabel-2102'><br />
+<div class="standard" id='magicparlabel-2092'><br />
 
 </div>
-<h4 class="subsubsection_" id='magicparlabel-2103'>Change of support effect</h4>
+<h4 class="subsubsection_" id='magicparlabel-2093'>Change of support effect</h4>
 
-<div class="note" id='magicparlabel-2104'><div class="note_item"><span class="note_label">Note 202.</span>
+<div class="note" id='magicparlabel-2094'><div class="note_item"><span class="note_label">Note 202.</span>
 [Change of support effect] Consider the case that domain <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>S</mi>
  </mrow></math> is partitioned into volumes <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -26057,13 +26061,13 @@ The knowledge of the semi-variogram makes the computation of <math xmlns="http:/
   </mrow>
  </mrow></math>. </div>
 </div>
-<h4 class="subsubsection_" id='magicparlabel-2105'>Change of support: affine model</h4>
+<h4 class="subsubsection_" id='magicparlabel-2095'>Change of support: affine model</h4>
 
-<div class="standard" id='magicparlabel-2106'><br />
+<div class="standard" id='magicparlabel-2096'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2107'><div class="note_item"><span class="note_label">Note 203.</span>
+<div class="note" id='magicparlabel-2097'><div class="note_item"><span class="note_label">Note 203.</span>
 Consider a stationary process <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -26109,11 +26113,11 @@ Consider a stationary process <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math> as the standardized block variable. </div>
 </div>
 
-<div class="standard" id='magicparlabel-2108'><br />
+<div class="standard" id='magicparlabel-2098'><br />
 
 </div>
 
-<div class="example" id='magicparlabel-2109'><div class="example_item"><span class="example_label">Example 204.</span>
+<div class="example" id='magicparlabel-2099'><div class="example_item"><span class="example_label">Example 204.</span>
 For example, in the Gaussian process case, where <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -26247,9 +26251,9 @@ For example, in the Gaussian process case, where <math xmlns="http://www.w3.org/
   </mrow>
  </mrow></math></div>
 </div>
-<h3 class="subsection" id='magicparlabel-2110'><span class="subsection_label">16.2</span> Block (Universal) Kriging</h3>
+<h3 class="subsection" id='magicparlabel-2100'><span class="subsection_label">16.2</span> Block (Universal) Kriging</h3>
 
-<div class="note" id='magicparlabel-2111'><div class="note_item"><span class="note_label">Note 205.</span>
+<div class="note" id='magicparlabel-2101'><div class="note_item"><span class="note_label">Note 205.</span>
 Block Kriging aims to predict a block value <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -26282,11 +26286,11 @@ Block Kriging aims to predict a block value <math xmlns="http://www.w3.org/1998/
  </mrow></math>; see Figure <a href="#fig_Block_Kriging_cartoon">16.2</a>. It can be used withing the framework of Universal, Ordinary, Simple, and Bayesian Kriging as the point-to-point cases we saw in Sec <a href="#subsec_Universal_Kriging">14.1</a>.</div>
 </div>
 
-<div class="standard" id='magicparlabel-2112'><br />
+<div class="standard" id='magicparlabel-2102'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2113'><div class="note_item"><span class="note_label">Note 206.</span>
+<div class="note" id='magicparlabel-2103'><div class="note_item"><span class="note_label">Note 206.</span>
 Assume we want the estimate a block value <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -26378,26 +26382,26 @@ Assume we want the estimate a block value <math xmlns="http://www.w3.org/1998/Ma
    <mrow><mi>i</mi>
    </mrow>
   </msub>
- </mrow></math> (Figure <a href="#fig_Block_Kriging_cartoon">16.2</a>).  <div class='float-figure'><div class="plain_layout" id='magicparlabel-2117'><img style='width:33%;' src='55_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___stics_IV_Handouts_figures_cos-block-kriging.png' alt='image: 55_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___stics_IV_Handouts_figures_cos-block-kriging.png' />
+ </mrow></math> (Figure <a href="#fig_Block_Kriging_cartoon">16.2</a>).  <div class='float-figure'><div class="plain_layout" id='magicparlabel-2107'><img style='width:33%;' src='55_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___stics_IV_Handouts_figures_cos-block-kriging.png' alt='image: 55_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___stics_IV_Handouts_figures_cos-block-kriging.png' />
 <span class='float-caption-Standard float-caption float-caption-standard'>Figure 16.2:  Block Kriging cartoon<a id="fig_Block_Kriging_cartoon" />
 </span></div>
 </div>
 </div>
 </div>
 
-<div class="standard" id='magicparlabel-2122'><br />
+<div class="standard" id='magicparlabel-2112'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2123'><div class="note_item"><span class="note_label">Note 207.</span>
+<div class="note" id='magicparlabel-2113'><div class="note_item"><span class="note_label">Note 207.</span>
 Here, we present the Block Kriging in the (traditional) Universal Kriging framework (Sec <a href="#subsec_Universal_Kriging">14.1</a>). We will refer to the UK in Sec <a href="#subsec_Universal_Kriging">14.1</a> as point-to-point UK.</div>
 </div>
 
-<div class="standard" id='magicparlabel-2124'><br />
+<div class="standard" id='magicparlabel-2114'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2125'><div class="note_item"><span class="note_label">Note 208.</span>
+<div class="note" id='magicparlabel-2115'><div class="note_item"><span class="note_label">Note 208.</span>
 Consider the statistical model be the stochastic process <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <msub>
@@ -26580,11 +26584,11 @@ Consider the statistical model be the stochastic process <math xmlns="http://www
  </mrow></math> –as in UK in Sec <a href="#subsec_Universal_Kriging">14.1</a>, stationarity is not a necessary assumption if one can estimate the covariance function directly. </div>
 </div>
 
-<div class="standard" id='magicparlabel-2134'><br />
+<div class="standard" id='magicparlabel-2124'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2135'><div class="note_item"><span class="note_label">Note 209.</span>
+<div class="note" id='magicparlabel-2125'><div class="note_item"><span class="note_label">Note 209.</span>
 The Block UK predictor <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -26782,11 +26786,11 @@ The Block UK predictor <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math>. </div>
 </div>
 
-<div class="standard" id='magicparlabel-2136'><br />
+<div class="standard" id='magicparlabel-2126'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2137'><div class="note_item"><span class="note_label">Note 210.</span>
+<div class="note" id='magicparlabel-2127'><div class="note_item"><span class="note_label">Note 210.</span>
 Following the steps in (point-to-point) UK (Note <a href="#note_For___to">136</a>), unbiasness implies conditions <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -26943,11 +26947,11 @@ Following the steps in (point-to-point) UK (Note <a href="#note_For___to">136</a
  </mrow></math>. </div>
 </div>
 
-<div class="standard" id='magicparlabel-2138'><br />
+<div class="standard" id='magicparlabel-2128'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2139'><div class="note_item"><span class="note_label">Note 211.</span>
+<div class="note" id='magicparlabel-2129'><div class="note_item"><span class="note_label">Note 211.</span>
 Following the steps in (point-to-point) UK (Note <a href="#note_Now__since_we">138</a>), I get <a id="eq__65" />
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
@@ -27250,11 +27254,11 @@ Following the steps in (point-to-point) UK (Note <a href="#note_Now__since_we">1
  </mrow></math>. </div>
 </div>
 
-<div class="standard" id='magicparlabel-2140'><br />
+<div class="standard" id='magicparlabel-2130'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2141'><div class="note_item"><span class="note_label">Note 212.</span>
+<div class="note" id='magicparlabel-2131'><div class="note_item"><span class="note_label">Note 212.</span>
 The Block Universal Kriging equations then are <a id="eq__66" />
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
@@ -27515,11 +27519,11 @@ The Block Universal Kriging equations then are <a id="eq__66" />
  </mtable></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-2142'><br />
+<div class="standard" id='magicparlabel-2132'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2143'><div class="note_item"><span class="note_label">Note 213.</span>
+<div class="note" id='magicparlabel-2133'><div class="note_item"><span class="note_label">Note 213.</span>
 Hence the UK predictor <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -27747,11 +27751,11 @@ Hence the UK predictor <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mtable></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-2144'><br />
+<div class="standard" id='magicparlabel-2134'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2145'><div class="note_item"><span class="note_label">Note 214.</span>
+<div class="note" id='magicparlabel-2135'><div class="note_item"><span class="note_label">Note 214.</span>
 Block Kriging as a concept can be implemented even when <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <msub>
@@ -27819,9 +27823,9 @@ Block Kriging as a concept can be implemented even when <math xmlns="http://www.
   </mrow>
  </mrow></math>.</div>
 </div>
-<h3 class="subsection" id='magicparlabel-2146'><span class="subsection_label">16.3</span> Block (Bayesian) Kriging</h3>
+<h3 class="subsection" id='magicparlabel-2136'><span class="subsection_label">16.3</span> Block (Bayesian) Kriging</h3>
 
-<div class="note" id='magicparlabel-2147'><div class="note_item"><span class="note_label">Note 215.</span>
+<div class="note" id='magicparlabel-2137'><div class="note_item"><span class="note_label">Note 215.</span>
 Block (Bayesian) Kriging is produced in the same lines as the Bayesian Kriging procedure (Section <a href="#sec_The_Bayesian_Kriging">15</a>): (1.) compute the joint distribution in <a href="#eq__68">(15.10)</a> i.e. <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>(</mo>
@@ -28204,13 +28208,14 @@ Block (Bayesian) Kriging is produced in the same lines as the Bayesian Kriging p
  </mrow></math> (Note <a href="#note_Given_that_vector">171</a>), and (3.) recognize the corresponding Gaussian process as in Note <a href="#note_Since_the_derivation">172</a>. The derivation is identical to that Sec <a href="#subsec_Bayesian_Kriging__Gaussian">15.2</a>.</div>
 </div>
 
-<div class="standard" id='magicparlabel-2153'><br />
+<div class="standard" id='magicparlabel-2143'><br />
 
 </div>
-<h2 class="section" id='magicparlabel-2154'><span class="section_label">17</span> Extensions to Multivariate Geostatistics</h2>
-<h3 class="subsection" id='magicparlabel-2155'><span class="subsection_label">17.1</span> Cross-variance functions</h3>
+<h1 class="part" id='magicparlabel-2144'><span class="part_label">Part V</span> Extensions to multivariate Geostatistics (special topic)</h1>
+<h2 class="section" id='magicparlabel-2145'><span class="section_label">17</span> Extensions to Multivariate Geostatistics</h2>
+<h3 class="subsection" id='magicparlabel-2146'><span class="subsection_label">17.1</span> Cross-variance functions</h3>
 
-<div class="definition" id='magicparlabel-2156'><div class="definition_item"><span class="definition_label">Definition 216.</span>
+<div class="definition" id='magicparlabel-2147'><div class="definition_item"><span class="definition_label">Definition 216.</span>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -28389,11 +28394,11 @@ Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math>.</div>
 </div>
 
-<div class="standard" id='magicparlabel-2161'><br />
+<div class="standard" id='magicparlabel-2152'><br />
 
 </div>
 
-<div class="definition" id='magicparlabel-2162'><div class="definition_item"><span class="definition_label">Definition 217.</span>
+<div class="definition" id='magicparlabel-2153'><div class="definition_item"><span class="definition_label">Definition 217.</span>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -28586,14 +28591,14 @@ Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math>.</div>
 </div>
 
-<div class="standard" id='magicparlabel-2167'><br />
+<div class="standard" id='magicparlabel-2158'><br />
 
 </div>
 
-<div class="example" id='magicparlabel-2168'><div class="example_item"><span class="example_label">Example 218.</span>
+<div class="example" id='magicparlabel-2159'><div class="example_item"><span class="example_label">Example 218.</span>
 Cross-covariograms have the following properties </div>
 
-<ol class="enumerate" id='magicparlabel-2169'><li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-2160'><li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <msub>
@@ -28664,7 +28669,7 @@ Cross-covariograms have the following properties </div>
  </mrow></math> is semi-positive definite</li>
 </ol>
 
-<div class="solution_" id='magicparlabel-2171'><div class="solution__item"><span class="solution__label">Solution.</span>
+<div class="solution_" id='magicparlabel-2162'><div class="solution__item"><span class="solution__label">Solution.</span>
 Well part 1. is easy to check. Now for Part 2. it is <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi> &forall; </mi>
@@ -28804,13 +28809,13 @@ Well part 1. is easy to check. Now for Part 2. it is <math xmlns="http://www.w3.
 
 
 
-<div class="standard" id='magicparlabel-2178'><br />
+<div class="standard" id='magicparlabel-2169'><br />
 
 </div>
 
 
 
-<div class="definition" id='magicparlabel-2180'><div class="definition_item"><span class="definition_label">Definition 219.</span>
+<div class="definition" id='magicparlabel-2171'><div class="definition_item"><span class="definition_label">Definition 219.</span>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -28966,7 +28971,7 @@ Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math>.</div>
 </div>
 
-<div class="example" id='magicparlabel-2189'><div class="example_item"><span class="example_label">Example 220.</span>
+<div class="example" id='magicparlabel-2180'><div class="example_item"><span class="example_label">Example 220.</span>
 <a id="exa_Let__and" />
 Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -29438,19 +29443,19 @@ Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mtable></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-2190'><br />
+<div class="standard" id='magicparlabel-2181'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2191'><div class="note_item"><span class="note_label">Note 221.</span>
+<div class="note" id='magicparlabel-2182'><div class="note_item"><span class="note_label">Note 221.</span>
 Ex <a href="#exa_Let__and">220</a> implies that the cross-variogram is not adequate for modeling as it covers only the even term of the cross-covariance function. </div>
 </div>
 
-<div class="standard" id='magicparlabel-2196'><br />
+<div class="standard" id='magicparlabel-2187'><br />
 
 </div>
 
-<div class="definition" id='magicparlabel-2197'><div class="definition_item"><span class="definition_label">Definition 222.</span>
+<div class="definition" id='magicparlabel-2188'><div class="definition_item"><span class="definition_label">Definition 222.</span>
 Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -29580,25 +29585,25 @@ Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math>.</div>
 </div>
 
-<div class="standard" id='magicparlabel-2206'><br />
+<div class="standard" id='magicparlabel-2197'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2207'><div class="note_item"><span class="note_label">Note 223.</span>
+<div class="note" id='magicparlabel-2198'><div class="note_item"><span class="note_label">Note 223.</span>
 Pseudo-cross-variogram function has the advantage that it is not nessesarily even, hence it can model more cases. Its disadvantages involve that (1) it is positive, hence it cannot model negative cross-dependencies, and that (2) stationarity across increments is unrealistic as it may consider differences of variables with different unites.</div>
 </div>
 
 
 
-<div class="standard" id='magicparlabel-2213'><br />
+<div class="standard" id='magicparlabel-2204'><br />
 
 </div>
-<h3 class="subsection" id='magicparlabel-2214'><span class="subsection_label">17.2</span> Co-Kriging</h3>
+<h3 class="subsection" id='magicparlabel-2205'><span class="subsection_label">17.2</span> Co-Kriging</h3>
 
-<div class="note" id='magicparlabel-2215'><div class="note_item"><span class="note_label">Note 224.</span>
+<div class="note" id='magicparlabel-2206'><div class="note_item"><span class="note_label">Note 224.</span>
 The cokriging procedure is a natural extension of kriging when the cross-covariance function/model is available.  A variable of interest is cokriged at a specific location from data about itself and about auxiliary variables in the neighborhood. Examples: </div>
 
-<ol class="enumerate" id='magicparlabel-2220'><li class="enumerate_item">Different variables correspond to a different characteristics. The variable of interest can be chromium (Cr) and the auxiliary variables can be <math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-2211'><li class="enumerate_item">Different variables correspond to a different characteristics. The variable of interest can be chromium (Cr) and the auxiliary variables can be <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <msubsup>
    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
@@ -30264,65 +30269,65 @@ The cokriging procedure is a natural extension of kriging when the cross-covaria
 </ol>
 </div>
 
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-2227'>  <span class='float-caption-Standard float-caption float-caption-standard'>Figure 17.1:  Central valley Groundware example data<a id="fig_Saterlite__data_1" />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-2218'>  <span class='float-caption-Standard float-caption float-caption-standard'>Figure 17.1:  Central valley Groundware example data<a id="fig_Saterlite__data_1" />
 </span></div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-2231'><img style='width:33%;' src='56_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___s_Central_Valley_Groundwater_Jan2019_As_obs.png' alt='image: 56_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___s_Central_Valley_Groundwater_Jan2019_As_obs.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-2222'><img style='width:33%;' src='56_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___s_Central_Valley_Groundwater_Jan2019_As_obs.png' alt='image: 56_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___s_Central_Valley_Groundwater_Jan2019_As_obs.png' />
 </div>
 
-<div class="plain_layout" id='magicparlabel-2232'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  Cr concentration</span></div>
+<div class="plain_layout" id='magicparlabel-2223'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  Cr concentration</span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-2240'><img style='width:33%;' src='57_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___es_Central_Valley_Groundwater_Jan2019_U_obs.png' alt='image: 57_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___es_Central_Valley_Groundwater_Jan2019_U_obs.png' />
-</div>
-
-<div class="plain_layout" id='magicparlabel-2241'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  Fe concentration</span></div>
-</div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-2249'><img style='width:33%;' src='58_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Groundwater_Jan2019_Cr_Fe_obs_scatter_plot.png' alt='image: 58_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Groundwater_Jan2019_Cr_Fe_obs_scatter_plot.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-2231'><img style='width:33%;' src='57_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___es_Central_Valley_Groundwater_Jan2019_U_obs.png' alt='image: 57_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___es_Central_Valley_Groundwater_Jan2019_U_obs.png' />
 </div>
 
-<div class="plain_layout" id='magicparlabel-2250'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  Scatterplot Cr vs Fe</span></div>
+<div class="plain_layout" id='magicparlabel-2232'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  Fe concentration</span></div>
+</div>
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-2240'><img style='width:33%;' src='58_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Groundwater_Jan2019_Cr_Fe_obs_scatter_plot.png' alt='image: 58_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Groundwater_Jan2019_Cr_Fe_obs_scatter_plot.png' />
+</div>
+
+<div class="plain_layout" id='magicparlabel-2241'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  Scatterplot Cr vs Fe</span></div>
 </div>
 
 </div>
 
 
 
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-2263'>  <span class='float-caption-Standard float-caption float-caption-standard'>Figure 17.2:  Satellite temperature readings data<a id="fig_Saterlite__data" />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-2254'>  <span class='float-caption-Standard float-caption float-caption-standard'>Figure 17.2:  Satellite temperature readings data<a id="fig_Saterlite__data" />
 </span></div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-2267'><img style='width:33%;' src='59_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_ck_N14_true.png' alt='image: 59_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_ck_N14_true.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-2258'><img style='width:33%;' src='59_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_ck_N14_true.png' alt='image: 59_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____statistics_IV_Handouts_figures_ck_N14_true.png' />
 </div>
 
-<div class="plain_layout" id='magicparlabel-2268'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  N14 (less accurate)</span></div>
+<div class="plain_layout" id='magicparlabel-2259'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure a:  N14 (less accurate)</span></div>
 
 
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-2277'><img style='width:33%;' src='60_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tistics_IV_Handouts_figures_ck_N15_training.png' alt='image: 60_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tistics_IV_Handouts_figures_ck_N15_training.png' />
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-2268'><img style='width:33%;' src='60_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tistics_IV_Handouts_figures_ck_N15_training.png' alt='image: 60_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tistics_IV_Handouts_figures_ck_N15_training.png' />
 </div>
 
-<div class="plain_layout" id='magicparlabel-2278'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  N15 (more accurate)</span></div>
+<div class="plain_layout" id='magicparlabel-2269'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure b:  N15 (more accurate)</span></div>
 </div>
-<div class='float-figure'><div class="plain_layout" id='magicparlabel-2286'><img style='width:33%;' src='61_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tatistics_IV_Handouts_figures_ck_N15_p_full.png' alt='image: 61_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tatistics_IV_Handouts_figures_ck_N15_p_full.png' />
-</div>
-
-<div class="plain_layout" id='magicparlabel-2287'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  N15 (co-kriging prediction)</span></div>
+<div class='float-figure'><div class="plain_layout" id='magicparlabel-2277'><img style='width:33%;' src='61_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tatistics_IV_Handouts_figures_ck_N15_p_full.png' alt='image: 61_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___tatistics_IV_Handouts_figures_ck_N15_p_full.png' />
 </div>
 
+<div class="plain_layout" id='magicparlabel-2278'><span class='float-caption-Standard float-caption float-caption-standard'>Sub-Figure c:  N15 (co-kriging prediction)</span></div>
 </div>
-
-
-
-<div class="standard" id='magicparlabel-2296'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2297'><div class="note_item"><span class="note_label">Note 225.</span>
+
+
+<div class="standard" id='magicparlabel-2287'><br />
+
+</div>
+
+<div class="note" id='magicparlabel-2288'><div class="note_item"><span class="note_label">Note 225.</span>
 We present the concept in the ordinary Kriging framework. </div>
 </div>
 
-<div class="standard" id='magicparlabel-2298'><br />
+<div class="standard" id='magicparlabel-2289'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2299'><div class="note_item"><span class="note_label">Note 226.</span>
+<div class="note" id='magicparlabel-2290'><div class="note_item"><span class="note_label">Note 226.</span>
 Consider <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>k</mi>
  </mrow></math> stochastic processes <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -30486,11 +30491,11 @@ Consider <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math>. </div>
 </div>
 
-<div class="standard" id='magicparlabel-2300'><br />
+<div class="standard" id='magicparlabel-2291'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2301'><div class="note_item"><span class="note_label">Note 227.</span>
+<div class="note" id='magicparlabel-2292'><div class="note_item"><span class="note_label">Note 227.</span>
 Assume <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
@@ -30599,7 +30604,7 @@ Assume <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
 </div>
 
 
-<div class="note" id='magicparlabel-2312'><div class="note_item"><span class="note_label">Note 228.</span>
+<div class="note" id='magicparlabel-2303'><div class="note_item"><span class="note_label">Note 228.</span>
 Co-Kriging produces the BLUE <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -30661,11 +30666,11 @@ Co-Kriging produces the BLUE <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math>. </div>
 </div>
 
-<div class="standard" id='magicparlabel-2313'><br />
+<div class="standard" id='magicparlabel-2304'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2314'><div class="note_item"><span class="note_label">Note 229.</span>
+<div class="note" id='magicparlabel-2305'><div class="note_item"><span class="note_label">Note 229.</span>
 The Co-Kriging predictor has the linear form<a id="eq__69" />
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
@@ -30907,11 +30912,11 @@ The Co-Kriging predictor has the linear form<a id="eq__69" />
  </mrow></math>.</div>
 </div>
 
-<div class="standard" id='magicparlabel-2315'><br />
+<div class="standard" id='magicparlabel-2306'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2316'><div class="note_item"><span class="note_label">Note 230.</span>
+<div class="note" id='magicparlabel-2307'><div class="note_item"><span class="note_label">Note 230.</span>
 Although parametrization <a href="#eq__69">(17.1)</a> requires that all <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -30936,11 +30941,11 @@ Although parametrization <a href="#eq__69">(17.1)</a> requires that all <math xm
  </mrow></math>, the concept can be adjusted to consider more general cases. </div>
 </div>
 
-<div class="standard" id='magicparlabel-2317'><br />
+<div class="standard" id='magicparlabel-2308'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2318'><div class="note_item"><span class="note_label">Note 231.</span>
+<div class="note" id='magicparlabel-2309'><div class="note_item"><span class="note_label">Note 231.</span>
 To enforce unbiassness, we find sufficient conditions for <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
 
@@ -31358,20 +31363,6 @@ To enforce unbiassness, we find sufficient conditions for <math xmlns="http://ww
  </mrow></math>, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
-   <msub>
-    <mrow><mi> &zeta; </mi>
-    </mrow>
-    <mrow>
-     <mrow><mi>j</mi><mo>,</mo>
-      <msub>
-       <mrow><mi>j</mi>
-       </mrow>
-       <mrow><mn>0</mn>
-       </mrow>
-      </msub>
-     </mrow>
-    </mrow>
-   </msub><mo>:</mo><mo>=</mo>
    <msubsup>
     <mrow><mo> &sum; </mo>
     </mrow>
@@ -31434,22 +31425,14 @@ To enforce unbiassness, we find sufficient conditions for <math xmlns="http://ww
  </mrow></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-2323'><br />
+<div class="standard" id='magicparlabel-2318'><br />
 
 </div>
 
-<div class="notation" id='magicparlabel-2324'><div class="notation_item"><span class="notation_label">Notation 232.</span>
+<div class="notation" id='magicparlabel-2319'><div class="notation_item"><span class="notation_label">Notation 232.</span>
 Set convenient notation for the calculations below as<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
-   <msub>
-    <mrow><mi> &zeta; </mi>
-    </mrow>
-    <mrow>
-     <mrow><mi>j</mi><mo>,</mo><mn>0</mn>
-     </mrow>
-    </mrow>
-   </msub><mo>:</mo><mo>=</mo>
    <msub>
     <mrow><mi>w</mi>
     </mrow>
@@ -31498,11 +31481,11 @@ Set convenient notation for the calculations below as<math display="block" xmlns
  </mrow></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-2325'><br />
+<div class="standard" id='magicparlabel-2324'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2326'><div class="note_item"><span class="note_label">Note 233.</span>
+<div class="note" id='magicparlabel-2325'><div class="note_item"><span class="note_label">Note 233.</span>
 The MSE (or Variance) is <a id="eq__71" />
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
@@ -32498,11 +32481,11 @@ The MSE (or Variance) is <a id="eq__71" />
  </mtable></math> </div>
 </div>
 
-<div class="standard" id='magicparlabel-2327'><br />
+<div class="standard" id='magicparlabel-2326'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2328'><div class="note_item"><span class="note_label">Note 234.</span>
+<div class="note" id='magicparlabel-2327'><div class="note_item"><span class="note_label">Note 234.</span>
 The Lagrange function is<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
@@ -32842,11 +32825,11 @@ The Lagrange function is<math display="block" xmlns="http://www.w3.org/1998/Math
  </mtable></math> </div>
 </div>
 
-<div class="standard" id='magicparlabel-2329'><br />
+<div class="standard" id='magicparlabel-2328'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2330'><div class="note_item"><span class="note_label">Note 235.</span>
+<div class="note" id='magicparlabel-2329'><div class="note_item"><span class="note_label">Note 235.</span>
 The CK system of equations produced by <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mn>0</mn><mo>=</mo>
@@ -33099,11 +33082,11 @@ The CK system of equations produced by <math xmlns="http://www.w3.org/1998/Math/
  </mtable></math> </div>
 </div>
 
-<div class="standard" id='magicparlabel-2331'><br />
+<div class="standard" id='magicparlabel-2330'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2332'><div class="note_item"><span class="note_label">Note 236.</span>
+<div class="note" id='magicparlabel-2331'><div class="note_item"><span class="note_label">Note 236.</span>
 Plugin <a href="#eq__70">(17.3)</a> in <a href="#eq__71">(17.2)</a>, I can get the co-Kriging variance<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -33273,19 +33256,19 @@ Plugin <a href="#eq__70">(17.3)</a> in <a href="#eq__71">(17.2)</a>, I can get t
  </mrow></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-2333'><br />
+<div class="standard" id='magicparlabel-2332'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2334'><div class="note_item"><span class="note_label">Note 237.</span>
+<div class="note" id='magicparlabel-2333'><div class="note_item"><span class="note_label">Note 237.</span>
 The above derivation can be done wrt the cross-variogram as in UK, OK (by making extra assumptions). I choose to presented wrt the cross-covariance as more general. </div>
 </div>
 
-<div class="standard" id='magicparlabel-2335'><br />
+<div class="standard" id='magicparlabel-2334'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2336'><div class="note_item"><span class="note_label">Note 238.</span>
+<div class="note" id='magicparlabel-2335'><div class="note_item"><span class="note_label">Note 238.</span>
 Regarding the Bayesian framework. Consider the paradigm that <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -34070,11 +34053,11 @@ Regarding the Bayesian framework. Consider the paradigm that <math xmlns="http:/
  </mtable></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-2337'><br />
+<div class="standard" id='magicparlabel-2336'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2338'><div class="note_item"><span class="note_label">Note 239.</span>
+<div class="note" id='magicparlabel-2337'><div class="note_item"><span class="note_label">Note 239.</span>
 If <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>k</mi>
  </mrow></math> is large with moderate large <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -34094,11 +34077,11 @@ If <math xmlns="http://www.w3.org/1998/Math/MathML">
 
 
 
-<div class="standard" id='magicparlabel-2345'><br />
+<div class="standard" id='magicparlabel-2344'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-2346'><div class="note_item"><span class="note_label">Note 240.</span>
+<div class="note" id='magicparlabel-2345'><div class="note_item"><span class="note_label">Note 240.</span>
 For instance some tricks to mitigate challenges with large <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>k</mi>
  </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -34109,11 +34092,28 @@ For instance some tricks to mitigate challenges with large <math xmlns="http://w
    <mrow><mi>j</mi>
    </mrow>
   </msub>
- </mrow></math> involve specifying restricted forms of cross-covariance functions with special structure often introducing conditional independences (hence restricting the model), as well as using suitable experimental designs.</div>
+ </mrow></math> involve specifying restricted forms of cross-covariance functions <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mi>C</mi>
+    </mrow>
+    <mrow>
+     <mrow><mi>i</mi><mo>,</mo><mi>j</mi>
+     </mrow>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>s</mi><mo>,</mo><mi>t</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> with special structure often introducing conditional independences (hence restricting the model), as well as using suitable experimental designs.</div>
 </div>
 
-<div class="definition" id='magicparlabel-2347'><div class="definition_item"><span class="definition_label">Definition 241.</span>
-Intrinsic Multivariate Correlation (co-Kriking) model is the CK model which assumes that the multivariate correlation structure is independent of the spatial correlation; i.e. the correlation <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="definition" id='magicparlabel-2346'><div class="definition_item"><span class="definition_label">Definition 241.</span>
+Intrinsic Multivariate Correlation (co-Kriking) model is the CK model which assumes that the multivariate correlation structure is independent of the spatial correlation; i.e. the following correlation <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mfrac>
    <mrow>
@@ -34192,7 +34192,7 @@ Intrinsic Multivariate Correlation (co-Kriking) model is the CK model which assu
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
- </mrow></math> at any pair of sites <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math> at <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
   <mrow><mi>s</mi><mo>,</mo><mi>t</mi>
@@ -34213,10 +34213,17 @@ Intrinsic Multivariate Correlation (co-Kriking) model is the CK model which assu
   </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
+ </mrow></math> for any pair of sites <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <mrow><mi>s</mi><mo>,</mo><mi>t</mi>
+  </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
  </mrow></math>. </div>
 </div>
 
-<div class="example" id='magicparlabel-2348'><div class="example_item"><span class="example_label">Example 242.</span>
+<div class="example" id='magicparlabel-2347'><div class="example_item"><span class="example_label">Example 242.</span>
 Consider a set of processes <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
 
@@ -34307,7 +34314,7 @@ Consider a set of processes <math xmlns="http://www.w3.org/1998/Math/MathML">
   </mrow>
  </mrow></math>. Show that this co-kriging model is Intrinsic Multivariate Correlation model. </div>
 
-<div class="solution_" id='magicparlabel-2349'><div class="solution__item"><span class="solution__label">Solution.</span>
+<div class="solution_" id='magicparlabel-2348'><div class="solution__item"><span class="solution__label">Solution.</span>
 The correlation between two variables For any pair of spatial points <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -34474,20 +34481,20 @@ The correlation between two variables For any pair of spatial points <math xmlns
 </div>
 </div>
 
-<div class="note" id='magicparlabel-2350'><div class="note_item"><span class="note_label">Note 243.</span>
+<div class="note" id='magicparlabel-2349'><div class="note_item"><span class="note_label">Note 243.</span>
 In Co-Kriging, using the Intrinsic Multivariate Correlation model for the cross-covariance, and using sites in a grid allows the use of Kronecker product operations in cases <a href="#eq__70">(17.3)</a> and <a href="#eq__72">17.4</a> for mitigating the computational requirements.</div>
 </div>
 
 
 
-<div class="standard" id='magicparlabel-2356'><br />
+<div class="standard" id='magicparlabel-2355'><br />
 
 </div>
 
 
-<h3 class="subsection" id='magicparlabel-2363'><span class="subsection_label">17.3</span> Linear model of coregionalisation (LMC)</h3>
+<h3 class="subsection" id='magicparlabel-2362'><span class="subsection_label">17.3</span> Linear model of coregionalisation (LMC)</h3>
 
-<ul class="itemize" id='magicparlabel-2364'><li class="itemize_item">Perhaps we will not introduce this special concept this year due to lack of time. </li>
+<ul class="itemize" id='magicparlabel-2363'><li class="itemize_item">Perhaps we will not introduce this special concept this year due to lack of time. </li>
 <li class="itemize_item">The linear model of coregionalisation, essentially introduces a special structure in the cross-covariance functions <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
 
@@ -34542,8 +34549,10 @@ In Co-Kriging, using the Intrinsic Multivariate Correlation model for the cross-
   </msub>
  </mrow></math>)... See the covariance matrix in <a href="#eq__72">(17.4)</a> or the system of equations in <a href="#eq__70">17.3</a>. </li>
 </ul>
-<h4 class="subsubsection" id='magicparlabel-2368'><span class="subsubsection_label">17.3.1</span> Intrinsic multivariate correlation</h4>
-<h4 class="subsubsection" id='magicparlabel-2369'><span class="subsubsection_label">17.3.2</span> The Linear model of coregionalisation</h4>
+<h4 class="subsubsection" id='magicparlabel-2367'><span class="subsubsection_label">17.3.1</span> Intrinsic multivariate correlation</h4>
+<h4 class="subsubsection" id='magicparlabel-2368'><span class="subsubsection_label">17.3.2</span> The Linear model of coregionalisation</h4>
+<div class="standard" id='magicparlabel-2369'>&nbsp; </div>
+
 
 </body>
 </html>

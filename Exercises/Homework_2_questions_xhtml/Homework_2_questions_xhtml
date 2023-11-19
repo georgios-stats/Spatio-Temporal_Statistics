@@ -4952,9 +4952,8 @@ div.foot:hover div.foot_inner {
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
- </mrow></math>. 
-
-<ol class="enumerate" id='magicparlabel-108'><li class="enumerate_item">To learn the unknown weights <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>. </li>
+<li class="enumerate_item">To learn the unknown weights <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
 
   <msub>
@@ -5429,8 +5428,7 @@ div.foot:hover div.foot_inner {
    </mtd>
   </mtr>
  </mtable></math></li>
-</ol>
-</li><li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
    <mtd>
