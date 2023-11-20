@@ -124,7 +124,7 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
     </mrow>
    </msup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-   <mrow><mi>u</mi><mo>|</mo><mi>V</mi>
+   <mrow><mi>v</mi><mo>|</mo><mi>V</mi>
    </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 <mo>=</mo>
