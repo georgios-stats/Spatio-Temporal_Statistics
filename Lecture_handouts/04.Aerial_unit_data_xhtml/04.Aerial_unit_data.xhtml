@@ -3677,9 +3677,9 @@ Adjacency matrix <math xmlns="http://www.w3.org/1998/Math/MathML">
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
- </mrow></math> for some symmetric neighbourhood relation <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math> for some symmetric neighborhood relation <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &sim; </mo>
- </mrow></math> on<math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math> on <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mstyle mathvariant='script'><mi>S</mi>
   </mstyle>
@@ -3705,7 +3705,7 @@ Proximity matrix <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>j</mi>
  </mrow></math> in some fashion for some symmetric neighbourhood relation <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &sim; </mo>
- </mrow></math> on<math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math> on <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mstyle mathvariant='script'><mi>S</mi>
   </mstyle>
@@ -3727,54 +3727,297 @@ Proximity matrix <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math></div>
 </div>
 
-<div class="standard" id='magicparlabel-195'><br />
+<h3 class="subsection" id='magicparlabel-206'><span class="subsection_label">3.1</span> Conditional autoregressive models (CAR)</h3>
 
+<div class="definition" id='magicparlabel-207'><div class="definition_item"><span class="definition_label">Definition 27.</span>
+Assume a random field <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>Z</mi><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>Z</mi>
+     </mrow>
+     <mrow><mi>s</mi>
+     </mrow>
+    </msub><mo>;</mo><mi>s</mi><mo> &isin; </mo>
+    <mstyle mathvariant='script'><mi>S</mi>
+    </mstyle>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> on a set of indexes <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mstyle mathvariant='script'><mi>S</mi>
+  </mstyle>
+ </mrow></math> with values in <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mstyle mathvariant='script'><mi>Z</mi>
+  </mstyle>
+ </mrow></math>. We say that <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>Z</mi>
+ </mrow></math> follows a conditional autoregressive model (CAR) if the distribution of each element <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow><mi>Z</mi>
+   </mrow>
+   <mrow><mi>s</mi>
+   </mrow>
+  </msub>
+ </mrow></math> of the random field <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>Z</mi>
+ </mrow></math> is specified conditionally on the values at the neighboring sites of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>s</mi>
+ </mrow></math>. </div>
 </div>
 
-<div class="note" id='magicparlabel-196'><div class="note_item"><span class="note_label">Note 27.</span>
-Proximity matrix <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mi>W</mi>
- </mrow></math> can be an adjacency matrix, or it can be some kind of distance e.g. <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
+<div class="standard" id='magicparlabel-208'><br />
+
+</div>
+<h4 class="subsubsection" id='magicparlabel-209'><span class="subsubsection_label">3.1.1</span> Gaussian CAR</h4>
+
+<div class="definition" id='magicparlabel-210'><div class="definition_item"><span class="definition_label">Definition 28.</span>
+<a id="def_Gaussian_CAR_involves" />
+Gaussian CAR assumes that the local characteristics <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
+
   <mrow>
    <msub>
-    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
-<mi>W</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+    <mrow><mo> Pr </mo>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
+   <mrow>
+    <msub>
+     <mrow><mi>z</mi>
+     </mrow>
+     <mrow><mi>i</mi>
+     </mrow>
+    </msub><mo>|</mo>
+    <msub>
+     <mrow><mi>z</mi>
+     </mrow>
+     <mrow>
+      <mrow>
+       <mstyle mathvariant='script'><mi>S</mi>
+       </mstyle><mo>-</mo><mi>i</mi>
+      </mrow>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
+
+ </mrow></math> are Gaussian distributions <a id="eq__1" />
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mtable>
+  <mtr>
+   <mtd>
+    <mrow>
+     <msub>
+      <mrow><mi>Z</mi>
+      </mrow>
+      <mrow><mi>i</mi>
+      </mrow>
+     </msub><mo>|</mo>
+     <msub>
+      <mrow><mi>z</mi>
+      </mrow>
+      <mrow>
+       <mrow>
+        <mstyle mathvariant='script'><mi>S</mi>
+        </mstyle><mo>-</mo><mi>i</mi>
+       </mrow>
+      </mrow>
+     </msub>
+    </mrow>
+   </mtd>
+   <mtd>
+    <mrow><mo> &sim; </mo>
+     <mstyle mathvariant='normal'><mi>N</mi>
+     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow>
+      <msub>
+       <mrow><mi> &mu; </mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub><mo>+</mo>
+      <msub>
+       <mrow><mo> &sum; </mo>
+       </mrow>
+       <mrow>
+        <mrow><mi>j</mi><mo> &ne; </mo><mi>i</mi>
+        </mrow>
+       </mrow>
+      </msub>
+      <msub>
+       <mrow><mi>b</mi>
+       </mrow>
+       <mrow>
+        <mrow><mi>i</mi><mo>,</mo><mi>j</mi>
+        </mrow>
+       </mrow>
+      </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow>
+       <msub>
+        <mrow><mi>Z</mi>
+        </mrow>
+        <mrow><mi>j</mi>
+        </mrow>
+       </msub><mo>-</mo>
+       <msub>
+        <mrow><mi> &mu; </mi>
+        </mrow>
+        <mrow><mi>j</mi>
+        </mrow>
+       </msub>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>,</mo>
+      <msub>
+       <mrow><mi> &kappa; </mi>
+       </mrow>
+       <mrow><mi>i</mi>
+       </mrow>
+      </msub>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+   </mtd>
+   <mtd>(3.1)
+   </mtd>
+  </mtr>
+ </mtable></math> with mean <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='normal'><mi>E</mi>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>Z</mi>
+     </mrow>
+     <mrow><mi>i</mi>
+     </mrow>
+    </msub><mo>|</mo>
+    <msub>
+     <mrow><mi>Z</mi>
+     </mrow>
+     <mrow>
+      <mrow>
+       <mstyle mathvariant='script'><mi>S</mi>
+       </mstyle><mo>-</mo><mi>i</mi>
+      </mrow>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <msub>
+    <mrow><mi> &mu; </mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub><mo>+</mo>
+   <msub>
+    <mrow><mo> &sum; </mo>
+    </mrow>
+    <mrow>
+     <mrow><mi>j</mi><mo> &ne; </mo><mi>i</mi>
+     </mrow>
+    </mrow>
+   </msub>
+   <msub>
+    <mrow><mi>b</mi>
     </mrow>
     <mrow>
      <mrow><mi>i</mi><mo>,</mo><mi>j</mi>
      </mrow>
     </mrow>
-   </msub><mo>=</mo>
-   <mstyle mathvariant='normal'>
-    <mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi>
-    </mrow>
-   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-   <mrow><mi>i</mi><mo>,</mo><mi>j</mi>
+   <mrow>
+    <msub>
+     <mrow><mi>Z</mi>
+     </mrow>
+     <mrow><mi>j</mi>
+     </mrow>
+    </msub><mo>-</mo>
+    <msub>
+     <mrow><mi> &mu; </mi>
+     </mrow>
+     <mrow><mi>j</mi>
+     </mrow>
+    </msub>
    </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
+ </mrow></math> and variance <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>V</mi><mi>a</mi><mi>r</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>Z</mi>
+     </mrow>
+     <mrow><mi>i</mi>
+     </mrow>
+    </msub><mo>|</mo>
+    <msub>
+     <mrow><mi>Z</mi>
+     </mrow>
+     <mrow>
+      <mrow>
+       <mstyle mathvariant='script'><mi>S</mi>
+       </mstyle><mo>-</mo><mi>i</mi>
+      </mrow>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <msub>
+    <mrow><mi> &kappa; </mi>
+    </mrow>
+    <mrow><mi>i</mi>
+    </mrow>
+   </msub>
+  </mrow>
+ </mrow></math> for <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>i</mi><mo> &isin; </mo>
+   <mstyle mathvariant='script'><mi>S</mi>
+   </mstyle>
+  </mrow>
  </mrow></math>.</div>
 </div>
-<h3 class="subsection" id='magicparlabel-202'><span class="subsection_label">3.1</span> Conditional autoregressive models (CAR)</h3>
 
-<div class="standard" id='magicparlabel-207'><br />
+
+
+<div class="standard" id='magicparlabel-288'><br />
 
 </div>
-<h4 class="subsubsection" id='magicparlabel-208'><span class="subsubsection_label">3.1.1</span> Gaussian CAR</h4>
-<h3 class="subsection" id='magicparlabel-259'><span class="subsection_label">3.2</span> Simultaneus Autoregressive (SAR) models</h3>
+<h2 class="section" id='magicparlabel-289'><span class="section_label">4</span> Related Random Field structures</h2>
 
-<h2 class="section" id='magicparlabel-277'><span class="section_label">4</span> Gibbs state</h2>
-<div class="standard" id='magicparlabel-278'>&nbsp;</div>
-<h2 class="section" id='magicparlabel-279'><span class="section_label">5</span> Markov Random Fields</h2>
-<div class="standard" id='magicparlabel-280'>&nbsp;</div>
-<h1 class="part" id='magicparlabel-281'><span class="part_label">Part II</span> Model building &amp; related parametric inference</h1>
 
-<div class="standard" id='magicparlabel-282'><br />
+<div class="standard" id='magicparlabel-368'>&nbsp;</div>
+<h1 class="part" id='magicparlabel-369'><span class="part_label">Part II</span> Model building &amp; related parametric inference</h1>
+
+<div class="standard" id='magicparlabel-370'><br />
 
 </div>
 </body>
