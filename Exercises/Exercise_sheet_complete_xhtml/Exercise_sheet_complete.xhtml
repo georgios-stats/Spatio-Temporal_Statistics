@@ -24343,8 +24343,665 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 
 
 
-<div class="solution_" id='magicparlabel-816'><div class="solution__item"><span class="solution__label">Solution.</span>
-&nbsp; </div>
+<div class="solution_" id='magicparlabel-820'><div class="solution__item"><span class="solution__label">Solution.</span>
+&nbsp; &nbsp;<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mtable>
+  <mtr>
+   <mtd>
+    <mrow>
+     <msup>
+      <mrow><mi> &sigma; </mi>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </msup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>v</mi><mo>|</mo><mi>V</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+    </mrow>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &sum; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msubsup>
+     <msubsup>
+      <mrow><mi> &sigma; </mi>
+      </mrow>
+      <mrow><mi>E</mi>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </msubsup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow>
+      <msub>
+       <mrow><mi>v</mi>
+       </mrow>
+       <mrow><mi>j</mi>
+       </mrow>
+      </msub><mo>,</mo><mi>V</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mo>=</mo>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &sum; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msubsup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+     <mrow><mn>2</mn>
+      <mover>
+       <mrow><mi> &gamma; </mi>
+       </mrow><mo stretchy="true">&OverBar;</mo>
+      </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow>
+       <msub>
+        <mrow><mi>v</mi>
+        </mrow>
+        <mrow><mi>j</mi>
+        </mrow>
+       </msub><mo>,</mo><mi>V</mi>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+      <mover>
+       <mrow><mi> &gamma; </mi>
+       </mrow><mo stretchy="true">&OverBar;</mo>
+      </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow>
+       <msub>
+        <mrow><mi>v</mi>
+        </mrow>
+        <mrow><mi>j</mi>
+        </mrow>
+       </msub><mo>,</mo>
+       <msub>
+        <mrow><mi>v</mi>
+        </mrow>
+        <mrow><mi>j</mi>
+        </mrow>
+       </msub>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+      <mover>
+       <mrow><mi> &gamma; </mi>
+       </mrow><mo stretchy="true">&OverBar;</mo>
+      </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow><mi>V</mi><mo>,</mo><mi>V</mi>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mo>=</mo>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mrow><mn>2</mn>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &sum; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msubsup>
+     <mover>
+      <mrow><mi> &gamma; </mi>
+      </mrow><mo stretchy="true">&OverBar;</mo>
+     </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow>
+      <msub>
+       <mrow><mi>v</mi>
+       </mrow>
+       <mrow><mi>j</mi>
+       </mrow>
+      </msub><mo>,</mo><mi>V</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &sum; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msubsup>
+     <mover>
+      <mrow><mi> &gamma; </mi>
+      </mrow><mo stretchy="true">&OverBar;</mo>
+     </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow>
+      <msub>
+       <mrow><mi>v</mi>
+       </mrow>
+       <mrow><mi>j</mi>
+       </mrow>
+      </msub><mo>,</mo>
+      <msub>
+       <mrow><mi>v</mi>
+       </mrow>
+       <mrow><mi>j</mi>
+       </mrow>
+      </msub>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &sum; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msubsup>
+     <mover>
+      <mrow><mi> &gamma; </mi>
+      </mrow><mo stretchy="true">&OverBar;</mo>
+     </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>V</mi><mo>,</mo><mi>V</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mo>=</mo>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mrow><mn>2</mn>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &sum; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msubsup>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+        <msub>
+         <mrow><mi>v</mi>
+         </mrow>
+         <mrow><mi>j</mi>
+         </mrow>
+        </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>V</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+       </mrow>
+      </mrow>
+     </mfrac>
+     <msub>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>s</mi><mo> &isin; </mo>
+        <msub>
+         <mrow><mi>v</mi>
+         </mrow>
+         <mrow><mi>j</mi>
+         </mrow>
+        </msub>
+       </mrow>
+      </mrow>
+     </msub>
+     <msub>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>s</mi><mo> &isin; </mo><mi>V</mi>
+       </mrow>
+      </mrow>
+     </msub><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>s</mi><mo>-</mo><mi>s</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>s</mi>
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>s</mi><mo>'</mo>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mrow/>
+   </mtd>
+   <mtd>
+    <mrow><mo>-</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &sum; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msubsup>
+     <mover>
+      <mrow><mi> &gamma; </mi>
+      </mrow><mo stretchy="true">&OverBar;</mo>
+     </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow>
+      <msub>
+       <mrow><mi>v</mi>
+       </mrow>
+       <mrow><mi>j</mi>
+       </mrow>
+      </msub><mo>,</mo>
+      <msub>
+       <mrow><mi>v</mi>
+       </mrow>
+       <mrow><mi>j</mi>
+       </mrow>
+      </msub>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &sum; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msubsup>
+     <mover>
+      <mrow><mi> &gamma; </mi>
+      </mrow><mo stretchy="true">&OverBar;</mo>
+     </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>V</mi><mo>,</mo><mi>V</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mspace width="6px" /><mspace width="6px" />
+     <mstyle mathvariant='normal'><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow><mi>b</mi><mi>u</mi><mi>t</mi>&nbsp;
+       <mstyle class='math'>
+        <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+         <msub>
+          <mrow><mi>v</mi>
+          </mrow>
+          <mrow><mi>j</mi>
+          </mrow>
+         </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+        </mrow>
+       </mstyle>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     </mstyle>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mo>=</mo>
+   </mtd>
+   <mtd>
+    <mrow><mn>2</mn>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>n</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>V</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+       </mrow>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &sum; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msubsup>
+     <msub>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>s</mi><mo> &isin; </mo>
+        <msub>
+         <mrow><mi>v</mi>
+         </mrow>
+         <mrow><mi>j</mi>
+         </mrow>
+        </msub>
+       </mrow>
+      </mrow>
+     </msub>
+     <msub>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>s</mi><mo> &isin; </mo><mi>V</mi>
+       </mrow>
+      </mrow>
+     </msub><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>s</mi><mo>-</mo><mi>s</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>s</mi>
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>s</mi><mo>'</mo><mo>-</mo>
+     <mover>
+      <mrow><mi> &gamma; </mi>
+      </mrow><mo stretchy="true">&OverBar;</mo>
+     </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>v</mi><mo>,</mo><mi>v</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+     <mover>
+      <mrow><mi> &gamma; </mi>
+      </mrow><mo stretchy="true">&OverBar;</mo>
+     </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>V</mi><mo>,</mo><mi>V</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mo>=</mo>
+   </mtd>
+   <mtd>
+    <mrow><mn>2</mn>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><munder accent='false'>
+        <munder>
+         <mrow>
+          <mrow><mi>n</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+          </mrow>
+         </mrow><mo stretchy="true">&UnderBrace;</mo>
+        </munder>
+        <mrow><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>V</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+        </mrow></munder><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>V</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+       </mrow>
+      </mrow>
+     </mfrac><munder accent='false'>
+     <munder>
+      <mrow>
+       <mrow>
+        <msubsup>
+         <mrow><mo> &sum; </mo>
+         </mrow>
+         <mrow>
+          <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
+          </mrow>
+         </mrow>
+         <mrow><mi>n</mi>
+         </mrow>
+        </msubsup>
+        <msub>
+         <mrow><mo> &int; </mo>
+         </mrow>
+         <mrow>
+          <mrow><mi>s</mi><mo> &isin; </mo>
+           <msub>
+            <mrow><mi>v</mi>
+            </mrow>
+            <mrow><mi>j</mi>
+            </mrow>
+           </msub>
+          </mrow>
+         </mrow>
+        </msub>
+       </mrow>
+      </mrow><mo stretchy="true">&UnderBrace;</mo>
+     </munder>
+     <msub>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>s</mi><mo> &isin; </mo><mi>V</mi>
+       </mrow>
+      </mrow>
+     </msub></munder>
+     <msub>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>s</mi><mo> &isin; </mo><mi>V</mi>
+       </mrow>
+      </mrow>
+     </msub><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>s</mi><mo>-</mo><mi>s</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>s</mi>
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>s</mi><mo>'</mo><mo>-</mo>
+     <mover>
+      <mrow><mi> &gamma; </mi>
+      </mrow><mo stretchy="true">&OverBar;</mo>
+     </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>v</mi><mo>,</mo><mi>v</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+     <mover>
+      <mrow><mi> &gamma; </mi>
+      </mrow><mo stretchy="true">&OverBar;</mo>
+     </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>V</mi><mo>,</mo><mi>V</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mo>=</mo>
+   </mtd>
+   <mtd>
+    <mrow><mn>2</mn>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &sum; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
+       </mrow>
+      </mrow>
+      <mrow><mi>n</mi>
+      </mrow>
+     </msubsup>
+     <mover>
+      <mrow><mi> &gamma; </mi>
+      </mrow><mo stretchy="true">&OverBar;</mo>
+     </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>V</mi><mo>,</mo><mi>V</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+     <mover>
+      <mrow><mi> &gamma; </mi>
+      </mrow><mo stretchy="true">&OverBar;</mo>
+     </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>v</mi><mo>,</mo><mi>v</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+     <mover>
+      <mrow><mi> &gamma; </mi>
+      </mrow><mo stretchy="true">&OverBar;</mo>
+     </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>V</mi><mo>,</mo><mi>V</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mspace width="20px" />
+     <mover>
+      <mrow><mi> &gamma; </mi>
+      </mrow><mo stretchy="true">&OverBar;</mo>
+     </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>V</mi><mo>,</mo><mi>V</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+     <mover>
+      <mrow><mi> &gamma; </mi>
+      </mrow><mo stretchy="true">&OverBar;</mo>
+     </mover><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>v</mi><mo>,</mo><mi>v</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+   </mtd>
+  </mtr>
+ </mtable></math></div>
 </div>
 
 </div>
@@ -25077,47 +25734,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
   </mrow>
  </mrow></math></dd>
 <dt class="description_label">Hint-2</dt>
-<dd class="description_item"> Assume known function <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <mstyle mathvariant='normal'>
-    <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
-    </mrow>
-   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>x</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>=</mo>
-   <mfrac>
-    <mrow><mn>2</mn>
-    </mrow>
-    <mrow>
-     <msqrt><mi> &pi; </mi>
-     </msqrt>
-    </mrow>
-   </mfrac>
-   <msubsup>
-    <mrow><mo> &int; </mo>
-    </mrow>
-    <mrow><mn>0</mn>
-    </mrow>
-    <mrow><mi>x</mi>
-    </mrow>
-   </msubsup><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow><mo>-</mo>
-    <msup>
-     <mrow><mi>t</mi>
-     </mrow>
-     <mrow><mn>2</mn>
-     </mrow>
-    </msup>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-   <mstyle mathvariant='normal'><mi>d</mi>
-   </mstyle><mi>t</mi>
-  </mrow>
- </mrow></math>. Then <math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd class="description_item"> You can use that <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo> &int; </mo>
    <mstyle mathvariant='normal'>
@@ -25162,31 +25779,2387 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
     </mrow>
    </mstyle>
   </mrow>
- </mrow></math></dd>
+ </mrow></math> , when <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>x</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <mfrac>
+    <mrow><mn>2</mn>
+    </mrow>
+    <mrow>
+     <msqrt><mi> &pi; </mi>
+     </msqrt>
+    </mrow>
+   </mfrac>
+   <msubsup>
+    <mrow><mo> &int; </mo>
+    </mrow>
+    <mrow><mn>0</mn>
+    </mrow>
+    <mrow><mi>x</mi>
+    </mrow>
+   </msubsup><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mo>-</mo>
+    <msup>
+     <mrow><mi>t</mi>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </msup>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   <mstyle mathvariant='normal'><mi>d</mi>
+   </mstyle><mi>t</mi>
+  </mrow>
+ </mrow></math> .</dd>
 </dl>
 
 
 <div class="solution_" id='magicparlabel-878'><div class="solution__item"><span class="solution__label">Solution.</span>
-&nbsp;&nbsp; </div>
+&nbsp;&nbsp; &nbsp; </div>
+
+<ol class="enumerate" id='magicparlabel-879'><li class="enumerate_item">It is <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo>=</mo><mi>b</mi><mo>-</mo><mi>a</mi>
+  </mrow>
+ </mrow></math></li>
+<li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi> &mu; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mi> &mu; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+   <mrow><mi>a</mi><mo>,</mo><mi>b</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+   <mfrac>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+    </mrow>
+   </mfrac>
+   <msub>
+    <mrow><mo> &int; </mo>
+    </mrow>
+    <mrow><mi>v</mi>
+    </mrow>
+   </msub><mi> &mu; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>s</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   <mstyle mathvariant='normal'><mi>d</mi>
+   </mstyle><mi>s</mi><mo>=</mo>
+   <mfrac>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+    </mrow>
+   </mfrac>
+   <msub>
+    <mrow><mo> &int; </mo>
+    </mrow>
+    <mrow><mi>v</mi>
+    </mrow>
+   </msub><mn>1</mn>
+   <mstyle mathvariant='normal'><mi>d</mi>
+   </mstyle><mi>s</mi><mo>=</mo>
+   <mfrac>
+    <mrow><mn>1</mn>
+    </mrow>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+    </mrow>
+   </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mo>=</mo><mn>1</mn>
+  </mrow>
+ </mrow></math></li>
+<li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mtable>
+  <mtr>
+   <mtd>
+    <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>v</mi><mo>,</mo><mi>s</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+    </mrow>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+      </mrow>
+     </mfrac>
+     <msub>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow><mi>v</mi>
+      </mrow>
+     </msub><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>t</mi><mo>,</mo><mi>s</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>t</mi><mo>=</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow><mi>a</mi>
+      </mrow>
+      <mrow><mi>b</mi>
+      </mrow>
+     </msubsup><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mo>-</mo>
+      <msup>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>t</mi><mo>-</mo><mi>s</mi>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msup>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>t</mi>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mo>=</mo>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow><mi>a</mi>
+      </mrow>
+      <mrow><mi>b</mi>
+      </mrow>
+     </msubsup>
+     <mfrac>
+      <mrow><mn>2</mn>
+      </mrow>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+     </mfrac><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mo>-</mo>
+      <msup>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>t</mi><mo>-</mo><mi>s</mi>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msup>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>t</mi><mo>=</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>a</mi><mo>-</mo><mi>s</mi>
+       </mrow>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>s</mi>
+       </mrow>
+      </mrow>
+     </msubsup>
+     <mfrac>
+      <mrow><mn>2</mn>
+      </mrow>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+     </mfrac><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mo>-</mo>
+      <msup>
+       <mrow><mi> &xi; </mi>
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msup>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi> &xi; </mi>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mo>=</mo>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow><mn>0</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>s</mi>
+       </mrow>
+      </mrow>
+     </msubsup>
+     <mfrac>
+      <mrow><mn>2</mn>
+      </mrow>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+     </mfrac><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mo>-</mo>
+      <msup>
+       <mrow><mi> &xi; </mi>
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msup>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi> &xi; </mi><mo>-</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow><mn>0</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>a</mi><mo>-</mo><mi>s</mi>
+       </mrow>
+      </mrow>
+     </msubsup>
+     <mfrac>
+      <mrow><mn>2</mn>
+      </mrow>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+     </mfrac><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mo>-</mo>
+      <msup>
+       <mrow><mi> &xi; </mi>
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msup>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi> &xi; </mi>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mo>=</mo>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac>
+     <mstyle mathvariant='normal'>
+      <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
+      </mrow>
+     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>b</mi><mo>-</mo><mi>s</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac>
+     <mstyle mathvariant='normal'>
+      <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
+      </mrow>
+     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>a</mi><mo>-</mo><mi>s</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+   </mtd>
+  </mtr>
+ </mtable></math></li>
+<li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mtable>
+  <mtr>
+   <mtd>
+    <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>v</mi><mo>,</mo><mi>v</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+    </mrow>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+       <mrow><mi>v</mi><mo>'</mo>
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </msubsup>
+     <msubsup>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow><mi>a</mi>
+      </mrow>
+      <mrow><mi>b</mi>
+      </mrow>
+     </msubsup><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>t</mi><mo>,</mo><mi>s</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>t</mi>
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>s</mi><mo>=</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+       <mrow><mi>v</mi><mo>'</mo>
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>|</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>|</mo>
+
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </msubsup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+     <mrow>
+      <msubsup>
+       <mrow><mo> &int; </mo>
+       </mrow>
+       <mrow><mi>a</mi>
+       </mrow>
+       <mrow><mi>b</mi>
+       </mrow>
+      </msubsup><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow><mi>t</mi><mo>,</mo><mi>s</mi>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+      <mstyle mathvariant='normal'><mi>d</mi>
+      </mstyle><mi>t</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>s</mi><mo>=</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </msubsup><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>v</mi><mo>,</mo><mi>s</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>s</mi>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mo>=</mo>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </msubsup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow>
+      <mfrac>
+       <mrow><mn>1</mn>
+       </mrow>
+       <mrow>
+        <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+        </mrow>
+       </mrow>
+      </mfrac>
+      <mfrac>
+       <mrow>
+        <msqrt><mi> &pi; </mi>
+        </msqrt>
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </mfrac>
+      <mstyle mathvariant='normal'>
+       <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
+       </mrow>
+      </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow><mi>b</mi><mo>-</mo><mi>s</mi>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+      <mfrac>
+       <mrow><mn>1</mn>
+       </mrow>
+       <mrow>
+        <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+        </mrow>
+       </mrow>
+      </mfrac>
+      <mfrac>
+       <mrow>
+        <msqrt><mi> &pi; </mi>
+        </msqrt>
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </mfrac>
+      <mstyle mathvariant='normal'>
+       <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
+       </mrow>
+      </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow><mi>a</mi><mo>-</mo><mi>s</mi>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>s</mi>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mo>=</mo>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </msubsup>
+     <mstyle mathvariant='normal'>
+      <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
+      </mrow>
+     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>b</mi><mo>-</mo><mi>s</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>s</mi><mo>-</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac>
+     <msubsup>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </msubsup>
+     <mstyle mathvariant='normal'>
+      <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
+      </mrow>
+     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>a</mi><mo>-</mo><mi>s</mi>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi>s</mi>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mo>=</mo>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mo>-</mo><mn>1</mn>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <msubsup>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>b</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </msubsup>
+     <mstyle mathvariant='normal'>
+      <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
+      </mrow>
+     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi> &xi; </mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi> &xi; </mi><mo>-</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mo>-</mo><mn>1</mn>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <msubsup>
+      <mrow><mo> &int; </mo>
+      </mrow>
+      <mrow>
+       <mrow><mi>a</mi><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+      <mrow>
+       <mrow><mi>a</mi><mo>-</mo><mi>b</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </msubsup>
+     <mstyle mathvariant='normal'>
+      <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
+      </mrow>
+     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi> &xi; </mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'><mi>d</mi>
+     </mstyle><mi> &xi; </mi>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mo>=</mo>
+   </mtd>
+   <mtd>
+    <mrow>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mo>-</mo><mn>1</mn>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <msubsup>
+      <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+       <mrow><mi> &xi; </mi>
+        <mstyle mathvariant='normal'>
+         <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
+         </mrow>
+        </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi> &xi; </mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>+</mo>
+        <mfrac>
+         <mrow>
+          <mrow><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+           <mrow><mo>-</mo>
+            <msup>
+             <mrow><mi> &xi; </mi>
+             </mrow>
+             <mrow><mn>2</mn>
+             </mrow>
+            </msup>
+           </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+          </mrow>
+         </mrow>
+         <mrow>
+          <msqrt><mi> &pi; </mi>
+          </msqrt>
+         </mrow>
+        </mfrac>
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>b</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </msubsup><mo>-</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mo>-</mo><mn>1</mn>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <msubsup>
+      <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+       <mrow><mi> &xi; </mi>
+        <mstyle mathvariant='normal'>
+         <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
+         </mrow>
+        </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi> &xi; </mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>+</mo>
+        <mfrac>
+         <mrow>
+          <mrow><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+           <mrow><mo>-</mo>
+            <msup>
+             <mrow><mi> &xi; </mi>
+             </mrow>
+             <mrow><mn>2</mn>
+             </mrow>
+            </msup>
+           </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+          </mrow>
+         </mrow>
+         <mrow>
+          <msqrt><mi> &pi; </mi>
+          </msqrt>
+         </mrow>
+        </mfrac>
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+      </mrow>
+      <mrow>
+       <mrow><mi>a</mi><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+      <mrow>
+       <mrow><mi>a</mi><mo>-</mo><mi>b</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </msubsup>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mo>=</mo>
+   </mtd>
+   <mtd>
+    <mrow><mo>-</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>b</mi><mo>-</mo><mi>b</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'>
+      <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
+      </mrow>
+     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>b</mi><mo>-</mo><mi>b</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>b</mi><mo>-</mo><mi>b</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mo>-</mo>
+      <msup>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>b</mi><mo>-</mo><mi>b</mi><mo>'</mo>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msup>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mrow/>
+   </mtd>
+   <mtd>
+    <mrow><mo>+</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>b</mi><mo>-</mo><mi>a</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'>
+      <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
+      </mrow>
+     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>b</mi><mo>-</mo><mi>a</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>+</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>b</mi><mo>-</mo><mi>a</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mo>-</mo>
+      <msup>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>b</mi><mo>-</mo><mi>a</mi><mo>'</mo>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msup>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mrow/>
+   </mtd>
+   <mtd>
+    <mrow><mo>+</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>a</mi><mo>-</mo><mi>b</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'>
+      <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
+      </mrow>
+     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>a</mi><mo>-</mo><mi>b</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>+</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>a</mi><mo>-</mo><mi>b</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mo>-</mo>
+      <msup>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>a</mi><mo>-</mo><mi>b</mi><mo>'</mo>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msup>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd><mrow/>
+   </mtd>
+   <mtd>
+    <mrow><mo>-</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow>
+       <msqrt><mi> &pi; </mi>
+       </msqrt>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>a</mi><mo>-</mo><mi>a</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     <mstyle mathvariant='normal'>
+      <mrow><mi>e</mi><mi>r</mi><mi>f</mi>
+      </mrow>
+     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>a</mi><mo>-</mo><mi>a</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>'</mo><mo>-</mo><mi>a</mi><mo>'</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow>
+       <mrow><mi>b</mi><mo>-</mo><mi>a</mi>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mfrac>
+      <mrow><mn>1</mn>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mi>a</mi><mo>-</mo><mi>a</mi><mo>'</mo>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mo>-</mo>
+      <msup>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>a</mi><mo>-</mo><mi>a</mi><mo>'</mo>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msup>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+   </mtd>
+  </mtr>
+ </mtable></math> </li>
+<li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+   <mtable>
+    <mtr>
+     <mtd>
+      <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+      </mrow>
+     </mtd>
+    </mtr>
+    <mtr>
+     <mtd>
+      <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+       <mrow><mi>v</mi><mo>'</mo>
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+      </mrow>
+     </mtd>
+    </mtr>
+    <mtr>
+     <mtd><mi>Z</mi>
+     </mtd>
+    </mtr>
+   </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo><mo> &sim; </mo>
+   <mstyle mathvariant='normal'><mi>N</mi>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow><mi> &mu; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow><mi> &mu; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>v</mi><mo>'</mo>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow><mi> &mu; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>S</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo><mo>,</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>v</mi><mo>,</mo><mi>v</mi>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>v</mi><mo>,</mo><mi>v</mi><mo>'</mo>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>v</mi><mo>,</mo><mi>S</mi>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>v</mi><mo>'</mo><mo>,</mo><mi>v</mi>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>v</mi><mo>'</mo><mo>,</mo><mi>v</mi><mo>'</mo>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>v</mi><mo>'</mo><mo>,</mo><mi>S</mi>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd>
+       <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>S</mi><mo>,</mo><mi>v</mi>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>S</mi><mo>,</mo><mi>v</mi><mo>'</mo>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+      </mtd>
+      <mtd>
+       <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>S</mi><mo>,</mo><mi>S</mi>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math></li>
+<li class="enumerate_item">Taking a better look at part 1, I can see<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+   <mtable>
+    <mtr>
+     <mtd><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+      <mtable>
+       <mtr>
+        <mtd>
+         <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+          <msub>
+           <mrow><mi>v</mi>
+           </mrow>
+           <mrow><mn>1</mn>
+           </mrow>
+          </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+         </mrow>
+        </mtd>
+       </mtr>
+       <mtr>
+        <mtd>
+         <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+          <msub>
+           <mrow><mi>v</mi>
+           </mrow>
+           <mrow><mn>2</mn>
+           </mrow>
+          </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+         </mrow>
+        </mtd>
+       </mtr>
+      </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo>
+     </mtd>
+    </mtr>
+    <mtr>
+     <mtd><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+<mi>Z</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+     </mtd>
+    </mtr>
+   </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo><mo> &sim; </mo>
+   <mstyle mathvariant='normal'><mi>N</mi>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+    <mtable>
+     <mtr>
+      <mtd><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+       <mtable>
+        <mtr>
+         <mtd>
+          <mrow><mi> &mu; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+          </mrow>
+         </mtd>
+        </mtr>
+        <mtr>
+         <mtd>
+          <mrow><mi> &mu; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+           <msub>
+            <mrow><mi>v</mi>
+            </mrow>
+            <mrow><mn>2</mn>
+            </mrow>
+           </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+          </mrow>
+         </mtd>
+        </mtr>
+       </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+       <mrow><mi> &mu; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>S</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+      </mtd>
+     </mtr>
+    </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo><mo>,</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+    <mtable>
+     <mtr>
+      <mtd><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+       <mtable>
+        <mtr>
+         <mtd>
+          <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+           <mrow>
+            <msub>
+             <mrow><mi>v</mi>
+             </mrow>
+             <mrow><mn>1</mn>
+             </mrow>
+            </msub><mo>,</mo>
+            <msub>
+             <mrow><mi>v</mi>
+             </mrow>
+             <mrow><mn>1</mn>
+             </mrow>
+            </msub>
+           </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+          </mrow>
+         </mtd>
+         <mtd>
+          <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+           <mrow>
+            <msub>
+             <mrow><mi>v</mi>
+             </mrow>
+             <mrow><mn>1</mn>
+             </mrow>
+            </msub><mo>,</mo>
+            <msub>
+             <mrow><mi>v</mi>
+             </mrow>
+             <mrow><mn>2</mn>
+             </mrow>
+            </msub>
+           </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+          </mrow>
+         </mtd>
+        </mtr>
+        <mtr>
+         <mtd>
+          <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+           <mrow>
+            <msub>
+             <mrow><mi>v</mi>
+             </mrow>
+             <mrow><mn>2</mn>
+             </mrow>
+            </msub><mo>,</mo>
+            <msub>
+             <mrow><mi>v</mi>
+             </mrow>
+             <mrow><mn>1</mn>
+             </mrow>
+            </msub>
+           </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+          </mrow>
+         </mtd>
+         <mtd>
+          <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+           <mrow>
+            <msub>
+             <mrow><mi>v</mi>
+             </mrow>
+             <mrow><mn>2</mn>
+             </mrow>
+            </msub><mo>,</mo>
+            <msub>
+             <mrow><mi>v</mi>
+             </mrow>
+             <mrow><mn>2</mn>
+             </mrow>
+            </msub>
+           </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+          </mrow>
+         </mtd>
+        </mtr>
+       </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo>
+      </mtd>
+      <mtd><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+       <mtable>
+        <mtr>
+         <mtd>
+          <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+           <mrow>
+            <msub>
+             <mrow><mi>v</mi>
+             </mrow>
+             <mrow><mn>1</mn>
+             </mrow>
+            </msub><mo>,</mo><mi>S</mi>
+           </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+          </mrow>
+         </mtd>
+        </mtr>
+        <mtr>
+         <mtd>
+          <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+           <mrow>
+            <msub>
+             <mrow><mi>v</mi>
+             </mrow>
+             <mrow><mn>2</mn>
+             </mrow>
+            </msub><mo>,</mo><mi>S</mi>
+           </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+          </mrow>
+         </mtd>
+        </mtr>
+       </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo>
+      </mtd>
+     </mtr>
+     <mtr>
+      <mtd><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+       <mtable>
+        <mtr>
+         <mtd>
+          <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+           <mrow><mi>S</mi><mo>,</mo>
+            <msub>
+             <mrow><mi>v</mi>
+             </mrow>
+             <mrow><mn>1</mn>
+             </mrow>
+            </msub>
+           </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+          </mrow>
+         </mtd>
+         <mtd>
+          <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+           <mrow><mi>S</mi><mo>,</mo>
+            <msub>
+             <mrow><mi>v</mi>
+             </mrow>
+             <mrow><mn>2</mn>
+             </mrow>
+            </msub>
+           </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+          </mrow>
+         </mtd>
+        </mtr>
+       </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo>
+      </mtd>
+      <mtd><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+       <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow><mi>S</mi><mo>,</mo><mi>S</mi>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+      </mtd>
+     </mtr>
+    </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math>From the hint I can see, I can see that <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+   <mtable>
+    <mtr>
+     <mtd>
+      <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+       <msub>
+        <mrow><mi>v</mi>
+        </mrow>
+        <mrow><mn>1</mn>
+        </mrow>
+       </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+      </mrow>
+     </mtd>
+    </mtr>
+    <mtr>
+     <mtd>
+      <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+       <msub>
+        <mrow><mi>v</mi>
+        </mrow>
+        <mrow><mn>2</mn>
+        </mrow>
+       </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+      </mrow>
+     </mtd>
+    </mtr>
+   </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo><mo>|</mo><mi>Z</mi><mo> &sim; </mo>
+   <mstyle mathvariant='normal'><mi>N</mi>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msup>
+     <mrow><mi> &mu; </mi>
+     </mrow>
+     <mrow><mo> &dagger; </mo>
+     </mrow>
+    </msup><mo>,</mo>
+    <msup>
+     <mrow><mi>C</mi>
+     </mrow>
+     <mrow><mo> &dagger; </mo>
+     </mrow>
+    </msup>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> with <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msup>
+    <mrow><mi>C</mi>
+    </mrow>
+    <mrow><mo> &dagger; </mo>
+    </mrow>
+   </msup><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+   <mtable>
+    <mtr>
+     <mtd>
+      <msubsup>
+       <mrow><mi>C</mi>
+       </mrow>
+       <mrow><mn>11</mn>
+       </mrow>
+       <mrow><mo> &dagger; </mo>
+       </mrow>
+      </msubsup>
+     </mtd>
+     <mtd>
+     </mtd>
+    </mtr>
+    <mtr>
+     <mtd>
+      <msubsup>
+       <mrow><mi>C</mi>
+       </mrow>
+       <mrow><mn>21</mn>
+       </mrow>
+       <mrow><mo> &dagger; </mo>
+       </mrow>
+      </msubsup>
+     </mtd>
+     <mtd>
+      <msubsup>
+       <mrow><mi>C</mi>
+       </mrow>
+       <mrow><mn>22</mn>
+       </mrow>
+       <mrow><mo> &dagger; </mo>
+       </mrow>
+      </msubsup>
+     </mtd>
+    </mtr>
+   </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+   <mtable>
+    <mtr>
+     <mtd>
+      <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+       <mrow>
+        <msub>
+         <mrow><mi>v</mi>
+         </mrow>
+         <mrow><mn>1</mn>
+         </mrow>
+        </msub><mo>,</mo>
+        <msub>
+         <mrow><mi>v</mi>
+         </mrow>
+         <mrow><mn>1</mn>
+         </mrow>
+        </msub>
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+      </mrow>
+     </mtd>
+     <mtd>
+     </mtd>
+    </mtr>
+    <mtr>
+     <mtd>
+      <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+       <mrow>
+        <msub>
+         <mrow><mi>v</mi>
+         </mrow>
+         <mrow><mn>2</mn>
+         </mrow>
+        </msub><mo>,</mo>
+        <msub>
+         <mrow><mi>v</mi>
+         </mrow>
+         <mrow><mn>1</mn>
+         </mrow>
+        </msub>
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+      </mrow>
+     </mtd>
+     <mtd>
+      <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+       <mrow>
+        <msub>
+         <mrow><mi>v</mi>
+         </mrow>
+         <mrow><mn>2</mn>
+         </mrow>
+        </msub><mo>,</mo>
+        <msub>
+         <mrow><mi>v</mi>
+         </mrow>
+         <mrow><mn>2</mn>
+         </mrow>
+        </msub>
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+      </mrow>
+     </mtd>
+    </mtr>
+   </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo><mo>-</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+   <mtable>
+    <mtr>
+     <mtd>
+     </mtd>
+    </mtr>
+    <mtr>
+     <mtd>
+      <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+       <mrow>
+        <msub>
+         <mrow><mi>v</mi>
+         </mrow>
+         <mrow><mn>2</mn>
+         </mrow>
+        </msub><mo>,</mo><mi>S</mi>
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+      </mrow>
+     </mtd>
+    </mtr>
+   </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+     <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow><mi>S</mi><mo>,</mo><mi>S</mi>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+    </mrow>
+    <mrow>
+     <mrow><mo>-</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+   </msup><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
+   <mtable>
+    <mtr>
+     <mtd>
+      <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+       <mrow><mi>S</mi><mo>,</mo>
+        <msub>
+         <mrow><mi>v</mi>
+         </mrow>
+         <mrow><mn>1</mn>
+         </mrow>
+        </msub>
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+      </mrow>
+     </mtd>
+     <mtd>
+     </mtd>
+    </mtr>
+   </mtable><mo form='postfix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>]</mo>
+  </mrow>
+ </mrow></math> and <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msup>
+    <mrow><mi> &mu; </mi>
+    </mrow>
+    <mrow><mo> &dagger; </mo>
+    </mrow>
+   </msup><mo>=</mo><mi> &mu; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <msub>
+    <mrow><mi>v</mi>
+    </mrow>
+    <mrow><mn>1</mn>
+    </mrow>
+   </msub>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>+</mo><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>v</mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub><mo>,</mo><mi>S</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+     <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow><mi>S</mi><mo>,</mo><mi>S</mi>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+    </mrow>
+    <mrow>
+     <mrow><mo>-</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+   </msup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>Z</mi><mo>-</mo><mi> &mu; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>S</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> As this is consistent for any vector of blocks with any size, not only <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>V</mi><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>v</mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub><mo>,</mo>
+    <msub>
+     <mrow><mi>v</mi>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
+
+  </mrow>
+ </mrow></math>, but also <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>V</mi><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
+
+   <mrow>
+    <msub>
+     <mrow><mi>v</mi>
+     </mrow>
+     <mrow><mn>1</mn>
+     </mrow>
+    </msub><mo>,</mo>
+    <msub>
+     <mrow><mi>v</mi>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </msub><mo>,</mo><mn>...</mn><mo>,</mo>
+    <msub>
+     <mrow><mi>v</mi>
+     </mrow>
+     <mrow><mi>q</mi>
+     </mrow>
+    </msub>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
+
+  </mrow>
+ </mrow></math> then the predictive stochastic process is a Gaussian Process<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mo> &sdot; </mo>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>|</mo><mi>Z</mi><mo> &sim; </mo>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>G</mi><mi>P</mi>
+    </mrow>
+   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <msup>
+     <mrow><mi> &mu; </mi>
+     </mrow>
+     <mrow><mo>*</mo>
+     </mrow>
+    </msup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mo> &sdot; </mo>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>,</mo>
+    <msup>
+     <mrow><mi>c</mi>
+     </mrow>
+     <mrow><mo>*</mo>
+     </mrow>
+    </msup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+    <mrow><mo> &sdot; </mo><mo>,</mo><mo> &sdot; </mo>
+    </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> with mean function at block <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>v</mi>
+ </mrow></math> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msup>
+    <mrow><mi> &mu; </mi>
+    </mrow>
+    <mrow><mo>*</mo>
+    </mrow>
+   </msup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mi> &mu; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>v</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>+</mo><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>v</mi><mo>,</mo><mi>S</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+     <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow><mi>S</mi><mo>,</mo><mi>S</mi>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+    </mrow>
+    <mrow>
+     <mrow><mo>-</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+   </msup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>Z</mi><mo>-</mo><mi> &mu; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi>S</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> by looking at <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
+   <mrow><mi> &mu; </mi>
+   </mrow>
+   <mrow><mo> &dagger; </mo>
+   </mrow>
+  </msup>
+ </mrow></math>, and with covariance function at any pair of blocks <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>v</mi>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>v</mi><mo>'</mo>
+  </mrow>
+ </mrow></math> <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msup>
+    <mrow><mi>c</mi>
+    </mrow>
+    <mrow><mo>*</mo>
+    </mrow>
+   </msup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>v</mi><mo>,</mo><mi>v</mi><mo>'</mo>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>v</mi><mo>,</mo><mi>v</mi><mo>'</mo>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>-</mo><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>v</mi><mo>,</mo><mi>S</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+
+     <mrow><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow><mi>S</mi><mo>,</mo><mi>S</mi>
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+    </mrow>
+    <mrow>
+     <mrow><mo>-</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+   </msup><mi>c</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>S</mi><mo>,</mo><mi>v</mi><mo>'</mo>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> looking at any off-diagonal element of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
+   <mrow><mi>C</mi>
+   </mrow>
+   <mrow><mo> &dagger; </mo>
+   </mrow>
+  </msup>
+ </mrow></math> e.g. the <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+  <mrow><mn>1</mn><mo>,</mo><mn>2</mn>
+  </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+ </mrow></math> element marked in red. </li>
+</ol>
 </div>
 
 </div>
 </div>
-<div class="standard" id='magicparlabel-898'><hr />
+<div class="standard" id='magicparlabel-894'><hr />
 
 </div>
 
 
 
-<div class="standard" id='magicparlabel-917'><br />
+<div class="standard" id='magicparlabel-913'><br />
 </div>
-<h1 class="part" id='magicparlabel-918'><span class="part_label">Part IV</span> Aerial unit data / spatial data on lattices</h1>
+<h1 class="part" id='magicparlabel-914'><span class="part_label">Part IV</span> Aerial unit data / spatial data on lattices</h1>
 
-<div class="exercise" id='magicparlabel-919'><div class="exercise_item"><span class="exercise_label">Exercise 24.</span>
+<div class="exercise" id='magicparlabel-915'><div class="exercise_item"><span class="exercise_label">Exercise 24.</span>
 <a id="exer____4_1_1_4_1_1_1_2_1_1_1_2_1" />
 (<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &starf; </mo>
- </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-921'>The conditionals <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-917'>The conditionals <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>x</mi><mo>|</mo><mi>y</mi><mo> &sim; </mo>
    <mstyle mathvariant='normal'><mi>N</mi>
@@ -25296,7 +28269,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 
 
 
-<div class="solution_" id='magicparlabel-927'><div class="solution__item"><span class="solution__label">Solution.</span>
+<div class="solution_" id='magicparlabel-923'><div class="solution__item"><span class="solution__label">Solution.</span>
 &nbsp;&nbsp;It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
@@ -26373,7 +29346,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 
 </div>
 </div>
-<div class="standard" id='magicparlabel-933'><hr />
+<div class="standard" id='magicparlabel-929'><hr />
 
 </div>
 </body>
