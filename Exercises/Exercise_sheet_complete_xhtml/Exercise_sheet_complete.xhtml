@@ -29999,198 +29999,22 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 
 
 <div class="solution_" id='magicparlabel-966'><div class="solution__item"><span class="solution__label">Solution.</span>
-&nbsp; &nbsp; The local characteristics are well-defined normal densities. Using Besag’s factorization theorem, with reference <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <msup>
-    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <mrow><mn>0</mn><mo>,</mo><mn>0</mn>
-     </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-    </mrow>
-    <mrow><mi> &top; </mi>
-    </mrow>
-   </msup><mo>,</mo>
-  </mrow>
- </mrow></math> the joint density would be proportional to <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <mfrac>
-    <mrow>
-     <mrow>
-      <msub>
-       <mrow><mo> Pr </mo>
-       </mrow>
-       <mrow><mn>1</mn>
-       </mrow>
-      </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <mrow><mi>x</mi><mo>|</mo><mn>0</mn>
-      </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-     </mrow>
-    </mrow>
-    <mrow>
-     <mrow>
-      <msub>
-       <mrow><mo> Pr </mo>
-       </mrow>
-       <mrow><mn>1</mn>
-       </mrow>
-      </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <mrow><mn>0</mn><mo>|</mo><mn>0</mn>
-      </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-     </mrow>
-    </mrow>
-   </mfrac>
-   <mfrac>
-    <mrow>
-     <mrow>
-      <msub>
-       <mrow><mo> Pr </mo>
-       </mrow>
-       <mrow><mn>2</mn>
-       </mrow>
-      </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <mrow><mi>y</mi><mo>|</mo><mi>x</mi>
-      </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-     </mrow>
-    </mrow>
-    <mrow>
-     <mrow>
-      <msub>
-       <mrow><mo> Pr </mo>
-       </mrow>
-       <mrow><mn>2</mn>
-       </mrow>
-      </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <mrow><mn>0</mn><mo>|</mo><mi>x</mi>
-      </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-     </mrow>
-    </mrow>
-   </mfrac><mo>=</mo><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow><mo>-</mo>
-    <mfrac>
-     <mrow><mn>1</mn>
-     </mrow>
-     <mrow><mn>2</mn>
-     </mrow>
-    </mfrac>
-    <msup>
-     <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <mrow><mi>y</mi><mo>-</mo><mi>x</mi>
-      </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-     </mrow>
-     <mrow><mn>2</mn>
-     </mrow>
-    </msup>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>=</mo><mi>G</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow><mi>x</mi><mo>,</mo><mi>y</mi>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-  </mrow>
- </mrow></math> for <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow><mi>x</mi><mo>,</mo><mi>y</mi>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo> &isin; </mo>
-   <msup>
-    <mrow>
-     <mstyle mathvariant='double-struck'><mi>R</mi>
-     </mstyle>
-    </mrow>
-    <mrow><mn>2</mn>
-    </mrow>
-   </msup>
-  </mrow>
- </mrow></math>. But <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi>G</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow><mi>x</mi><mo>,</mo><mi>y</mi>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-  </mrow>
- </mrow></math> is not integratable, <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <msub>
-    <mrow><mo> &int; </mo>
-    </mrow>
-    <mrow>
-     <msup>
-      <mrow>
-       <mstyle mathvariant='double-struck'><mi>R</mi>
-       </mstyle>
-      </mrow>
-      <mrow><mn>2</mn>
-      </mrow>
-     </msup>
-    </mrow>
-   </msub><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow><mo>-</mo>
-    <mfrac>
-     <mrow><mn>1</mn>
-     </mrow>
-     <mrow><mn>2</mn>
-     </mrow>
-    </mfrac>
-    <msup>
-     <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <mrow><mi>y</mi><mo>-</mo><mi>x</mi>
-      </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-     </mrow>
-     <mrow><mn>2</mn>
-     </mrow>
-    </msup>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>=</mo><mi> &infin; </mi>
-  </mrow>
- </mrow></math></div>
+&nbsp;</div>
 </div>
 
 </div>
 </div>
-<div class="standard" id='magicparlabel-972'><hr />
+<div class="standard" id='magicparlabel-976'><hr />
 
 </div>
 
-<div class="exercise" id='magicparlabel-977'><div class="exercise_item"><span class="exercise_label">Exercise 27.</span>
+<div class="exercise" id='magicparlabel-981'><div class="exercise_item"><span class="exercise_label">Exercise 27.</span>
 <a id="exer____4_1_1_4_1_1_1_2_1_1_1_2_1_1_1_1" />
 (<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &starf; </mo>
  </mrow></math><math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &starf; </mo>
- </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-979'>Consider the model <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-983'>Consider the model <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>Z</mi><mo>=</mo><mi>B</mi><mi>Z</mi><mo>+</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -30266,7 +30090,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 
  </mrow></math> is non-singular.</div>
 
-<ol class="enumerate" id='magicparlabel-986'><li class="enumerate_item">Show that <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-990'><li class="enumerate_item">Show that <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
    <mtd>
@@ -30415,10 +30239,10 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 </ol>
 
 
-<div class="solution_" id='magicparlabel-995'><div class="solution__item"><span class="solution__label">Solution.</span>
+<div class="solution_" id='magicparlabel-999'><div class="solution__item"><span class="solution__label">Solution.</span>
 &nbsp; &nbsp;</div>
 
-<ol class="enumerate" id='magicparlabel-1000'><li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-1004'><li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
    <mtd>
@@ -31846,7 +31670,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 <mi>X</mi>
   </mrow>
  </mrow></math> is non-singular (this is given, anyway). 
-<div class="standard" id='magicparlabel-1003'>Solving the second equation wrt <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-1007'>Solving the second equation wrt <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <msup>
    <mrow>
@@ -32900,16 +32724,16 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 </ol>
 </div>
 
-<ul class="itemize" id='magicparlabel-1005'><li class="itemize_item">Notice that, in Frequentist Statistical framework, once we have computed the sampling distributions (those above), we can produce inference tools in the similar manner to Normal Linear regression. </li>
+<ul class="itemize" id='magicparlabel-1009'><li class="itemize_item">Notice that, in Frequentist Statistical framework, once we have computed the sampling distributions (those above), we can produce inference tools in the similar manner to Normal Linear regression. </li>
 </ul>
 
 </div>
 </div>
-<div class="standard" id='magicparlabel-1011'><hr />
+<div class="standard" id='magicparlabel-1015'><hr />
 
 </div>
 
-<div class="exercise" id='magicparlabel-1016'><div class="exercise_item"><span class="exercise_label">Exercise 28.</span>
+<div class="exercise" id='magicparlabel-1020'><div class="exercise_item"><span class="exercise_label">Exercise 28.</span>
 <a id="exer____4_1_1_4_1_1_1_2_1_1_1_2_1_1_1_1_1" />
 (<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &starf; </mo>
@@ -32917,7 +32741,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
  <mrow><mo> &starf; </mo>
  </mrow></math><math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &starf; </mo>
- </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-1018'>Suppose that <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-1022'>Suppose that <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mstyle mathvariant='script'><mi>S</mi>
   </mstyle>
@@ -33018,7 +32842,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
   </mrow>
  </mrow></math> .</div>
 
-<dl class='description' id='magicparlabel-1023'><dt class="description_label">Hint</dt>
+<dl class='description' id='magicparlabel-1027'><dt class="description_label">Hint</dt>
 <dd class="description_item"> You can use that if <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>X</mi><mo> &sim; </mo>
@@ -33081,7 +32905,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
  </mrow></math></dd>
 </dl>
 
-<ol class="enumerate" id='magicparlabel-1024'><li class="enumerate_item">Show that the above model is well-defined if and only if <math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-1028'><li class="enumerate_item">Show that the above model is well-defined if and only if <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi> &theta; </mi><mo> &le; </mo><mn>0</mn>
   </mrow>
@@ -33094,7 +32918,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
 </ol>
 
 
-<div class="solution_" id='magicparlabel-1031'><div class="solution__item"><span class="solution__label">Solution.</span>
+<div class="solution_" id='magicparlabel-1035'><div class="solution__item"><span class="solution__label">Solution.</span>
 &nbsp; &nbsp; It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -33186,7 +33010,7 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
  </mrow></math></div>
 </div>
 
-<ol class="enumerate" id='magicparlabel-1032'><li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-1036'><li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <msub>
@@ -34218,13 +34042,13 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
    </msub><mo>=</mo><mn>0</mn>
   </mrow>
  </mrow></math>. 
-<div class="standard" id='magicparlabel-1034'>Then I will use Theorem <a href="#thm_Let_X_be">thm:Let-X-be</a>, and <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-1038'>Then I will use Theorem <a href="#thm_Let_X_be">thm:Let-X-be</a>, and <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi> &zeta; </mi><mo>=</mo><mn>0</mn>
   </mrow>
  </mrow></math>. </div>
 
-<div class="standard" id='magicparlabel-1035'>For <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-1039'>For <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <mstyle mathvariant='script'><mi>A</mi>
@@ -34636,12 +34460,12 @@ The method is called Ordinary Kriging, and hence we denote it as OK. </div>
  </mtable></math> all the other potentials are zero.</div>
 </li></ol>
 
-<ul class="itemize" id='magicparlabel-1036'><li class="itemize_item">Perhaps not the most elegant derivation. In the next lecture, we will use a more general tool to compute such stuff which is based on the &ldquo;exponential distribution family&rdquo;. </li>
+<ul class="itemize" id='magicparlabel-1040'><li class="itemize_item">Perhaps not the most elegant derivation. In the next lecture, we will use a more general tool to compute such stuff which is based on the &ldquo;exponential distribution family&rdquo;. </li>
 </ul>
 
 </div>
 </div>
-<div class="standard" id='magicparlabel-1042'><hr />
+<div class="standard" id='magicparlabel-1046'><hr />
 
 </div>
 </body>
