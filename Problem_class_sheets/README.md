@@ -43,6 +43,8 @@ Problem class sheet 1: [[PDF](https://github.com/georgios-stats/Spatio-Temporal_
 
 Problem class sheet 2: [[PDF](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Problem_class_sheets/Problem_class_sheet_2.pdf)] and [[HTML](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Problem_class_sheets/Problem_class_sheet_2_xhtml/Problem_class_sheet_2.xhtml) ]   
 
-Problem class sheet 3: [[PDF](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Problem_class_sheets/Problem_class_sheet_3.pdf)] and [[HTML](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Problem_class_sheets/Problem_class_sheet_3_xhtml/Problem_class_sheet_3.xhtml) ] 
+Problem class sheet 3: [[PDF](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Problem_class_sheets/Problem_class_sheet_3.pdf)] and [[HTML](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Problem_class_sheets/Problem_class_sheet_3_xhtml/Problem_class_sheet_3.xhtml) ]    
+
+Problem class sheet 4: [[PDF](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Problem_class_sheets/Problem_class_sheet_4.pdf)] and [[HTML](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Problem_class_sheets/Problem_class_sheet_4_xhtml/Problem_class_sheet_4.xhtml) ]   
 
 
