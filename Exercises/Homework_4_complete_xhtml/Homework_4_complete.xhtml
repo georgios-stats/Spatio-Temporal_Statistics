@@ -47,13 +47,6 @@ font-variant: normal;
 font-size: medium;
 
 }
-ol.enumerate {
-margin-top: 0.7ex;
-margin-bottom: 0.7ex;
-margin-left: 3ex;
-text-align: left;
-
-}
 div.solution_ {
 font-style: normal;
 font-variant: normal;
@@ -70,252 +63,571 @@ font-variant: normal;
 font-size: medium;
 
 }
+div.definition_ {
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+text-align: left;
+
+}
+span.definition__label {
+font-weight: bold;
+font-style: normal;
+font-variant: normal;
+font-size: medium;
+
+}
+ol.enumerate {
+margin-top: 0.7ex;
+margin-bottom: 0.7ex;
+margin-left: 3ex;
+text-align: left;
+
+}
 div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; border-right: solid black 1ex; padding: 0.5ex; }
 
 
 </style>
 </head>
 <body dir="auto">
-<div class="standard" id='magicparlabel-1'><div class='Shadowbox'><div class="plain_layout" id='magicparlabel-5'>Spatio-temporal statistics (MATH4341)&nbsp;&nbsp;Michaelmas term, 2023<div style='height:3ex'></div></div>
 
-<div class="plain_layout" style='text-align: center;' id='magicparlabel-6'><b><span style='font-size:x-large;'>Homework 1: Regional statistical &amp; probabilistic concepts</span></b><div style='height:3ex'></div></div>
 
-<div class="plain_layout" id='magicparlabel-7'>Lecturer: Georgios P. Karagiannis&nbsp;&nbsp; <a href="georgios.karagiannis@durham.ac.uk">georgios.karagiannis@durham.ac.uk</a></div>
+<div class="standard" id='magicparlabel-1'><div class='Shadowbox'><div class="plain_layout" id='magicparlabel-10'>Spatio-temporal statistics (MATH4341)&nbsp;&nbsp;Michaelmas term, 2023<div style='height:3ex'></div></div>
 
-<div class="plain_layout" id='magicparlabel-8'><hr />
+<div class="plain_layout" style='text-align: center;' id='magicparlabel-11'><b><span style='font-size:x-large;'>Homework 4: Aerial data modeling</span></b><div style='height:3ex'></div></div>
+
+<div class="plain_layout" id='magicparlabel-12'>Lecturer: Georgios P. Karagiannis&nbsp;&nbsp; <a href="georgios.karagiannis@durham.ac.uk">georgios.karagiannis@durham.ac.uk</a></div>
+
+<div class="plain_layout" id='magicparlabel-13'><hr />
 
 </div>
-
-<div class="plain_layout" id='magicparlabel-9'>As formative assessment, submit the solutions to Exercise ...</div>
 </div></div>
 
-<div class="standard" id='magicparlabel-10'>&nbsp;<div style='height:1ex'></div><div style='height:1ex'></div></div>
+<div class="standard" id='magicparlabel-14'>&nbsp;<div style='height:1ex'></div><div style='height:1ex'></div></div>
 
 
-<div class="standard" id='magicparlabel-11'><br />
-
-</div>
-
-
-<div class="standard" id='magicparlabel-12'><br />
+<div class="standard" id='magicparlabel-15'><br />
 
 </div>
 
-<div class="standard" id='magicparlabel-13'><hr />
+
+<div class="standard" id='magicparlabel-16'><br />
 
 </div>
 
-<div class="exercise" id='magicparlabel-14'><div class="exercise_item"><span class="exercise_label">Exercise 1.</span>
+<div class="standard" id='magicparlabel-17'><hr />
+
+</div>
+
+<div class="exercise" id='magicparlabel-18'><div class="exercise_item"><span class="exercise_label">Exercise 1.</span>
 (<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &starf; </mo>
- </mrow></math><math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mo> &starf; </mo>
- </mrow></math><math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow><mo> &starf; </mo>
- </mrow></math>) <div class="standard" id='magicparlabel-16'>Let <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi>Z</mi><mo>=</mo>
-   <msub>
-    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
+ </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-20'>Show that the local characteristics<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mtable>
+  <mtr>
+   <mtd>
+    <mrow>
      <msub>
-      <mrow><mi>Z</mi>
+      <mrow><mo> Pr </mo>
       </mrow>
-      <mrow><mi>s</mi>
+      <mrow><mn>1</mn>
       </mrow>
-     </msub>
+     </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow>
+      <msub>
+       <mrow><mi>x</mi>
+       </mrow>
+       <mrow><mn>1</mn>
+       </mrow>
+      </msub><mo>|</mo>
+      <msub>
+       <mrow><mi>x</mi>
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msub>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
+    </mrow>
+   </mtd>
+   <mtd>
+    <mrow>
+     <msqrt>
+      <mfrac>
+       <mrow><mn>1</mn>
+       </mrow>
+       <mrow>
+        <mrow><mn>2</mn><mi> &pi; </mi>
+        </mrow>
+       </mrow>
+      </mfrac>
+     </msqrt><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mo>-</mo>
+      <mfrac>
+       <mrow><mn>1</mn>
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </mfrac>
+      <msup>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow>
+         <msub>
+          <mrow><mi>x</mi>
+          </mrow>
+          <mrow><mn>1</mn>
+          </mrow>
+         </msub><mo>-</mo>
+         <msub>
+          <mrow><mi>x</mi>
+          </mrow>
+          <mrow><mn>2</mn>
+          </mrow>
+         </msub>
+        </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
-    </mrow>
-    <mrow>
-     <mrow><mi>s</mi><mo> &isin; </mo>
-      <msup>
-       <mrow>
-        <mstyle mathvariant='double-struck'><mi>R</mi>
-        </mstyle>
        </mrow>
-       <mrow><mi>d</mi>
+       <mrow><mn>2</mn>
        </mrow>
       </msup>
      </mrow>
-    </mrow>
-   </msub>
-  </mrow>
- </mrow></math> be an intrinsically stationary stochastic process, and let <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi> &gamma; </mi><mo>:</mo>
-   <msup>
-    <mrow>
-     <mstyle mathvariant='double-struck'><mi>R</mi>
-     </mstyle>
-    </mrow>
-    <mrow><mi>d</mi>
-    </mrow>
-   </msup><mo> &rarr; </mo>
-   <mstyle mathvariant='double-struck'><mi>R</mi>
-   </mstyle>
-  </mrow>
- </mrow></math> be its semivariogram. Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi>a</mi><mo> &isin; </mo>
-   <msup>
-    <mrow>
-     <mstyle mathvariant='double-struck'><mi>R</mi>
-     </mstyle>
-    </mrow>
-    <mrow><mi>n</mi>
-    </mrow>
-   </msup>
-  </mrow>
- </mrow></math>s.t. <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <msubsup>
-    <mrow><mo> &sum; </mo>
-    </mrow>
-    <mrow>
-     <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-     </mrow>
-    </mrow>
-    <mrow><mi>n</mi>
-    </mrow>
-   </msubsup>
-   <msub>
-    <mrow><mi>a</mi>
-    </mrow>
-    <mrow><mi>i</mi>
-    </mrow>
-   </msub><mo>=</mo><mn>0</mn>
-  </mrow>
- </mrow></math>.</div>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
-<ol class="enumerate" id='magicparlabel-21'><li class="enumerate_item">Let <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi>a</mi><mo> &isin; </mo>
-   <msup>
+    </mrow>
+   </mtd>
+  </mtr>
+  <mtr>
+   <mtd>
     <mrow>
-     <mstyle mathvariant='double-struck'><mi>R</mi>
-     </mstyle>
+     <msub>
+      <mrow><mo> Pr </mo>
+      </mrow>
+      <mrow><mn>2</mn>
+      </mrow>
+     </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow>
+      <msub>
+       <mrow><mi>x</mi>
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msub><mo>|</mo>
+      <msub>
+       <mrow><mi>x</mi>
+       </mrow>
+       <mrow><mn>1</mn>
+       </mrow>
+      </msub>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo>
     </mrow>
-    <mrow><mi>n</mi>
+   </mtd>
+   <mtd>
+    <mrow>
+     <msqrt>
+      <mfrac>
+       <mrow><mn>1</mn>
+       </mrow>
+       <mrow>
+        <mrow><mn>2</mn><mi> &pi; </mi>
+        </mrow>
+       </mrow>
+      </mfrac>
+     </msqrt><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow><mo>-</mo>
+      <mfrac>
+       <mrow><mn>1</mn>
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </mfrac>
+      <msup>
+       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+        <mrow>
+         <msub>
+          <mrow><mi>x</mi>
+          </mrow>
+          <mrow><mn>2</mn>
+          </mrow>
+         </msub><mo>-</mo>
+         <msub>
+          <mrow><mi>x</mi>
+          </mrow>
+          <mrow><mn>1</mn>
+          </mrow>
+         </msub>
+        </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+       </mrow>
+       <mrow><mn>2</mn>
+       </mrow>
+      </msup>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
     </mrow>
-   </msup>
-  </mrow>
- </mrow></math> be a vector of constants. Show that <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+   </mtd>
+  </mtr>
+ </mtable></math>do not define a proper joint distribution on <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
+   <mrow>
+    <mstyle mathvariant='double-struck'><mi>R</mi>
+    </mstyle>
+   </mrow>
+   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
+
+    <mrow><mn>1</mn><mo>,</mo><mn>2</mn>
+    </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
+
+   </mrow>
+  </msup>
+ </mrow></math></div>
+
+
+
+<div class="solution_" id='magicparlabel-26'><div class="solution__item"><span class="solution__label">Solution.</span>
+&nbsp;</div>
+</div>
+
+</div>
+</div>
+<div class="standard" id='magicparlabel-36'><hr />
+
+</div>
+
+<div class="definition_" id='magicparlabel-41'><div class="definition__item"><span class="definition__label">Definition.</span>
+(Pseudo-likelihood) The pseudo likelihood <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <mstyle mathvariant='normal'>
-    <mrow><mi>V</mi><mi>a</mi><mi>r</mi>
+    <mrow><mi>p</mi><mi>s</mi><mi>e</mi><mi>u</mi><mi>d</mi><mi>o</mi><mo>-</mo>
     </mrow>
-   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+   </mstyle><mi>L</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-   <mrow>
-    <msubsup>
-     <mrow><mo> &sum; </mo>
-     </mrow>
-     <mrow>
-      <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-      </mrow>
-     </mrow>
-     <mrow><mi>n</mi>
-     </mrow>
-    </msubsup>
-    <msub>
-     <mrow><mi>a</mi>
-     </mrow>
-     <mrow><mi>i</mi>
-     </mrow>
-    </msub><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-    <msub>
-     <mrow><mi>s</mi>
-     </mrow>
-     <mrow><mi>i</mi>
-     </mrow>
-    </msub>
+   <mrow><mi>Z</mi><mo>;</mo><mi> &theta; </mi>
+   </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
+  </mrow>
+ </mrow></math> of observables <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>Z</mi><mo>=</mo>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow>
+      <msub>
+       <mrow><mi>Z</mi>
+       </mrow>
+       <mrow><mn>1</mn>
+       </mrow>
+      </msub><mo>,</mo><mn>...</mn><mo>,</mo>
+      <msub>
+       <mrow><mi>Z</mi>
+       </mrow>
+       <mrow><mi>n</mi>
+       </mrow>
+      </msub>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow><mi> &top; </mi>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math> given parameters <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &theta; </mi>
+ </mrow></math> is an approximation of the likelihood <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>L</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>Z</mi><mo>;</mo><mi> &theta; </mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> of observables <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>Z</mi><mo>=</mo>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow>
+      <msub>
+       <mrow><mi>Z</mi>
+       </mrow>
+       <mrow><mn>1</mn>
+       </mrow>
+      </msub><mo>,</mo><mn>...</mn><mo>,</mo>
+      <msub>
+       <mrow><mi>Z</mi>
+       </mrow>
+       <mrow><mi>n</mi>
+       </mrow>
+      </msub>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow><mi> &top; </mi>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math> given parameters <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &theta; </mi>
+ </mrow></math> which is equal to <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>p</mi><mi>s</mi><mi>e</mi><mi>u</mi><mi>d</mi><mi>o</mi><mo>-</mo>
+    </mrow>
+   </mstyle><mi>L</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>Z</mi><mo>;</mo><mi> &theta; </mi>
    </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 <mo>=</mo>
-   <msubsup>
-    <mrow><mo> &sum; </mo>
-    </mrow>
-    <mrow>
-     <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-     </mrow>
-    </mrow>
-    <mrow><mi>n</mi>
-    </mrow>
-   </msubsup>
-   <msubsup>
-    <mrow><mo> &sum; </mo>
-    </mrow>
-    <mrow>
-     <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
-     </mrow>
-    </mrow>
-    <mrow><mi>n</mi>
-    </mrow>
-   </msubsup>
    <msub>
-    <mrow><mi>a</mi>
+    <mrow><mo> &prod; </mo>
     </mrow>
     <mrow><mi>i</mi>
     </mrow>
-   </msub>
-   <msub>
-    <mrow><mi>a</mi>
-    </mrow>
-    <mrow><mi>j</mi>
-    </mrow>
-   </msub>
-   <msub>
-    <mrow><mi>c</mi>
-    </mrow>
-    <mrow><mi>Y</mi>
-    </mrow>
-   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+   </msub><mo> Pr </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
    <mrow>
     <msub>
-     <mrow><mi>s</mi>
+     <mrow><mi>Z</mi>
      </mrow>
      <mrow><mi>i</mi>
      </mrow>
-    </msub><mo>,</mo>
+    </msub><mo>|</mo>
     <msub>
-     <mrow><mi>s</mi>
+     <mrow><mi>Z</mi>
      </mrow>
-     <mrow><mi>j</mi>
+     <mrow>
+      <mrow><mo>-</mo><mi>i</mi>
+      </mrow>
      </mrow>
-    </msub>
+    </msub><mo>,</mo><mi> &theta; </mi>
    </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
  </mrow></math>where <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
-  <mrow>
-   <msub>
-    <mrow><mi>c</mi>
-    </mrow>
-    <mrow><mi>Y</mi>
-    </mrow>
-   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+  <mrow><mo> Pr </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-   <mrow><mi>s</mi><mo>,</mo><mi>t</mi>
+   <mrow><mi>Y</mi><mo>|</mo><mi> &theta; </mi>
    </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>=</mo>
-   <mstyle mathvariant='normal'><mi>E</mi>
+
+  </mrow>
+ </mrow></math> is the joint pdf/pmf of the sampling distribution of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>Y</mi>
+ </mrow></math> given parameter <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &theta; </mi>
+ </mrow></math>.</div>
+</div>
+
+<div class="standard" id='magicparlabel-42'><br />
+
+</div>
+
+<div class="definition_" id='magicparlabel-43'><div class="definition__item"><span class="definition__label">Definition.</span>
+(Maximum Pseudo-Likelihood Estimator) The Maximum Pseudo-Likelihood Estimator (MPLE) <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mover>
+   <mrow><mi> &theta; </mi>
+   </mrow><mo stretchy="true">&tilde;</mo>
+  </mover>
+ </mrow></math> of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &theta; </mi>
+ </mrow></math> is the maximizer of the pseudo likelihood function <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='normal'>
+    <mrow><mi>p</mi><mi>s</mi><mi>e</mi><mi>u</mi><mi>d</mi><mi>o</mi><mo>-</mo>
+    </mrow>
+   </mstyle><mi>L</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>Z</mi><mo>;</mo><mi> &theta; </mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math> where the parameter <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &theta; </mi>
+ </mrow></math> is the argument and the observables <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>Z</mi><mo>=</mo>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <mrow>
+      <msub>
+       <mrow><mi>Z</mi>
+       </mrow>
+       <mrow><mn>1</mn>
+       </mrow>
+      </msub><mo>,</mo><mn>...</mn><mo>,</mo>
+      <msub>
+       <mrow><mi>Z</mi>
+       </mrow>
+       <mrow><mi>n</mi>
+       </mrow>
+      </msub>
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+    </mrow>
+    <mrow><mi> &top; </mi>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math> are fixed values.<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mover>
+    <mrow><mi> &theta; </mi>
+    </mrow><mo stretchy="true">&tilde;</mo>
+   </mover><mo>=</mo><munder accent='false'>
+   <mrow><mo> arg </mo><mo> max </mo>
+   </mrow><mi> &theta; </mi></munder><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow>
+    <mstyle mathvariant='normal'>
+     <mrow><mi>p</mi><mi>s</mi><mi>e</mi><mi>u</mi><mi>d</mi><mi>o</mi><mo>-</mo>
+     </mrow>
+    </mstyle><mi>L</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+    <mrow><mi>Z</mi><mo>;</mo><mi> &theta; </mi>
+    </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+  </mrow>
+ </mrow></math></div>
+</div>
+
+<div class="exercise" id='magicparlabel-44'><div class="exercise_item"><span class="exercise_label">Exercise 2.</span>
+(<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mo> &starf; </mo>
+ </mrow></math>)&nbsp; <div class="standard" id='magicparlabel-46'>Let <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>Z</mi><mo> &isin; </mo>
+   <msup>
+    <mrow>
+     <mstyle mathvariant='script'><mi>Z</mi>
+     </mstyle>
+    </mrow>
+    <mrow>
+     <mstyle mathvariant='script'><mi>S</mi>
+     </mstyle>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math> where <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='script'><mi>S</mi>
+   </mstyle><mo>=</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
+
+   <mrow><mn>1</mn><mo>,</mo><mn>...</mn><mo>,</mo><mi>n</mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
+
+  </mrow>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <mstyle mathvariant='script'><mi>Z</mi>
+   </mstyle><mo>=</mo>
+   <mstyle mathvariant='double-struck'><mi>R</mi>
+   </mstyle>
+  </mrow>
+ </mrow></math>. Consider the model <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>Z</mi><mo>=</mo><mi>X</mi><mi> &beta; </mi><mo>+</mo><mi>B</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+   <mrow><mi>Z</mi><mo>-</mo><mi>X</mi><mi> &beta; </mi>
+   </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>+</mo><mi>E</mi>
+  </mrow>
+ </mrow></math>where <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>X</mi>
+ </mrow></math> is a <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>n</mi><mo> &times; </mo><mi>p</mi>
+  </mrow>
+ </mrow></math> design matrix <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>X</mi>
+ </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi> &beta; </mi><mo> &isin; </mo>
+   <msup>
+    <mrow>
+     <mstyle mathvariant='double-struck'><mi>R</mi>
+     </mstyle>
+    </mrow>
+    <mrow><mi>p</mi>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>B</mi>
+ </mrow></math> is an <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>n</mi><mo> &times; </mo><mi>n</mi>
+  </mrow>
+ </mrow></math> symmetric positive definite matrix with <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msub>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>[</mo>
+<mi>B</mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>]</mo>
+
+    </mrow>
+    <mrow>
+     <mrow><mi>i</mi><mo>,</mo><mi>i</mi>
+     </mrow>
+    </mrow>
+   </msub><mo>=</mo><mn>0</mn>
+  </mrow>
+ </mrow></math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>E</mi><mo> &sim; </mo>
+   <mstyle mathvariant='normal'><mi>N</mi>
    </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-   <mrow><mi>Y</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>s</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mi>Y</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>t</mi>
+   <mrow><mn>0</mn><mo>,</mo>
+    <msup>
+     <mrow><mi> &sigma; </mi>
+     </mrow>
+     <mrow><mn>2</mn>
+     </mrow>
+    </msup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+    <mrow><mi>I</mi><mo>-</mo><mi>B</mi>
+    </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
    </mrow>
@@ -325,872 +637,194 @@ div.Shadowbox { border: solid gray medium; border-bottom: solid black 1ex; borde
  </mrow></math>, and <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
-   <msub>
-    <mrow><mi>Y</mi>
+   <msup>
+    <mrow><mi> &sigma; </mi>
     </mrow>
-    <mrow><mi>s</mi>
+    <mrow><mn>2</mn>
     </mrow>
-   </msub><mo>=</mo>
-   <msub>
-    <mrow><mi>Z</mi>
-    </mrow>
-    <mrow><mi>s</mi>
-    </mrow>
-   </msub><mo>-</mo>
-   <msub>
-    <mrow><mi>Z</mi>
-    </mrow>
-    <mrow><mn>0</mn>
-    </mrow>
-   </msub>
-  </mrow>
- </mrow></math>.</li>
-<li class="enumerate_item">Show that <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <msub>
-    <mrow><mi>c</mi>
-    </mrow>
-    <mrow><mi>Y</mi>
-    </mrow>
-   </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow><mi>s</mi><mo>,</mo><mi>t</mi>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>=</mo><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>s</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>+</mo><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>t</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>-</mo><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow><mi>s</mi><mo>-</mo><mi>t</mi>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-  </mrow>
- </mrow></math></li>
-<li class="enumerate_item">Show that  for all <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi> &forall; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
-
-   <mrow>
-    <msub>
-     <mrow><mi>s</mi>
-     </mrow>
-     <mrow><mn>1</mn>
-     </mrow>
-    </msub><mo>,</mo><mn>...</mn><mo>,</mo>
-    <msub>
-     <mrow><mi>s</mi>
-     </mrow>
-     <mrow><mi>n</mi>
-     </mrow>
-    </msub>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
-<mo> &sube; </mo><mi>S</mi>
-  </mrow>
- </mrow></math> it is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <msubsup>
-    <mrow><mo> &sum; </mo>
-    </mrow>
-    <mrow>
-     <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-     </mrow>
-    </mrow>
-    <mrow><mi>n</mi>
-    </mrow>
-   </msubsup>
-   <msubsup>
-    <mrow><mo> &sum; </mo>
-    </mrow>
-    <mrow>
-     <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
-     </mrow>
-    </mrow>
-    <mrow><mi>n</mi>
-    </mrow>
-   </msubsup>
-   <msub>
-    <mrow><mi>a</mi>
-    </mrow>
-    <mrow><mi>i</mi>
-    </mrow>
-   </msub>
-   <msub>
-    <mrow><mi>a</mi>
-    </mrow>
-    <mrow><mi>j</mi>
-    </mrow>
-   </msub><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-   <mrow>
-    <msub>
-     <mrow><mi>s</mi>
-     </mrow>
-     <mrow><mi>i</mi>
-     </mrow>
-    </msub><mo>-</mo>
-    <msub>
-     <mrow><mi>s</mi>
-     </mrow>
-     <mrow><mi>j</mi>
-     </mrow>
-    </msub>
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo> &le; </mo><mn>0</mn>
-  </mrow>
- </mrow></math></li>
-</ol>
-
-
-<div class="solution_" id='magicparlabel-42'><div class="solution__item"><span class="solution__label">Solution.</span>
-Assume <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mn>0</mn><mo> &isin; </mo><mi>S</mi>
-  </mrow>
- </mrow></math>, and a random variable <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mn>0</mn>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-  </mrow>
- </mrow></math>. Let <math xmlns="http://www.w3.org/1998/Math/MathML">
- <mrow>
-  <mrow>
-   <msub>
-    <mrow><mi>Y</mi>
-    </mrow>
-    <mrow><mi>s</mi>
-    </mrow>
-   </msub><mo>=</mo>
-   <msub>
-    <mrow><mi>Z</mi>
-    </mrow>
-    <mrow><mi>s</mi>
-    </mrow>
-   </msub><mo>-</mo>
-   <msub>
-    <mrow><mi>Z</mi>
-    </mrow>
-    <mrow><mn>0</mn>
-    </mrow>
-   </msub>
+   </msup><mo>&gt;</mo><mn>0</mn>
   </mrow>
  </mrow></math>.</div>
 
-<ol class="enumerate" id='magicparlabel-43'><li class="enumerate_item">It is  <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
- <mtable>
-  <mtr>
-   <mtd>
-    <mrow>
-     <mstyle mathvariant='normal'>
-      <mrow><mi>V</mi><mi>a</mi><mi>r</mi>
-      </mrow>
-     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<ol class="enumerate" id='magicparlabel-47'><li class="enumerate_item">This is a multiple choice question, choose any number of correct answers. 
 
-     <mrow>
-      <msubsup>
-       <mrow><mo> &sum; </mo>
-       </mrow>
-       <mrow>
-        <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-        </mrow>
-       </mrow>
-       <mrow><mi>n</mi>
-       </mrow>
-      </msubsup>
-      <msub>
-       <mrow><mi>a</mi>
-       </mrow>
-       <mrow><mi>i</mi>
-       </mrow>
-      </msub><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <msub>
-       <mrow><mi>s</mi>
-       </mrow>
-       <mrow><mi>i</mi>
-       </mrow>
-      </msub>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-     </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>=</mo>
-    </mrow>
-   </mtd>
-   <mtd>
-    <mrow>
-     <mstyle mathvariant='normal'>
-      <mrow><mi>V</mi><mi>a</mi><mi>r</mi>
-      </mrow>
-     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <mrow>
-      <msubsup>
-       <mrow><mo> &sum; </mo>
-       </mrow>
-       <mrow>
-        <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-        </mrow>
-       </mrow>
-       <mrow><mi>n</mi>
-       </mrow>
-      </msubsup>
-      <msub>
-       <mrow><mi>a</mi>
-       </mrow>
-       <mrow><mi>i</mi>
-       </mrow>
-      </msub><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <msub>
-       <mrow><mi>s</mi>
-       </mrow>
-       <mrow><mi>i</mi>
-       </mrow>
-      </msub>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>-</mo><mover accent='false'>
-      <mover>
-       <mrow>
-        <mrow>
-         <msubsup>
-          <mrow><mo> &sum; </mo>
-          </mrow>
-          <mrow>
-           <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-           </mrow>
-          </mrow>
-          <mrow><mi>n</mi>
-          </mrow>
-         </msubsup>
-         <msub>
-          <mrow><mi>a</mi>
-          </mrow>
-          <mrow><mi>i</mi>
-          </mrow>
-         </msub>
-        </mrow>
-       </mrow><mo stretchy="true">&OverBrace;</mo>
-      </mover>
-      <mrow><mn>0</mn><mo>=</mo>
-      </mrow></mover><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mn>0</mn>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-     </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>=</mo>
-     <mstyle mathvariant='normal'>
-      <mrow><mi>V</mi><mi>a</mi><mi>r</mi>
-      </mrow>
-     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <mrow>
-      <msubsup>
-       <mrow><mo> &sum; </mo>
-       </mrow>
-       <mrow>
-        <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-        </mrow>
-       </mrow>
-       <mrow><mi>n</mi>
-       </mrow>
-      </msubsup>
-      <msub>
-       <mrow><mi>a</mi>
-       </mrow>
-       <mrow><mi>i</mi>
-       </mrow>
-      </msub><mi>Y</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <msub>
-       <mrow><mi>s</mi>
-       </mrow>
-       <mrow><mi>i</mi>
-       </mrow>
-      </msub>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-     </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-    </mrow>
-   </mtd>
-  </mtr>
-  <mtr>
-   <mtd><mo>=</mo>
-   </mtd>
-   <mtd>
-    <mrow>
-     <msubsup>
-      <mrow><mo> &sum; </mo>
-      </mrow>
-      <mrow>
-       <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-       </mrow>
-      </mrow>
-      <mrow><mi>n</mi>
-      </mrow>
-     </msubsup>
-     <msubsup>
-      <mrow><mo> &sum; </mo>
-      </mrow>
-      <mrow>
-       <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
-       </mrow>
-      </mrow>
-      <mrow><mi>n</mi>
-      </mrow>
-     </msubsup>
-     <msub>
-      <mrow><mi>a</mi>
-      </mrow>
-      <mrow><mi>i</mi>
-      </mrow>
-     </msub>
-     <msub>
-      <mrow><mi>a</mi>
-      </mrow>
-      <mrow><mi>j</mi>
-      </mrow>
-     </msub>
-     <mstyle mathvariant='normal'><mi>E</mi>
-     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <mrow><mi>Y</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <msub>
-       <mrow><mi>s</mi>
-       </mrow>
-       <mrow><mi>i</mi>
-       </mrow>
-      </msub>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mi>Y</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <msub>
-       <mrow><mi>s</mi>
-       </mrow>
-       <mrow><mi>j</mi>
-       </mrow>
-      </msub>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-     </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>=</mo>
-     <msub>
-      <mrow><mi>c</mi>
-      </mrow>
-      <mrow><mi>Y</mi>
-      </mrow>
-     </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <mrow><mi>s</mi><mo>,</mo><mi>t</mi>
-     </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-    </mrow>
-   </mtd>
-  </mtr>
- </mtable></math></li>
-<li class="enumerate_item">For <math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-48'><li class="enumerate_item"><math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi>Z</mi>
+ </mrow></math> follows a simultaneous autoregressive (SAR) with Gaussian joint distribution with mean <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>X</mi><mi> &beta; </mi>
+  </mrow>
+ </mrow></math> and covariance matrix <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
-   <mstyle mathvariant='normal'><mi>E</mi>
-   </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+   <msup>
+    <mrow><mi> &sigma; </mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msup>
+   <msup>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-   <mrow><mi>Y</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-    <msub>
-     <mrow><mi>s</mi>
-     </mrow>
-     <mrow><mi>i</mi>
-     </mrow>
-    </msub>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-   </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>=</mo><mn>0</mn>
-  </mrow>
- </mrow></math> it is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
- <mtable>
-  <mtr>
-   <mtd>
-    <mrow><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <mrow><mi>s</mi><mo>-</mo><mi>t</mi>
+     <mrow><mi>I</mi><mo>-</mo><mi>B</mi>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
     </mrow>
+    <mrow>
+     <mrow><mo>-</mo><mn>1</mn>
+     </mrow>
+    </mrow>
+   </msup>
+  </mrow>
+ </mrow></math></li>
+<li class="enumerate_item">Ising model</li>
+<li class="enumerate_item">Conditional autoregressive (CAR) with Gaussian joint distribution with mean <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>X</mi><mi> &beta; </mi>
+  </mrow>
+ </mrow></math> and covariance matrix <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow>
+   <msup>
+    <mrow><mi> &sigma; </mi>
+    </mrow>
+    <mrow><mn>2</mn>
+    </mrow>
+   </msup><mi>I</mi>
+  </mrow>
+ </mrow></math></li>
+<li class="enumerate_item">Bernoulli regression</li>
+</ol>
+</li><li class="enumerate_item">Show that the minus two log Pseudo-Likelihood is such as <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+ <mtable>
+  <mtr>
+   <mtd>
+    <mrow><mo>-</mo><mn>2</mn><mo> log </mo>
+    </mrow>
    </mtd>
    <mtd>
-    <mrow><mo>=</mo>
-     <mfrac>
-      <mrow><mn>1</mn>
-      </mrow>
-      <mrow><mn>2</mn>
-      </mrow>
-     </mfrac>
-     <mstyle mathvariant='normal'><mi>E</mi>
-     </mstyle>
-     <msup>
-      <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-       <mrow><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>s</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>-</mo><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mn>0</mn>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>+</mo><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>t</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>-</mo><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mn>0</mn>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
+     <mrow>
+      <mstyle mathvariant='normal'>
+       <mrow><mi>p</mi><mi>s</mi><mi>e</mi><mi>u</mi><mi>d</mi><mi>o</mi><mo>-</mo>
        </mrow>
+      </mstyle><mi>L</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow><mi>Z</mi><mo>;</mo><mi> &beta; </mi><mo>,</mo>
+       <msup>
+        <mrow><mi> &sigma; </mi>
+        </mrow>
+        <mrow><mn>2</mn>
+        </mrow>
+       </msup>
+      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
+     </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>=</mo><mi>n</mi><mo> log </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+     <msup>
+      <mrow><mi> &sigma; </mi>
       </mrow>
       <mrow><mn>2</mn>
       </mrow>
      </msup>
-    </mrow>
-   </mtd>
-  </mtr>
-  <mtr>
-   <mtd><mrow/>
-   </mtd>
-   <mtd>
-    <mrow><mo>=</mo>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+<mo>+</mo>
      <mfrac>
       <mrow><mn>1</mn>
       </mrow>
+      <mrow>
+       <msup>
+        <mrow><mi> &sigma; </mi>
+        </mrow>
+        <mrow><mn>2</mn>
+        </mrow>
+       </msup>
+      </mrow>
+     </mfrac>
+     <msup>
+      <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+       <mrow><mi>Z</mi><mo>-</mo><mi>X</mi><mi> &beta; </mi>
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+      </mrow>
+      <mrow><mi> &top; </mi>
+      </mrow>
+     </msup>
+     <msup>
+      <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+       <mrow><mi>I</mi><mo>-</mo><mi>B</mi>
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+      </mrow>
       <mrow><mn>2</mn>
       </mrow>
-     </mfrac><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+     </msup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-     <mrow><mn>2</mn><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>s</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>+</mo><mn>2</mn><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>t</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>-</mo><mn>2</mn>
-      <msub>
-       <mrow><mi>c</mi>
-       </mrow>
-       <mrow><mi>Y</mi>
-       </mrow>
-      </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <mrow><mi>s</mi><mo>,</mo><mi>t</mi>
-      </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
+     <mrow><mi>Z</mi><mo>-</mo><mi>X</mi><mi> &beta; </mi>
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-    </mrow>
-   </mtd>
-  </mtr>
-  <mtr>
-   <mtd>
-    <mrow><mo> &#x27F9; </mo>
-     <msub>
-      <mrow><mi>c</mi>
+<mo>+</mo>
+     <mstyle mathvariant='normal'>
+      <mrow><mi>c</mi><mi>o</mi><mi>n</mi><mi>s</mi><mi>t</mi><mn>.</mn>
       </mrow>
-      <mrow><mi>Y</mi>
-      </mrow>
-     </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <mrow><mi>s</mi><mo>,</mo><mi>t</mi>
-     </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-    </mrow>
-   </mtd>
-   <mtd>
-    <mrow><mo>=</mo><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>s</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>+</mo><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-<mi>t</mi>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>-</mo><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <mrow><mi>s</mi><mo>-</mo><mi>t</mi>
-     </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
+     </mstyle>
     </mrow>
    </mtd>
   </mtr>
  </mtable></math></li>
-<li class="enumerate_item">It is<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
- <mtable>
-  <mtr>
-   <mtd>
-    <mrow><mn>0</mn><mo> &le; </mo>
-    </mrow>
-   </mtd>
-   <mtd>
-    <mrow>
-     <mstyle mathvariant='normal'>
-      <mrow><mi>V</mi><mi>a</mi><mi>r</mi>
-      </mrow>
-     </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <mrow>
-      <msubsup>
-       <mrow><mo> &sum; </mo>
-       </mrow>
-       <mrow>
-        <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-        </mrow>
-       </mrow>
-       <mrow><mi>n</mi>
-       </mrow>
-      </msubsup>
-      <msub>
-       <mrow><mi>a</mi>
-       </mrow>
-       <mrow><mi>i</mi>
-       </mrow>
-      </msub><mi>Z</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <msub>
-       <mrow><mi>s</mi>
-       </mrow>
-       <mrow><mi>i</mi>
-       </mrow>
-      </msub>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-     </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>=</mo>
-     <msubsup>
-      <mrow><mo> &sum; </mo>
-      </mrow>
-      <mrow>
-       <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-       </mrow>
-      </mrow>
-      <mrow><mi>n</mi>
-      </mrow>
-     </msubsup>
-     <msubsup>
-      <mrow><mo> &sum; </mo>
-      </mrow>
-      <mrow>
-       <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
-       </mrow>
-      </mrow>
-      <mrow><mi>n</mi>
-      </mrow>
-     </msubsup>
-     <msub>
-      <mrow><mi>a</mi>
-      </mrow>
-      <mrow><mi>i</mi>
-      </mrow>
-     </msub>
-     <msub>
-      <mrow><mi>a</mi>
-      </mrow>
-      <mrow><mi>j</mi>
-      </mrow>
-     </msub>
-     <msub>
-      <mrow><mi>c</mi>
-      </mrow>
-      <mrow><mi>Y</mi>
-      </mrow>
-     </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <mrow>
-      <msub>
-       <mrow><mi>s</mi>
-       </mrow>
-       <mrow><mi>i</mi>
-       </mrow>
-      </msub><mo>,</mo>
-      <msub>
-       <mrow><mi>s</mi>
-       </mrow>
-       <mrow><mi>j</mi>
-       </mrow>
-      </msub>
-     </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-    </mrow>
-   </mtd>
-  </mtr>
-  <mtr>
-   <mtd><mrow/>
-   </mtd>
-   <mtd>
-    <mrow><mo>=</mo>
-     <msubsup>
-      <mrow><mo> &sum; </mo>
-      </mrow>
-      <mrow>
-       <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-       </mrow>
-      </mrow>
-      <mrow><mi>n</mi>
-      </mrow>
-     </msubsup>
-     <msubsup>
-      <mrow><mo> &sum; </mo>
-      </mrow>
-      <mrow>
-       <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
-       </mrow>
-      </mrow>
-      <mrow><mi>n</mi>
-      </mrow>
-     </msubsup>
-     <msub>
-      <mrow><mi>a</mi>
-      </mrow>
-      <mrow><mi>i</mi>
-      </mrow>
-     </msub>
-     <msub>
-      <mrow><mi>a</mi>
-      </mrow>
-      <mrow><mi>j</mi>
-      </mrow>
-     </msub><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <mrow><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <msub>
-       <mrow><mi>s</mi>
-       </mrow>
-       <mrow><mi>i</mi>
-       </mrow>
-      </msub>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>+</mo><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <msub>
-       <mrow><mi>s</mi>
-       </mrow>
-       <mrow><mi>j</mi>
-       </mrow>
-      </msub>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>-</mo><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-      <mrow>
-       <msub>
-        <mrow><mi>s</mi>
-        </mrow>
-        <mrow><mi>i</mi>
-        </mrow>
-       </msub><mo>-</mo>
-       <msub>
-        <mrow><mi>s</mi>
-        </mrow>
-        <mrow><mi>j</mi>
-        </mrow>
-       </msub>
-      </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-     </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-    </mrow>
-   </mtd>
-  </mtr>
-  <mtr>
-   <mtd><mrow/>
-   </mtd>
-   <mtd>
-    <mrow><mo>=</mo>
-     <msubsup>
-      <mrow><mo> &sum; </mo>
-      </mrow>
-      <mrow>
-       <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-       </mrow>
-      </mrow>
-      <mrow><mi>n</mi>
-      </mrow>
-     </msubsup>
-     <msub>
-      <mrow><mi>a</mi>
-      </mrow>
-      <mrow><mi>i</mi>
-      </mrow>
-     </msub><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <msub>
-      <mrow><mi>s</mi>
-      </mrow>
-      <mrow><mi>i</mi>
-      </mrow>
-     </msub>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>+</mo>
-     <msubsup>
-      <mrow><mo> &sum; </mo>
-      </mrow>
-      <mrow>
-       <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
-       </mrow>
-      </mrow>
-      <mrow><mi>n</mi>
-      </mrow>
-     </msubsup>
-     <msub>
-      <mrow><mi>a</mi>
-      </mrow>
-      <mrow><mi>j</mi>
-      </mrow>
-     </msub><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <msub>
-      <mrow><mi>s</mi>
-      </mrow>
-      <mrow><mi>j</mi>
-      </mrow>
-     </msub>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo>-</mo>
-     <msubsup>
-      <mrow><mo> &sum; </mo>
-      </mrow>
-      <mrow>
-       <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-       </mrow>
-      </mrow>
-      <mrow><mi>n</mi>
-      </mrow>
-     </msubsup>
-     <msubsup>
-      <mrow><mo> &sum; </mo>
-      </mrow>
-      <mrow>
-       <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
-       </mrow>
-      </mrow>
-      <mrow><mi>n</mi>
-      </mrow>
-     </msubsup>
-     <msub>
-      <mrow><mi>a</mi>
-      </mrow>
-      <mrow><mi>i</mi>
-      </mrow>
-     </msub>
-     <msub>
-      <mrow><mi>a</mi>
-      </mrow>
-      <mrow><mi>j</mi>
-      </mrow>
-     </msub><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <mrow>
-      <msub>
-       <mrow><mi>s</mi>
-       </mrow>
-       <mrow><mi>i</mi>
-       </mrow>
-      </msub><mo>-</mo>
-      <msub>
-       <mrow><mi>s</mi>
-       </mrow>
-       <mrow><mi>j</mi>
-       </mrow>
-      </msub>
-     </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
-    </mrow>
-   </mtd>
-  </mtr>
- </mtable></math> hence<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<li class="enumerate_item">Compute the Maximum Pseudo-Likelihood Estimators (MPLE) <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
-  <mrow>
-   <msubsup>
-    <mrow><mo> &sum; </mo>
-    </mrow>
-    <mrow>
-     <mrow><mi>i</mi><mo>=</mo><mn>1</mn>
-     </mrow>
-    </mrow>
-    <mrow><mi>n</mi>
-    </mrow>
-   </msubsup>
-   <msubsup>
-    <mrow><mo> &sum; </mo>
-    </mrow>
-    <mrow>
-     <mrow><mi>j</mi><mo>=</mo><mn>1</mn>
-     </mrow>
-    </mrow>
-    <mrow><mi>n</mi>
-    </mrow>
-   </msubsup>
-   <msub>
-    <mrow><mi>a</mi>
-    </mrow>
-    <mrow><mi>i</mi>
-    </mrow>
-   </msub>
-   <msub>
-    <mrow><mi>a</mi>
-    </mrow>
-    <mrow><mi>j</mi>
-    </mrow>
-   </msub><mi> &gamma; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
+  <mover>
+   <mrow><mi> &beta; </mi>
+   </mrow><mo stretchy="true">&tilde;</mo>
+  </mover>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
    <mrow>
-    <msub>
-     <mrow><mi>s</mi>
-     </mrow>
-     <mrow><mi>i</mi>
-     </mrow>
-    </msub><mo>-</mo>
-    <msub>
-     <mrow><mi>s</mi>
-     </mrow>
-     <mrow><mi>j</mi>
-     </mrow>
-    </msub>
+    <mover>
+     <mrow><mi> &sigma; </mi>
+     </mrow><mo stretchy="true">&tilde;</mo>
+    </mover>
    </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-<mo> &le; </mo><mn>0</mn>
-  </mrow>
- </mrow></math></li>
+   <mrow><mn>2</mn>
+   </mrow>
+  </msup>
+ </mrow></math> of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow><mi> &beta; </mi>
+ </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msup>
+   <mrow><mi> &sigma; </mi>
+   </mrow>
+   <mrow><mn>2</mn>
+   </mrow>
+  </msup>
+ </mrow></math> </li>
 </ol>
 
+
+<div class="solution_" id='magicparlabel-67'><div class="solution__item"><span class="solution__label">Solution.</span>
+&nbsp;</div>
 </div>
 
 </div>
 </div>
+<div class="standard" id='magicparlabel-88'><hr />
 
-<div class="standard" id='magicparlabel-72'><br />
+</div>
+
+
+<div class="standard" id='magicparlabel-93'><br />
 
 </div>
 </body>
