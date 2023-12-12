@@ -4045,6 +4045,7 @@ To compute an approximate for <math xmlns="http://www.w3.org/1998/Math/MathML">
 <h3 class="subsection" id='magicparlabel-217'><span class="subsection_label">2.4</span> The schematic of the procedure</h3>
 
 <div class="algorithm" id='magicparlabel-218'><div class="algorithm_item"><span class="algorithm_label">Algorithm 17.</span>
+<a id="alg_Summing_up__the" />
 Summing up, the INLA method proceeds as follows:</div>
 </div>
 
@@ -4127,7 +4128,8 @@ Summing up, the INLA method proceeds as follows:</div>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
 
  </mrow></math> by using <a href="#eq__8">(2.10)</a>.</li>
-<li class="enumerate_item">Compute approximation <math xmlns="http://www.w3.org/1998/Math/MathML">
+<li class="enumerate_item"><a id="enu_Compute_approximation_" />
+Compute approximation <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <mover>
@@ -4478,6 +4480,7 @@ Summing up, the INLA method proceeds as follows:</div>
 </ol>
 
 <div class="note" id='magicparlabel-226'><div class="note_item"><span class="note_label">Note 18.</span>
+<a id="note_The_error_in" />
 The error in <a href="#eq__14">(2.12)</a> comes from the Laplace approximations in <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -4671,7 +4674,7 @@ Marginal likelihood <math xmlns="http://www.w3.org/1998/Math/MathML">
 </div>
 
 
-<div class="note" id='magicparlabel-254'><div class="note_item"><span class="note_label">Note 20.</span>
+<div class="note" id='magicparlabel-245'><div class="note_item"><span class="note_label">Note 20.</span>
 Deviance Information Criterion (DIC) can be used in Bayesian model comparison. Analogously to AIC, the deviance of the model is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>D</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -4750,11 +4753,11 @@ Deviance Information Criterion (DIC) can be used in Bayesian model comparison. A
 
 
 
-<div class="standard" id='magicparlabel-260'><br />
+<div class="standard" id='magicparlabel-251'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-261'><div class="note_item"><span class="note_label">Note 21.</span>
+<div class="note" id='magicparlabel-252'><div class="note_item"><span class="note_label">Note 21.</span>
 Predictive distribution of an unseen value <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <msup>
@@ -4903,69 +4906,70 @@ Predictive distribution of an unseen value <math xmlns="http://www.w3.org/1998/M
   </mtr>
  </mtable></math> due to the conditional independence in <a href="#eq__17">(2.1)</a>. Given that <a href="#eq__8">(2.10)</a> has been approximated, INLA employs numerical integration for the integral <a href="#eq__16">(2.15)</a> firstly and <a href="#eq__11">2.15</a> secondly. </div>
 </div>
-<h2 class="section" id='magicparlabel-262'><span class="section_label">3</span> The R-INLA software (An empirical introduction)</h2>
 
-<div class="note" id='magicparlabel-275'><div class="note_item"><span class="note_label">Note 22.</span>
+<h2 class="section" id='magicparlabel-259'><span class="section_label">3</span> The R-INLA software (An empirical introduction)</h2>
+
+<div class="note" id='magicparlabel-272'><div class="note_item"><span class="note_label">Note 22.</span>
 All the info is int he website of the software <span class="flex_url">https://www.r-inla.org</span> </div>
 </div>
-<h3 class="subsection" id='magicparlabel-280'><span class="subsection_label">3.1</span> How to install R-INLA</h3>
+<h3 class="subsection" id='magicparlabel-277'><span class="subsection_label">3.1</span> How to install R-INLA</h3>
 
-<div class="standard" id='magicparlabel-281'><br />
+<div class="standard" id='magicparlabel-278'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-282'><div class="note_item"><span class="note_label">Note 23.</span>
+<div class="note" id='magicparlabel-279'><div class="note_item"><span class="note_label">Note 23.</span>
 To install R-INLA do the following from <span class="flex_url">https://www.r-inla.org/download-install</span>.</div>
-<div class="standard" id='magicparlabel-291'><div class='Frameless'><div class="plain_layout" id='magicparlabel-295'><span style='font-size:small;'># install the stable version, do </span></div>
+<div class="standard" id='magicparlabel-288'><div class='Frameless'><div class="plain_layout" id='magicparlabel-292'><span style='font-size:small;'># install the stable version, do </span></div>
+
+<div class="plain_layout" id='magicparlabel-293'><span style='font-family:monospace;'><span style='font-size:small;'>install.packages("INLA",repos=c(getOption("repos"),</span></span></div>
+
+<div class="plain_layout" id='magicparlabel-294'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;INLA="https://inla.r-inla-download.org/R/stable"), </span></span></div>
+
+<div class="plain_layout" id='magicparlabel-295'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;dep=TRUE)</span></span></div>
 
 <div class="plain_layout" id='magicparlabel-296'><span style='font-family:monospace;'><span style='font-size:small;'>install.packages("INLA",repos=c(getOption("repos"),</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-297'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;INLA="https://inla.r-inla-download.org/R/stable"), </span></span></div>
+<div class="plain_layout" id='magicparlabel-297'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;INLA="https://inla.r-inla-download.org/R/testing"),</span></span></div>
 
 <div class="plain_layout" id='magicparlabel-298'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;dep=TRUE)</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-299'><span style='font-family:monospace;'><span style='font-size:small;'>install.packages("INLA",repos=c(getOption("repos"),</span></span></div>
+<div class="plain_layout" id='magicparlabel-299'><span style='font-size:small;'># update the stable version the package</span></div>
 
-<div class="plain_layout" id='magicparlabel-300'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;INLA="https://inla.r-inla-download.org/R/testing"),</span></span></div>
+<div class="plain_layout" id='magicparlabel-300'><span style='font-size:small;'>inla.upgrade() </span></div>
 
-<div class="plain_layout" id='magicparlabel-301'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;dep=TRUE)</span></span></div>
+<div class="plain_layout" id='magicparlabel-301'><span style='font-size:small;'># install dependency fmesh R package</span></div>
 
-<div class="plain_layout" id='magicparlabel-302'><span style='font-size:small;'># update the stable version the package</span></div>
+<div class="plain_layout" id='magicparlabel-302'><span style='font-size:small;'>options(repos=c( inlabruorg = "https://inlabru-org.r-universe.dev", </span></div>
 
-<div class="plain_layout" id='magicparlabel-303'><span style='font-size:small;'>inla.upgrade() </span></div>
+<div class="plain_layout" id='magicparlabel-303'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;</span>INLA = "https://inla.r-inla-download.org/R/testing", </span></div>
 
-<div class="plain_layout" id='magicparlabel-304'><span style='font-size:small;'># install dependency fmesh R package</span></div>
+<div class="plain_layout" id='magicparlabel-304'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;</span>CRAN = "https://cran.rstudio.com")</span></div>
 
-<div class="plain_layout" id='magicparlabel-305'><span style='font-size:small;'>options(repos=c( inlabruorg = "https://inlabru-org.r-universe.dev", </span></div>
+<div class="plain_layout" id='magicparlabel-305'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;</span>) </span></div>
 
-<div class="plain_layout" id='magicparlabel-306'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;</span>INLA = "https://inla.r-inla-download.org/R/testing", </span></div>
-
-<div class="plain_layout" id='magicparlabel-307'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;</span>CRAN = "https://cran.rstudio.com")</span></div>
-
-<div class="plain_layout" id='magicparlabel-308'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;</span>) </span></div>
-
-<div class="plain_layout" id='magicparlabel-309'><span style='font-size:small;'>install.packages("fmesher")</span></div>
+<div class="plain_layout" id='magicparlabel-306'><span style='font-size:small;'>install.packages("fmesher")</span></div>
 </div></div>
 </div>
-<h3 class="subsection" id='magicparlabel-310'><span class="subsection_label">3.2</span> How to use R-INLA</h3>
+<h3 class="subsection" id='magicparlabel-307'><span class="subsection_label">3.2</span> How to use R-INLA</h3>
 
-<div class="note" id='magicparlabel-311'><div class="note_item"><span class="note_label">Note 24.</span>
+<div class="note" id='magicparlabel-308'><div class="note_item"><span class="note_label">Note 24.</span>
 There are two essential steps: </div>
 
-<ol class="enumerate" id='magicparlabel-312'><li class="enumerate_item">Define the linear predictor <a href="#eq__20">(2.6)</a> through a formula object </li>
+<ol class="enumerate" id='magicparlabel-309'><li class="enumerate_item">Define the linear predictor <a href="#eq__20">(2.6)</a> through a formula object </li>
 <li class="enumerate_item">Complete the model definition and fit the model using the R function <span style='font-family:monospace;'>inla{INLA}</span>.</li>
 </ol>
-<div class="standard" id='magicparlabel-314'>The fitted model is returned as an inla object. </div>
+<div class="standard" id='magicparlabel-311'>The fitted model is returned as an inla object. </div>
 </div>
 
-<div class="standard" id='magicparlabel-320'><br />
+<div class="standard" id='magicparlabel-317'><br />
 
 </div>
 
-<div class="example" id='magicparlabel-321'><div class="example_item"><span class="example_label">Example 25.</span>
+<div class="example" id='magicparlabel-318'><div class="example_item"><span class="example_label">Example 25.</span>
 We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.</div>
 
-<ul class="itemize" id='magicparlabel-322'><li class="itemize_item">Bayesian model<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<ul class="itemize" id='magicparlabel-319'><li class="itemize_item">Bayesian model<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
   <mtable>
    <mtr>
@@ -5236,43 +5240,43 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
  </mrow></math> . </li>
 </ul>
 </div>
-<h5 class="paragraph_" id='magicparlabel-325'>Data loading</h5>
+<h5 class="paragraph_" id='magicparlabel-322'>Data loading</h5>
 
-<ul class="itemize" id='magicparlabel-326'><li class="itemize_item">Load R-INLA
-<div class="standard" id='magicparlabel-327'><div class='Frameless'><div class="plain_layout" id='magicparlabel-331'><span style='font-family:monospace;'><span style='font-size:small;'># load the data set</span></span></div>
+<ul class="itemize" id='magicparlabel-323'><li class="itemize_item">Load R-INLA
+<div class="standard" id='magicparlabel-324'><div class='Frameless'><div class="plain_layout" id='magicparlabel-328'><span style='font-family:monospace;'><span style='font-size:small;'># load the data set</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-332'><span style='font-family:monospace;'><span style='font-size:small;'>library(&ldquo;INLA&rdquo;)</span></span></div>
+<div class="plain_layout" id='magicparlabel-329'><span style='font-family:monospace;'><span style='font-size:small;'>library(&ldquo;INLA&rdquo;)</span></span></div>
 </div></div>
 </li><li class="itemize_item">We import the R data set <span style='font-family:monospace;'>Salm{INLA}</span> as follows 
-<div class="standard" id='magicparlabel-338'><div class='Frameless'><div class="plain_layout" id='magicparlabel-342'><span style='font-family:monospace;'><span style='font-size:small;'># load the data set </span></span></div>
+<div class="standard" id='magicparlabel-335'><div class='Frameless'><div class="plain_layout" id='magicparlabel-339'><span style='font-family:monospace;'><span style='font-size:small;'># load the data set </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-343'><span style='font-family:monospace;'><span style='font-size:small;'>data(Salm) </span></span></div>
+<div class="plain_layout" id='magicparlabel-340'><span style='font-family:monospace;'><span style='font-size:small;'>data(Salm) </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-344'># get info about the R dataset</div>
+<div class="plain_layout" id='magicparlabel-341'># get info about the R dataset</div>
 
-<div class="plain_layout" id='magicparlabel-345'>?Salm</div>
+<div class="plain_layout" id='magicparlabel-342'>?Salm</div>
 
-<div class="plain_layout" id='magicparlabel-346'><span style='font-family:monospace;'><span style='font-size:small;'># rename the columns to fit the notation </span></span></div>
+<div class="plain_layout" id='magicparlabel-343'><span style='font-family:monospace;'><span style='font-size:small;'># rename the columns to fit the notation </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-347'><span style='font-family:monospace;'><span style='font-size:small;'>names(Salm) = c("z", "x", "u") </span></span></div>
+<div class="plain_layout" id='magicparlabel-344'><span style='font-family:monospace;'><span style='font-size:small;'>names(Salm) = c("z", "x", "u") </span></span></div>
 </div></div>
 </li></ul>
-<h5 class="paragraph_" id='magicparlabel-348'>Training via R-INLA</h5>
+<h5 class="paragraph_" id='magicparlabel-345'>Training via R-INLA</h5>
 
-<ul class="itemize" id='magicparlabel-349'><li class="itemize_item">Code the model in R-INLA language, and produce the inla object 
-<div class="standard" id='magicparlabel-350'><div class='Frameless'><div class="plain_layout" id='magicparlabel-354'><span style='font-family:monospace;'><span style='font-size:small;'># specify the prior for the log precision parameter</span></span></div>
+<ul class="itemize" id='magicparlabel-346'><li class="itemize_item">Code the model in R-INLA language, and produce the inla object 
+<div class="standard" id='magicparlabel-347'><div class='Frameless'><div class="plain_layout" id='magicparlabel-351'><span style='font-family:monospace;'><span style='font-size:small;'># specify the prior for the log precision parameter</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-355'><span style='font-family:monospace;'><span style='font-size:small;'>my.hyper &lt;- list(theta = list(prior="pc.prec", param=c(1,0.01)))</span></span></div>
+<div class="plain_layout" id='magicparlabel-352'><span style='font-family:monospace;'><span style='font-size:small;'>my.hyper &lt;- list(theta = list(prior="pc.prec", param=c(1,0.01)))</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-356'><span style='font-family:monospace;'><span style='font-size:small;'># specify the linear predictor</span></span></div>
+<div class="plain_layout" id='magicparlabel-353'><span style='font-family:monospace;'><span style='font-size:small;'># specify the linear predictor</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-357'><span style='font-family:monospace;'><span style='font-size:small;'>formula &lt;- z ~ log(x + 10) + x + f(u, model = "iid", hyper = my.hyper)</span></span></div>
+<div class="plain_layout" id='magicparlabel-354'><span style='font-family:monospace;'><span style='font-size:small;'>formula &lt;- z ~ log(x + 10) + x + f(u, model = "iid", hyper = my.hyper)</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-358'><span style='font-family:monospace;'><span style='font-size:small;'># run R-INLA and get the result object</span></span></div>
+<div class="plain_layout" id='magicparlabel-355'><span style='font-family:monospace;'><span style='font-size:small;'># run R-INLA and get the result object</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-359'><span style='font-family:monospace;'><span style='font-size:small;'>result &lt;- inla(formula=formula, data=Salm, family="Poisson",</span></span></div>
+<div class="plain_layout" id='magicparlabel-356'><span style='font-family:monospace;'><span style='font-size:small;'>result &lt;- inla(formula=formula, data=Salm, family="Poisson",</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-360'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;control.inla = list(strategy=&rdquo;</span></span>laplace<span style='font-family:monospace;'><span style='font-size:small;'>&rdquo;))</span></span></div>
+<div class="plain_layout" id='magicparlabel-357'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;control.inla = list(strategy=&rdquo;</span></span>laplace<span style='font-family:monospace;'><span style='font-size:small;'>&rdquo;))</span></span></div>
 </div></div>
 </li><li class="itemize_item">The `<span style='font-family:monospace;'>formula</span>' is as in <span style='font-family:monospace;'>lm{stats}</span> command. </li>
 <li class="itemize_item">Function `<span style='font-family:monospace;'>inla.list.models()</span>' provides a list of available distributions for the different parts of the model, such as the "prior" (available priors for the hyper-parameters), "likelihood" (all implemented likelihoods) and "latent" (available models for the latent field).</li>
@@ -5297,16 +5301,16 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
  </mrow></math>). </li>
 <li class="itemize_item">R function <span style='font-family:monospace;'>inla{INLA}</span> (given the input above) generates an inla object similar to that of <span style='font-family:monospace;'>lm{stats}</span>. The data object should be data.frame or list. The likelihood is specified in form of a string.  <span style='font-family:monospace;'><span style='font-size:small;'>strategy=&rdquo;</span></span>laplace<span style='font-family:monospace;'><span style='font-size:small;'>&rdquo;</span></span> refers to the approximation strategy in Note <a href="#note_To_compute_an">16</a> and has options &ldquo;gaussian&rdquo;, &ldquo;simplified.laplace&rdquo;, &ldquo;laplace&rdquo;.</li>
 </ul>
-<h5 class="paragraph_" id='magicparlabel-381'>Parametric inference </h5>
+<h5 class="paragraph_" id='magicparlabel-378'>Parametric inference </h5>
 
-<ul class="itemize" id='magicparlabel-382'><li class="itemize_item">Post-processing the results from <span style='font-family:monospace;'><span style='font-size:small;'>inla</span></span> object. 
-<div class="standard" id='magicparlabel-383'><div class='Frameless'><div class="plain_layout" id='magicparlabel-387'><span style='font-family:monospace;'><span style='font-size:small;'>summary(result)</span></span></div>
+<ul class="itemize" id='magicparlabel-379'><li class="itemize_item">Post-processing the results from <span style='font-family:monospace;'><span style='font-size:small;'>inla</span></span> object. 
+<div class="standard" id='magicparlabel-380'><div class='Frameless'><div class="plain_layout" id='magicparlabel-384'><span style='font-family:monospace;'><span style='font-size:small;'>summary(result)</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-388'><img style='width:90%;' src='0_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_1.png' alt='image: 0_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_1.png' />
+<div class="plain_layout" id='magicparlabel-385'><img style='width:90%;' src='0_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_1.png' alt='image: 0_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_1.png' />
 </div>
 </div> </div>
 
-<div class="standard" id='magicparlabel-389'>It provides summary statistics of the posterior of the fixed effect, random effect, and precision parameters, as well as the marginal log-likelihood <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-386'>It provides summary statistics of the posterior of the fixed effect, random effect, and precision parameters, as well as the marginal log-likelihood <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo> log </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -5328,22 +5332,22 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
    </mrow>
   </msub>
  </mrow></math> as 
-<div class="standard" id='magicparlabel-391'><div class='Frameless'><div class="plain_layout" id='magicparlabel-395'><span style='font-family:monospace;'><span style='font-size:small;'>beta_1_pdf &lt;- result$marginals.fixed$`log(x + 10)` </span></span></div>
+<div class="standard" id='magicparlabel-388'><div class='Frameless'><div class="plain_layout" id='magicparlabel-392'><span style='font-family:monospace;'><span style='font-size:small;'>beta_1_pdf &lt;- result$marginals.fixed$`log(x + 10)` </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-396'><span style='font-family:monospace;'><span style='font-size:small;'>plot(beta_1_pdf[,1], beta_1_pdf[,2], type="l")</span></span></div>
+<div class="plain_layout" id='magicparlabel-393'><span style='font-family:monospace;'><span style='font-size:small;'>plot(beta_1_pdf[,1], beta_1_pdf[,2], type="l")</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-397'><img style='width:40%;' src='1_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____ics_IV_Handouts_figures_beta_1_inla_example.png' alt='image: 1_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____ics_IV_Handouts_figures_beta_1_inla_example.png' />
+<div class="plain_layout" id='magicparlabel-394'><img style='width:40%;' src='1_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____ics_IV_Handouts_figures_beta_1_inla_example.png' alt='image: 1_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____ics_IV_Handouts_figures_beta_1_inla_example.png' />
 </div>
 </div></div>
 </li><li class="itemize_item">Summary of the above marginal posteriors can be obtained by using <span style='font-family:monospace;'>result$summary.fixed</span>, <span style='font-family:monospace;'>result$summary.random</span>, <span style='font-family:monospace;'>result$summary.hyperpar </span>
-<div class="standard" id='magicparlabel-399'><div class='Frameless'><div class="plain_layout" id='magicparlabel-403'>result$marginals.fixed</div>
+<div class="standard" id='magicparlabel-396'><div class='Frameless'><div class="plain_layout" id='magicparlabel-400'>result$marginals.fixed</div>
 
-<div class="plain_layout" id='magicparlabel-404'><img style='width:90%;' src='2_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_2.png' alt='image: 2_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_2.png' />
+<div class="plain_layout" id='magicparlabel-401'><img style='width:90%;' src='2_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_2.png' alt='image: 2_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_2.png' />
 </div>
 
-<div class="plain_layout" id='magicparlabel-405'>result$summary.hyperpar</div>
+<div class="plain_layout" id='magicparlabel-402'>result$summary.hyperpar</div>
 
-<div class="plain_layout" id='magicparlabel-406'><img style='width:90%;' src='3_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_3.png' alt='image: 3_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_3.png' />
+<div class="plain_layout" id='magicparlabel-403'><img style='width:90%;' src='3_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_3.png' alt='image: 3_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_3.png' />
 </div>
 </div></div>
 </li><li class="itemize_item">To get the posterior summary of a function of the parameters, e.g. the posterior mean and standard deviation of <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5360,11 +5364,11 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
 
   </mrow>
  </mrow></math>
-<div class="standard" id='magicparlabel-408'><div class='Frameless'><div class="plain_layout" id='magicparlabel-412'># Select the right hyperparameter marginal </div>
+<div class="standard" id='magicparlabel-405'><div class='Frameless'><div class="plain_layout" id='magicparlabel-409'># Select the right hyperparameter marginal </div>
 
-<div class="plain_layout" id='magicparlabel-413'>tau &lt;- result$marginals.hyperpar[[1]] </div>
+<div class="plain_layout" id='magicparlabel-410'>tau &lt;- result$marginals.hyperpar[[1]] </div>
 
-<div class="plain_layout" id='magicparlabel-414'># Compute the expected value for <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="plain_layout" id='magicparlabel-411'># Compute the expected value for <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mn>1</mn><mo>/</mo>
    <msqrt><mi> &tau; </mi>
@@ -5384,17 +5388,17 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
   </mrow>
  </mrow></math> </div>
 
-<div class="plain_layout" id='magicparlabel-415'>E = inla.emarginal(function(x) c(1/sqrt(x),(1/sqrt(x))^2), tau) </div>
+<div class="plain_layout" id='magicparlabel-412'>E = inla.emarginal(function(x) c(1/sqrt(x),(1/sqrt(x))^2), tau) </div>
 
-<div class="plain_layout" id='magicparlabel-416'># From this we computed the posterior standard deviation as </div>
+<div class="plain_layout" id='magicparlabel-413'># From this we computed the posterior standard deviation as </div>
 
-<div class="plain_layout" id='magicparlabel-417'>mysd = sqrt(E[2] - E[1]^2) </div>
+<div class="plain_layout" id='magicparlabel-414'>mysd = sqrt(E[2] - E[1]^2) </div>
 
-<div class="plain_layout" id='magicparlabel-418'># so that we obtain the posterior mean and standard deviation </div>
+<div class="plain_layout" id='magicparlabel-415'># so that we obtain the posterior mean and standard deviation </div>
 
-<div class="plain_layout" id='magicparlabel-419'>print(c(mean=E[1], sd=mysd))</div>
+<div class="plain_layout" id='magicparlabel-416'>print(c(mean=E[1], sd=mysd))</div>
 
-<div class="plain_layout" id='magicparlabel-420'><img src='4_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_4.png' alt='image: 4_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_4.png' />
+<div class="plain_layout" id='magicparlabel-417'><img src='4_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_4.png' alt='image: 4_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____s_IV_Handouts_figures_inla_example_output_4.png' />
 </div>
 </div></div>
 </li><li class="itemize_item">To compute the marginal posterior distribution of <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5411,58 +5415,58 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
 
   </mrow>
  </mrow></math> use the <span style='font-family:monospace;'>inla.tmarginal() </span>
-<div class="standard" id='magicparlabel-422'><div class='Frameless'><div class="plain_layout" id='magicparlabel-426'># Select the right hyperparameter marginal </div>
+<div class="standard" id='magicparlabel-419'><div class='Frameless'><div class="plain_layout" id='magicparlabel-423'># Select the right hyperparameter marginal </div>
 
-<div class="plain_layout" id='magicparlabel-427'>tau &lt;- result$marginals.hyperpar[[1]] </div>
+<div class="plain_layout" id='magicparlabel-424'>tau &lt;- result$marginals.hyperpar[[1]] </div>
 
-<div class="plain_layout" id='magicparlabel-428'># Do the transformation</div>
+<div class="plain_layout" id='magicparlabel-425'># Do the transformation</div>
 
-<div class="plain_layout" id='magicparlabel-429'>my.sigma &lt;- inla.tmarginal(function(x){1/sqrt(x)}, tau)</div>
+<div class="plain_layout" id='magicparlabel-426'>my.sigma &lt;- inla.tmarginal(function(x){1/sqrt(x)}, tau)</div>
 
-<div class="plain_layout" id='magicparlabel-430'># plot</div>
+<div class="plain_layout" id='magicparlabel-427'># plot</div>
 
-<div class="plain_layout" id='magicparlabel-431'>plot(my.sigma[,1], my.sigma[,2], type="l")</div>
+<div class="plain_layout" id='magicparlabel-428'>plot(my.sigma[,1], my.sigma[,2], type="l")</div>
 
-<div class="plain_layout" id='magicparlabel-432'><img style='width:45%;' src='5_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____stics_IV_Handouts_figures_sig2_inla_example.png' alt='image: 5_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____stics_IV_Handouts_figures_sig2_inla_example.png' />
+<div class="plain_layout" id='magicparlabel-429'><img style='width:45%;' src='5_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____stics_IV_Handouts_figures_sig2_inla_example.png' alt='image: 5_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____stics_IV_Handouts_figures_sig2_inla_example.png' />
 </div>
 </div></div>
 </li><li class="itemize_item">Other R-INLA functions providing operations on posterior marginals can be found in R help documentation, 
-<div class="standard" id='magicparlabel-434'><div class='Frameless'><div class="plain_layout" id='magicparlabel-438'>?inla.marginal</div>
+<div class="standard" id='magicparlabel-431'><div class='Frameless'><div class="plain_layout" id='magicparlabel-435'>?inla.marginal</div>
 </div></div>
 </li></ul>
-<h5 class="paragraph_" id='magicparlabel-439'>Predictive inference</h5>
+<h5 class="paragraph_" id='magicparlabel-436'>Predictive inference</h5>
 
-<ul class="itemize" id='magicparlabel-440'><li class="itemize_item">In R-INLA there is no function <span style='font-family:monospace;'>predict{stats}</span> as for <span style='font-family:monospace;'>glm{stats}</span> or <span style='font-family:monospace;'>lm{stats}</span>. Predictions must be done as a part of the model fitting itself. Prediction can be regarded as fitting a model with missing data, hence we can simply set <span style='font-family:monospace;'>y[i]=NA</span> for those “locations” we want to predict. Predictive distributions, which are often of interest, are however not returned directly, and the user needs to some extra &ldquo;hacks&rdquo;. There are two reasonable &ldquo;hacks&rdquo;.</li>
+<ul class="itemize" id='magicparlabel-437'><li class="itemize_item">In R-INLA there is no function <span style='font-family:monospace;'>predict{stats}</span> as for <span style='font-family:monospace;'>glm{stats}</span> or <span style='font-family:monospace;'>lm{stats}</span>. Predictions must be done as a part of the model fitting itself. Prediction can be regarded as fitting a model with missing data, hence we can simply set <span style='font-family:monospace;'>y[i]=NA</span> for those “locations” we want to predict. Predictive distributions, which are often of interest, are however not returned directly, and the user needs to some extra &ldquo;hacks&rdquo;. There are two reasonable &ldquo;hacks&rdquo;.</li>
 <li class="itemize_item">For illustration, pretend <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mn>7</mn>
  </mrow></math>th observation is unknown, by removing it from the training data, and try to predict it.
-<div class="standard" id='magicparlabel-442'><div class='Frameless'><div class="plain_layout" id='magicparlabel-446'><span style='font-family:monospace;'><span style='font-size:small;'>## set observation 7 to NA </span></span></div>
+<div class="standard" id='magicparlabel-439'><div class='Frameless'><div class="plain_layout" id='magicparlabel-443'><span style='font-family:monospace;'><span style='font-size:small;'>## set observation 7 to NA </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-447'><span style='font-family:monospace;'><span style='font-size:small;'>Salm.predict = Salm </span></span></div>
+<div class="plain_layout" id='magicparlabel-444'><span style='font-family:monospace;'><span style='font-size:small;'>Salm.predict = Salm </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-448'><span style='font-family:monospace;'><span style='font-size:small;'>Salm.predict[7, "y"] &lt;- NA </span></span></div>
+<div class="plain_layout" id='magicparlabel-445'><span style='font-family:monospace;'><span style='font-size:small;'>Salm.predict[7, "y"] &lt;- NA </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-449'><span style='font-family:monospace;'><span style='font-size:small;'># re-run the model </span></span></div>
+<div class="plain_layout" id='magicparlabel-446'><span style='font-family:monospace;'><span style='font-size:small;'># re-run the model </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-450'><span style='font-family:monospace;'><span style='font-size:small;'>res.predict = inla(formula=formula, data=Salm, &emsp;&emsp;family="Poisson", </span></span></div>
+<div class="plain_layout" id='magicparlabel-447'><span style='font-family:monospace;'><span style='font-size:small;'>res.predict = inla(formula=formula, data=Salm, &emsp;&emsp;family="Poisson", </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-451'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;control.predictor = list(compute = TRUE), </span></span></div>
+<div class="plain_layout" id='magicparlabel-448'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;control.predictor = list(compute = TRUE), </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-452'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;control.family = list(control.link=list(model="log")) )</span></span></div>
+<div class="plain_layout" id='magicparlabel-449'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;control.family = list(control.link=list(model="log")) )</span></span></div>
 </div></div>
 </li><li class="itemize_item">Using the same settings as before, train the model by function <span style='font-family:monospace;'>inla(INLA)</span>. 
-<div class="standard" id='magicparlabel-454'><div class='Frameless'><div class="plain_layout" id='magicparlabel-458'><span style='font-family:monospace;'><span style='font-size:small;'># re-run the model</span></span></div>
+<div class="standard" id='magicparlabel-451'><div class='Frameless'><div class="plain_layout" id='magicparlabel-455'><span style='font-family:monospace;'><span style='font-size:small;'># re-run the model</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-459'><span style='font-family:monospace;'><span style='font-size:small;'>res.predict = inla(formula=formula, data=Salm, &emsp;&emsp;family="Poisson",</span></span></div>
+<div class="plain_layout" id='magicparlabel-456'><span style='font-family:monospace;'><span style='font-size:small;'>res.predict = inla(formula=formula, data=Salm, &emsp;&emsp;family="Poisson",</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-460'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;control.predictor = list(compute = TRUE),</span></span></div>
+<div class="plain_layout" id='magicparlabel-457'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;control.predictor = list(compute = TRUE),</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-461'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;control.compute=list(return.marginals.predictor=TRUE),</span></span></div>
+<div class="plain_layout" id='magicparlabel-458'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;control.compute=list(return.marginals.predictor=TRUE),</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-462'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;control.family = list(control.link=list(model="log")) )</span></span></div>
+<div class="plain_layout" id='magicparlabel-459'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;control.family = list(control.link=list(model="log")) )</span></span></div>
 </div></div>
 
-<div class="standard" id='magicparlabel-463'>By specifying <span style='font-family:monospace;'>control.predictor=list(compute=TRUE)</span> the posterior marginals will be included in the results object. We also need to explicitly specify the link function <math xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-460'>By specifying <span style='font-family:monospace;'>control.predictor=list(compute=TRUE)</span> the posterior marginals will be included in the results object. We also need to explicitly specify the link function <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mi>g</mi>
  </mrow></math> connecting <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
@@ -5560,11 +5564,11 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
 
   </mrow>
  </mrow></math> by
-<div class="standard" id='magicparlabel-465'><div class='Frameless'><div class="plain_layout" id='magicparlabel-469'><span style='font-family:monospace;'><span style='font-size:small;'># marginal posterior for the linear predictor</span></span></div>
+<div class="standard" id='magicparlabel-462'><div class='Frameless'><div class="plain_layout" id='magicparlabel-466'><span style='font-family:monospace;'><span style='font-size:small;'># marginal posterior for the linear predictor</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-470'><span style='font-family:monospace;'><span style='font-size:small;'>eta7 = res.predict$marginals.linear.predictor[[7]]</span></span></div>
+<div class="plain_layout" id='magicparlabel-467'><span style='font-family:monospace;'><span style='font-size:small;'>eta7 = res.predict$marginals.linear.predictor[[7]]</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-471'><span style='font-size:small;'><img style='width:49%;' src='6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____ndouts_figures_pred_distr_eta7_inla_example.png' alt='image: 6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____ndouts_figures_pred_distr_eta7_inla_example.png' />
+<div class="plain_layout" id='magicparlabel-468'><span style='font-size:small;'><img style='width:49%;' src='6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____ndouts_figures_pred_distr_eta7_inla_example.png' alt='image: 6_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____ndouts_figures_pred_distr_eta7_inla_example.png' />
 </span></div>
 </div></div>
 </li><li class="itemize_item">Summary about is <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5591,9 +5595,9 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
 
   </mrow>
  </mrow></math> taken by 
-<div class="standard" id='magicparlabel-473'><div class='Frameless'><div class="plain_layout" id='magicparlabel-477'><span style='font-family:monospace;'><span style='font-size:small;'># some summary statistics round(res.predict$summary.linear.predictor[7,], 3)</span></span></div>
+<div class="standard" id='magicparlabel-470'><div class='Frameless'><div class="plain_layout" id='magicparlabel-474'><span style='font-family:monospace;'><span style='font-size:small;'># some summary statistics round(res.predict$summary.linear.predictor[7,], 3)</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-478'><span style='font-size:small;'><img style='width:100%;' src='7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____uts_R_scripts_figures_inla_example_output_5.png' alt='image: 7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____uts_R_scripts_figures_inla_example_output_5.png' />
+<div class="plain_layout" id='magicparlabel-475'><span style='font-size:small;'><img style='width:100%;' src='7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____uts_R_scripts_figures_inla_example_output_5.png' alt='image: 7_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____uts_R_scripts_figures_inla_example_output_5.png' />
 </span></div>
 </div></div>
 </li><li class="itemize_item">We can compute <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5620,25 +5624,25 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
 
   </mrow>
  </mrow></math> by
-<div class="standard" id='magicparlabel-480'><div class='Frameless'><div class="plain_layout" id='magicparlabel-484'><span style='font-family:monospace;'><span style='font-size:small;'># marginal posterior for lambda </span></span></div>
+<div class="standard" id='magicparlabel-477'><div class='Frameless'><div class="plain_layout" id='magicparlabel-481'><span style='font-family:monospace;'><span style='font-size:small;'># marginal posterior for lambda </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-485'><span style='font-size:small;'>eta7 = res.predict$marginals.linear.predictor[[7]]</span></div>
+<div class="plain_layout" id='magicparlabel-482'><span style='font-size:small;'>eta7 = res.predict$marginals.linear.predictor[[7]]</span></div>
 
-<div class="plain_layout" id='magicparlabel-486'><span style='font-family:monospace;'><span style='font-size:small;'>lambda7 = inla.tmarginal(function(x){exp(x)}, eta7)</span></span></div>
+<div class="plain_layout" id='magicparlabel-483'><span style='font-family:monospace;'><span style='font-size:small;'>lambda7 = inla.tmarginal(function(x){exp(x)}, eta7)</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-487'><span style='font-size:small;'>## or alternatively</span></div>
+<div class="plain_layout" id='magicparlabel-484'><span style='font-size:small;'>## or alternatively</span></div>
 
-<div class="plain_layout" id='magicparlabel-488'><span style='font-size:small;'># lambda7_bis = inla.tmarginal(function(x){exp(x)},eta7)</span></div>
+<div class="plain_layout" id='magicparlabel-485'><span style='font-size:small;'># lambda7_bis = inla.tmarginal(function(x){exp(x)},eta7)</span></div>
 
-<div class="plain_layout" id='magicparlabel-489'><span style='font-size:small;'>## or alternatively</span></div>
+<div class="plain_layout" id='magicparlabel-486'><span style='font-size:small;'>## or alternatively</span></div>
 
-<div class="plain_layout" id='magicparlabel-490'><span style='font-size:small;'># lambda7_bis = inla.tmarginal(function(x){exp(x)},eta7)</span></div>
+<div class="plain_layout" id='magicparlabel-487'><span style='font-size:small;'># lambda7_bis = inla.tmarginal(function(x){exp(x)},eta7)</span></div>
 
-<div class="plain_layout" id='magicparlabel-491'><span style='font-family:monospace;'><span style='font-size:small;'># plot</span></span></div>
+<div class="plain_layout" id='magicparlabel-488'><span style='font-family:monospace;'><span style='font-size:small;'># plot</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-492'><span style='font-family:monospace;'><span style='font-size:small;'>plot(lambda7[,1], lambda7[,2], type="l")</span></span></div>
+<div class="plain_layout" id='magicparlabel-489'><span style='font-family:monospace;'><span style='font-size:small;'>plot(lambda7[,1], lambda7[,2], type="l")</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-493'><span style='font-size:small;'><img style='width:49%;' src='8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____uts_figures_pred_distr_lambda7_inla_example.png' alt='image: 8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____uts_figures_pred_distr_lambda7_inla_example.png' />
+<div class="plain_layout" id='magicparlabel-490'><span style='font-size:small;'><img style='width:49%;' src='8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____uts_figures_pred_distr_lambda7_inla_example.png' alt='image: 8_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____uts_figures_pred_distr_lambda7_inla_example.png' />
 </span></div>
 </div></div>
 </li><li class="itemize_item">To compute <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -5805,33 +5809,33 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
    </mtd>
   </mtr>
  </mtable></math> and either approximated by using numerical integration, e.g. trapezoid rule with R function <span style='font-family:monospace;'>trapz{caTools}</span> 
-<div class="standard" id='magicparlabel-495'><div class='Frameless'><div class="plain_layout" id='magicparlabel-499'><span style='font-family:monospace;'><span style='font-size:small;'># library supporting trapezoid rule integration. </span></span></div>
+<div class="standard" id='magicparlabel-492'><div class='Frameless'><div class="plain_layout" id='magicparlabel-496'><span style='font-family:monospace;'><span style='font-size:small;'># library supporting trapezoid rule integration. </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-500'><span style='font-family:monospace;'><span style='font-size:small;'>library(caTools) </span></span></div>
+<div class="plain_layout" id='magicparlabel-497'><span style='font-family:monospace;'><span style='font-size:small;'>library(caTools) </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-501'><span style='font-family:monospace;'><span style='font-size:small;'># specify the support at which we want to compute the density </span></span></div>
+<div class="plain_layout" id='magicparlabel-498'><span style='font-family:monospace;'><span style='font-size:small;'># specify the support at which we want to compute the density </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-502'><span style='font-family:monospace;'><span style='font-size:small;'>z_tick_vec = 0:100 </span></span></div>
+<div class="plain_layout" id='magicparlabel-499'><span style='font-family:monospace;'><span style='font-size:small;'>z_tick_vec = 0:100 </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-503'><span style='font-family:monospace;'><span style='font-size:small;'>z7_pdf = rep(0,101) </span></span></div>
+<div class="plain_layout" id='magicparlabel-500'><span style='font-family:monospace;'><span style='font-size:small;'>z7_pdf = rep(0,101) </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-504'><span style='font-family:monospace;'><span style='font-size:small;'># go over the posterior marginal of the fitted value </span></span></div>
+<div class="plain_layout" id='magicparlabel-501'><span style='font-family:monospace;'><span style='font-size:small;'># go over the posterior marginal of the fitted value </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-505'><span style='font-family:monospace;'><span style='font-size:small;'>for(j in 1:(length(lambda7[ ,1])-1)) { </span></span></div>
+<div class="plain_layout" id='magicparlabel-502'><span style='font-family:monospace;'><span style='font-size:small;'>for(j in 1:(length(lambda7[ ,1])-1)) { </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-506'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;z7_pdf &lt;- z7_pdf + dpois(z_tick_vec, </span></span></div>
+<div class="plain_layout" id='magicparlabel-503'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;z7_pdf &lt;- z7_pdf + dpois(z_tick_vec, </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-507'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;&emsp;&emsp;lambda = ((lambda7[j,1]+ lambda7[j+1,1])/2)) </span></span></div>
+<div class="plain_layout" id='magicparlabel-504'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;&emsp;&emsp;lambda = ((lambda7[j,1]+ lambda7[j+1,1])/2)) </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-508'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;* trapz(lambda7[j:(j+1), 1], lambda7[j:(j+1), 2]) </span></span></div>
+<div class="plain_layout" id='magicparlabel-505'><span style='font-family:monospace;'><span style='font-size:small;'>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;* trapz(lambda7[j:(j+1), 1], lambda7[j:(j+1), 2]) </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-509'><span style='font-family:monospace;'><span style='font-size:small;'>} </span></span></div>
+<div class="plain_layout" id='magicparlabel-506'><span style='font-family:monospace;'><span style='font-size:small;'>} </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-510'><span style='font-family:monospace;'><span style='font-size:small;'># plot</span></span></div>
+<div class="plain_layout" id='magicparlabel-507'><span style='font-family:monospace;'><span style='font-size:small;'># plot</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-511'><span style='font-family:monospace;'><span style='font-size:small;'>plot(z_tick_vec,z7_pdf, type="l")</span></span></div>
+<div class="plain_layout" id='magicparlabel-508'><span style='font-family:monospace;'><span style='font-size:small;'>plot(z_tick_vec,z7_pdf, type="l")</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-512'><span style='font-size:small;'><img style='width:49%;' src='9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Handouts_figures_pred_distr_z7_inla_example.png' alt='image: 9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Handouts_figures_pred_distr_z7_inla_example.png' />
+<div class="plain_layout" id='magicparlabel-509'><span style='font-size:small;'><img style='width:49%;' src='9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Handouts_figures_pred_distr_z7_inla_example.png' alt='image: 9_extra_tmp_mffk55_Dropbox_Teaching_2023_term1____Handouts_figures_pred_distr_z7_inla_example.png' />
 </span></div>
 </div></div>
 </li><li class="itemize_item">alternatively one approximate <a href="#eq_">(3.1)</a> by Monte Carlo integration <a id="eq__3" />
@@ -6033,25 +6037,25 @@ We analyze the R dataset <span style='font-family:monospace;'>Salm{INLA}</span>.
 
   </mrow>
  </mrow></math> by using function inla.rmarginal{INLA} as follows.
-<div class="standard" id='magicparlabel-514'><div class='Frameless'><div class="plain_layout" id='magicparlabel-518'><span style='font-size:small;'># set the number of samples (T)</span></div>
+<div class="standard" id='magicparlabel-511'><div class='Frameless'><div class="plain_layout" id='magicparlabel-515'><span style='font-size:small;'># set the number of samples (T)</span></div>
 
-<div class="plain_layout" id='magicparlabel-519'><span style='font-family:monospace;'><span style='font-size:small;'>n.samples = 3000 </span></span></div>
+<div class="plain_layout" id='magicparlabel-516'><span style='font-family:monospace;'><span style='font-size:small;'>n.samples = 3000 </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-520'><span style='font-family:monospace;'><span style='font-size:small;'># sample from the marginal latent distribution</span></span></div>
+<div class="plain_layout" id='magicparlabel-517'><span style='font-family:monospace;'><span style='font-size:small;'># sample from the marginal latent distribution</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-521'><span style='font-family:monospace;'><span style='font-size:small;'>samples_lambda = inla.rmarginal(n.samples, lambda7) </span></span></div>
+<div class="plain_layout" id='magicparlabel-518'><span style='font-family:monospace;'><span style='font-size:small;'>samples_lambda = inla.rmarginal(n.samples, lambda7) </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-522'><span style='font-family:monospace;'><span style='font-size:small;'># sample from the likelihood model </span></span></div>
+<div class="plain_layout" id='magicparlabel-519'><span style='font-family:monospace;'><span style='font-size:small;'># sample from the likelihood model </span></span></div>
 
-<div class="plain_layout" id='magicparlabel-523'><span style='font-family:monospace;'><span style='font-size:small;'>predDist = rpois(n.samples, lambda = samples_lambda)</span></span></div>
+<div class="plain_layout" id='magicparlabel-520'><span style='font-family:monospace;'><span style='font-size:small;'>predDist = rpois(n.samples, lambda = samples_lambda)</span></span></div>
 
-<div class="plain_layout" id='magicparlabel-524'><span style='font-size:small;'><img style='width:49%;' src='10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___douts_figures_pred_distr_z7_MC_inla_example.png' alt='image: 10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___douts_figures_pred_distr_z7_MC_inla_example.png' />
+<div class="plain_layout" id='magicparlabel-521'><span style='font-size:small;'><img style='width:49%;' src='10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___douts_figures_pred_distr_z7_MC_inla_example.png' alt='image: 10_extra_tmp_mffk55_Dropbox_Teaching_2023_term1___douts_figures_pred_distr_z7_MC_inla_example.png' />
 </span></div>
 </div></div>
 </li></ul>
-<div class="standard" id='magicparlabel-525'><br />
+<div class="standard" id='magicparlabel-522'><br />
 </div>
-<h2 class="section" id='magicparlabel-526'><span class="section_label">A</span> Optimization algorithms<div class="marginal"><div class="plain_layout" id='magicparlabel-530'>Introduced 
+<h2 class="section" id='magicparlabel-523'><span class="section_label">A</span> Optimization algorithms<div class="marginal"><div class="plain_layout" id='magicparlabel-527'>Introduced 
 <br />
 
 in 
@@ -6063,7 +6067,7 @@ ASM3,
 MLNN3</div>
 </div></h2>
 
-<div class="note" id='magicparlabel-531'><div class="note_item"><span class="note_label">Note 26.</span>
+<div class="note" id='magicparlabel-528'><div class="note_item"><span class="note_label">Note 26.</span>
 Assume we wish to address the minimization problem <a id="eq__18" />
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
@@ -6099,11 +6103,11 @@ Assume we wish to address the minimization problem <a id="eq__18" />
  </mrow></math>. </div>
 </div>
 
-<div class="standard" id='magicparlabel-532'><br />
+<div class="standard" id='magicparlabel-529'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-533'><div class="note_item"><span class="note_label">Note 27.</span>
+<div class="note" id='magicparlabel-530'><div class="note_item"><span class="note_label">Note 27.</span>
 For instance, Proposition <a href="#note_Assume___Consider">1</a>, it is <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -6122,11 +6126,11 @@ For instance, Proposition <a href="#note_Assume___Consider">1</a>, it is <math x
  </mrow></math>.</div>
 </div>
 
-<div class="standard" id='magicparlabel-534'><br />
+<div class="standard" id='magicparlabel-531'><br />
 
 </div>
 
-<div class="note" id='magicparlabel-535'><div class="note_item"><span class="note_label">Note 28.</span>
+<div class="note" id='magicparlabel-532'><div class="note_item"><span class="note_label">Note 28.</span>
  Newton algorithm and Gradient descent algorithms are two optimization algorithms aiming to address the minimization problem <a href="#eq__18">(A.1)</a>. Each of them generate a convergence sequence <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>{</mo>
 
@@ -6167,11 +6171,11 @@ For instance, Proposition <a href="#note_Assume___Consider">1</a>, it is <math x
  </mrow></math> under regularity conditions (omitted here). </div>
 </div>
 
-<div class="standard" id='magicparlabel-540'><br />
+<div class="standard" id='magicparlabel-537'><br />
 
 </div>
 
-<div class="algorithm" id='magicparlabel-541'><div class="algorithm_item"><span class="algorithm_label">Algorithm 29.</span>
+<div class="algorithm" id='magicparlabel-538'><div class="algorithm_item"><span class="algorithm_label">Algorithm 29.</span>
 Newton algorithm consist of the recursion <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -6413,11 +6417,11 @@ Newton algorithm consist of the recursion <math display="block" xmlns="http://ww
  </mrow></math>, is satisfied.</div>
 </div>
 
-<div class="standard" id='magicparlabel-542'><br />
+<div class="standard" id='magicparlabel-539'><br />
 
 </div>
 
-<div class="algorithm" id='magicparlabel-543'><div class="algorithm_item"><span class="algorithm_label">Algorithm 30.</span>
+<div class="algorithm" id='magicparlabel-540'><div class="algorithm_item"><span class="algorithm_label">Algorithm 30.</span>
 Gradient descent algorithm consist of the recursion <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -6591,11 +6595,11 @@ Gradient descent algorithm consist of the recursion <math display="block" xmlns=
  </mrow></math>, is satisfied.</div>
 </div>
 
-<div class="standard" id='magicparlabel-544'><br />
+<div class="standard" id='magicparlabel-541'><br />
 
 </div>
 
-<div class="example" id='magicparlabel-545'><div class="example_item"><span class="example_label">Example 31.</span>
+<div class="example" id='magicparlabel-542'><div class="example_item"><span class="example_label">Example 31.</span>
 Consider the marginal likelihood<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>f</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -6730,7 +6734,7 @@ Consider the marginal likelihood<math display="block" xmlns="http://www.w3.org/1
   </mrow>
  </mrow></math>. </div>
 
-<dl class='description' id='magicparlabel-546'><dt class="description_label">Hint-1</dt>
+<dl class='description' id='magicparlabel-543'><dt class="description_label">Hint-1</dt>
 <dd class="description_item"> Digamma function <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi> &psi; </mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -6892,7 +6896,7 @@ Consider the marginal likelihood<math display="block" xmlns="http://www.w3.org/1
  </mrow></math></dd>
 </dl>
 
-<div class="proof" id='magicparlabel-549'><div class="proof_item"><span class="proof_label">Proof.</span>
+<div class="proof" id='magicparlabel-546'><div class="proof_item"><span class="proof_label">Proof.</span>
 Gradient descent's recursion is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true' lspace='thinmathspace'>[</mo>
@@ -7917,10 +7921,10 @@ Gradient descent's recursion is <math display="block" xmlns="http://www.w3.org/1
 </div>
 </div>
 
-<div class="standard" id='magicparlabel-550'><br />
+<div class="standard" id='magicparlabel-547'><br />
 
 </div>
-<h2 class="section" id='magicparlabel-551'><span class="section_label">B</span> Gaussian approximation of a (posterior) distribution <div class="marginal"><div class="plain_layout" id='magicparlabel-555'>Introduced 
+<h2 class="section" id='magicparlabel-548'><span class="section_label">B</span> Gaussian approximation of a (posterior) distribution <div class="marginal"><div class="plain_layout" id='magicparlabel-552'>Introduced 
 <br />
 
 in 
@@ -7929,11 +7933,11 @@ in
 SI2</div>
 </div></h2>
 
-<div class="note" id='magicparlabel-556'><div class="note_item"><span class="note_label">Note 32.</span>
+<div class="note" id='magicparlabel-553'><div class="note_item"><span class="note_label">Note 32.</span>
 A well known approximation of the posterior distribution is the Gaussian posterior approximation. </div>
 </div>
 
-<div class="theorem" id='magicparlabel-557'><div class="theorem_item"><span class="theorem_label">Theorem 33.</span>
+<div class="theorem" id='magicparlabel-554'><div class="theorem_item"><span class="theorem_label">Theorem 33.</span>
 The posterior density <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo> Pr </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -8203,7 +8207,7 @@ The posterior density <math xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math>. </i></div>
 </div>
 
-<div class="example" id='magicparlabel-558'><div class="example_item"><span class="example_label">Example 34.</span>
+<div class="example" id='magicparlabel-555'><div class="example_item"><span class="example_label">Example 34.</span>
 Consider a Bayesian model with sampling distribution <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -8322,7 +8326,7 @@ Consider a Bayesian model with sampling distribution <math xmlns="http://www.w3.
   </mrow>
  </mrow></math>.</div>
 
-<div class="solution_" id='magicparlabel-563'><div class="solution__item"><span class="solution__label">Solution.</span>
+<div class="solution_" id='magicparlabel-560'><div class="solution__item"><span class="solution__label">Solution.</span>
 The log posterior density is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
@@ -8786,7 +8790,9 @@ The log posterior density is <math display="block" xmlns="http://www.w3.org/1998
 </div>
 </div>
 
-<div class="standard" id='magicparlabel-564'><br />
+
+
+<div class="standard" id='magicparlabel-566'><br />
 
 </div>
 </body>
