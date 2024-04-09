@@ -82,5 +82,8 @@ Homework 4
 
 ------------------------------------------------------------------------
 
+### Revision sheet  
+
+[PDF](https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Exercises/Revision_sheet.pdf) & [HTML](https://htmlpreview.github.io/?https://github.com/georgios-stats/Spatio-Temporal_Statistics_Michaelmas_2023/blob/main/Exercises/Revision_sheet_xhtml/Revision_sheet.xhtml)
 
 
