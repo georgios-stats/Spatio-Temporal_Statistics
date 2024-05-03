@@ -4245,7 +4245,7 @@ Consider that <math xmlns="http://www.w3.org/1998/Math/MathML">
     <mtd>
      <mrow><mo> &sim; </mo>
       <mstyle mathvariant='normal'>
-       <mrow><mi>L</mi><mi>o</mi><mi>g</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi>i</mi><mi>c</mi>
+       <mrow><mi>L</mi><mi>o</mi><mi>g</mi><mi>i</mi><mi>t</mi>
        </mrow>
       </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -4382,8 +4382,10 @@ Consider that <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>x</mi><mo>|</mo><mi> &theta; </mi><mo> &sim; </mo>
    <mstyle mathvariant='normal'>
-    <mrow><mi>L</mi><mi>o</mi><mi>g</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi>i</mi><mi>c</mi>
-    </mrow>
+    <mstyle mathvariant='normal'>
+     <mrow><mi>L</mi><mi>o</mi><mi>g</mi><mi>i</mi><mi>t</mi>
+     </mrow>
+    </mstyle>
    </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi> &theta; </mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
@@ -4397,24 +4399,24 @@ Consider that <math xmlns="http://www.w3.org/1998/Math/MathML">
    </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 <mo>=</mo>
-   <msup>
-    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <mrow><mn>1</mn><mo>-</mo><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+   <mfrac>
+    <mrow>
+     <mrow><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
       <mrow><mi>x</mi><mi> &theta; </mi>
       </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
      </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
     </mrow>
     <mrow>
-     <mrow><mo>-</mo><mn>1</mn>
+     <mrow><mn>1</mn><mo>+</mo><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi> &theta; </mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
      </mrow>
     </mrow>
-   </msup>
+   </mfrac>
    <mstyle mathvariant='normal'><mn>1</mn>
    </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 

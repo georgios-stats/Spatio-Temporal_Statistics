@@ -13050,7 +13050,7 @@ The following theorem shows that the distribution of any Markov random field suc
   </mrow>
  </mrow></math> which is not a clique. Hence <a href="#eq__9">(4.10)</a> holds.</i></div>
 </dd><dt class="description_label">for&nbsp;
-<span style = "text-align: center;"><img src="lyxpreviewZAcFYD1.png" alt="Mathematical Equation" />
+<span style = "text-align: center;"><img src="lyxpreviewoabjVL1.png" alt="Mathematical Equation" />
 </span>
 </dt>
 <dd class="description_item"><i> By using <a href="#eq__8">(4.2)</a>, I can write <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
@@ -13362,7 +13362,7 @@ Essentially Theorem <a href="#thm__Hammersley_Clifford__Let_">77</a> gives guide
  <mrow><mstyle mathvariant='bold'><mi> &phiv; </mi></mstyle>
  </mrow></math>. </dd>
 <dt class="description_label">for&nbsp;
-<span style = "text-align: center;"><img src="lyxpreviewZAcFYD1.png" alt="Mathematical Equation" />
+<span style = "text-align: center;"><img src="lyxpreviewoabjVL1.png" alt="Mathematical Equation" />
 </span>
 </dt>
 <dd class="description_item"> a Gibbs Random Field with potentials <math xmlns="http://www.w3.org/1998/Math/MathML">
@@ -15919,8 +15919,10 @@ For <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
     </mrow>
    </msub><mo> &sim; </mo>
    <mstyle mathvariant='normal'>
-    <mrow><mi>L</mi><mi>o</mi><mi>g</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi>i</mi><mi>c</mi>
-    </mrow>
+    <mstyle mathvariant='normal'>
+     <mrow><mi>L</mi><mi>o</mi><mi>g</mi><mi>i</mi><mi>t</mi>
+     </mrow>
+    </mstyle>
    </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
    <mrow>
@@ -15950,12 +15952,14 @@ For <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  </mrow></math></div>
 
 <dl class='description' id='magicparlabel-537'><dt class="description_label">Hint:</dt>
-<dd class="description_item"> The PMF of Logistic distribution <math xmlns="http://www.w3.org/1998/Math/MathML">
+<dd class="description_item"> The PMF of distribution <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>x</mi><mo>|</mo><mi> &theta; </mi><mo> &sim; </mo>
    <mstyle mathvariant='normal'>
-    <mrow><mi>L</mi><mi>o</mi><mi>g</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi>i</mi><mi>c</mi>
-    </mrow>
+    <mstyle mathvariant='normal'>
+     <mrow><mi>L</mi><mi>o</mi><mi>g</mi><mi>i</mi><mi>t</mi>
+     </mrow>
+    </mstyle>
    </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi> &theta; </mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
@@ -15969,24 +15973,24 @@ For <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
    </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 <mo>=</mo>
-   <msup>
-    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
-
-     <mrow><mn>1</mn><mo>-</mo><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+   <mfrac>
+    <mrow>
+     <mrow><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
       <mrow><mi>x</mi><mi> &theta; </mi>
       </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
      </mrow>
-<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
     </mrow>
     <mrow>
-     <mrow><mo>-</mo><mn>1</mn>
+     <mrow><mn>1</mn><mo>+</mo><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+<mi> &theta; </mi>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
      </mrow>
     </mrow>
-   </msup>
+   </mfrac>
    <mstyle mathvariant='normal'><mn>1</mn>
    </mstyle><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -16524,7 +16528,7 @@ For <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
       <mrow><mo> &sum; </mo>
       </mrow>
       <mrow>
-       <mrow><mi>j</mi><mo> &sim; </mo><mi>i</mi>
+       <mrow><mi>j</mi><mo>:</mo><mi>j</mi><mo> &sim; </mo><mi>i</mi>
        </mrow>
       </mrow>
      </msub>
@@ -16977,12 +16981,20 @@ For <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
     <mrow>
      <mrow><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-      <msub>
-       <mrow><mi> &alpha; </mi>
-       </mrow>
-       <mrow><mi>i</mi>
-       </mrow>
-      </msub>
+      <mrow>
+       <msub>
+        <mrow><mi>z</mi>
+        </mrow>
+        <mrow><mi>i</mi>
+        </mrow>
+       </msub>
+       <msub>
+        <mrow><mi> &alpha; </mi>
+        </mrow>
+        <mrow><mi>i</mi>
+        </mrow>
+       </msub>
+      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
      </mrow>
