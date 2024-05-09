@@ -1039,7 +1039,25 @@ div.foot:hover div.foot_inner {
   </mrow>
  </mrow></math></dd>
 </dl>
-</li></ol>
+</li><li class="enumerate_item">What is the sampling distribution of <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <msub>
+   <mrow>
+    <mover>
+     <mrow><mi> &beta; </mi>
+     </mrow><mo stretchy="true">&circ;</mo>
+    </mover>
+   </mrow>
+   <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+    <mrow><mi> &phi; </mi><mo>,</mo><mi> &xi; </mi>
+    </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+   </mrow>
+  </msub>
+ </mrow></math>? Specify the distribution family along with its parameters. </li>
+</ol>
 </li><li class="enumerate_item">Compute the so-called log &ldquo;profiled likelihood&rdquo; <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mo> log </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -1246,10 +1264,10 @@ div.foot:hover div.foot_inner {
 </ol>
 
 
-<div class="solution_" id='magicparlabel-65'><div class="solution__item"><span class="solution__label">Solution.</span>
+<div class="solution_" id='magicparlabel-66'><div class="solution__item"><span class="solution__label">Solution.</span>
 &nbsp;&nbsp; &nbsp;It is </div>
 
-<ol class="enumerate" id='magicparlabel-66'><li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-67'><li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mtable>
   <mtr>
    <mtd>
@@ -1350,7 +1368,7 @@ div.foot:hover div.foot_inner {
  </mtable></math></li>
 <li class="enumerate_item">It is 
 
-<ol class="enumerate" id='magicparlabel-68'><li class="enumerate_item">&nbsp;<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-69'><li class="enumerate_item">&nbsp;<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>C</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -1722,7 +1740,7 @@ div.foot:hover div.foot_inner {
   </mrow>
  </mrow></math> 
 
-<ol class="enumerate" id='magicparlabel-71'><li class="enumerate_item">So the likelihood equations are <math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-72'><li class="enumerate_item">So the likelihood equations are <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mn>0</mn><mo>=</mo>
    <msub>
@@ -3531,14 +3549,14 @@ div.foot:hover div.foot_inner {
 
 </div>
 </div>
-<div class="standard" id='magicparlabel-91'><hr />
+<div class="standard" id='magicparlabel-92'><hr />
 
 </div>
 
-<div class="exercise" id='magicparlabel-92'><div class="exercise_item"><span class="exercise_label">Exercise 2.</span>
+<div class="exercise" id='magicparlabel-93'><div class="exercise_item"><span class="exercise_label">Exercise 2.</span>
 (<math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow><mo> &starf; </mo>
- </mrow></math>) <div class="standard" id='magicparlabel-94'>Let <math xmlns="http://www.w3.org/1998/Math/MathML">
+ </mrow></math>) <div class="standard" id='magicparlabel-95'>Let <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <msub>
    <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
@@ -3874,7 +3892,7 @@ div.foot:hover div.foot_inner {
   </mrow>
  </mrow></math>.</div>
 
-<ol class="enumerate" id='magicparlabel-95'><li class="enumerate_item">Find sufficient conditions on <math xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-96'><li class="enumerate_item">Find sufficient conditions on <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow><mi>w</mi><mo>=</mo>
    <msup>
@@ -4264,10 +4282,10 @@ div.foot:hover div.foot_inner {
 </ol>
 
 
-<div class="solution_" id='magicparlabel-104'><div class="solution__item"><span class="solution__label">Solution.</span>
+<div class="solution_" id='magicparlabel-105'><div class="solution__item"><span class="solution__label">Solution.</span>
 &nbsp;&nbsp;&nbsp; &nbsp;The method is called Simple Kriging, and hence we denote it as SK. </div>
 
-<ol class="enumerate" id='magicparlabel-105'><li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<ol class="enumerate" id='magicparlabel-106'><li class="enumerate_item">It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <msub>
@@ -4349,7 +4367,7 @@ div.foot:hover div.foot_inner {
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>}</mo>
 
  </mrow></math> is a set of unknown weights to be learned. 
-<div class="standard" id='magicparlabel-106'>We assume that assume zero systematic error (unbiasness), hence <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+<div class="standard" id='magicparlabel-107'>We assume that assume zero systematic error (unbiasness), hence <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
    <mstyle mathvariant='normal'><mi>E</mi>
@@ -5620,7 +5638,7 @@ div.foot:hover div.foot_inner {
 </div>
 </div>
 
-<div class="standard" id='magicparlabel-115'><br />
+<div class="standard" id='magicparlabel-116'><br />
 
 </div>
 
