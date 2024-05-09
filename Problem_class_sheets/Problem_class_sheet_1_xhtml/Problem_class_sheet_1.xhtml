@@ -701,6 +701,10 @@ div.Boxed {
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
   </mrow>
+ </mrow></math> with <math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mrow><mi>b</mi><mo>,</mo><mi>d</mi><mo> &ge; </mo><mn>0</mn>
+  </mrow>
  </mrow></math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
  <mrow>
   <mrow>
@@ -1824,11 +1828,11 @@ It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
     <mrow><mi>f</mi><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 <mi> &omega; </mi>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
-
+<mo>=</mo>
     </mrow>
    </mtd>
    <mtd>
-    <mrow><mo>=</mo>
+    <mrow>
      <msup>
       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
@@ -1899,10 +1903,10 @@ It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
    </mtd>
   </mtr>
   <mtr>
-   <mtd><mrow/>
+   <mtd><mo>=</mo>
    </mtd>
    <mtd>
-    <mrow><mo>=</mo>
+    <mrow>
      <msup>
       <mrow><mi> &sigma; </mi>
       </mrow>
@@ -1975,10 +1979,10 @@ It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
    </mtd>
   </mtr>
   <mtr>
-   <mtd><mrow/>
+   <mtd><mo>=</mo>
    </mtd>
    <mtd>
-    <mrow><mo>=</mo>
+    <mrow>
      <msup>
       <mrow><mi> &sigma; </mi>
       </mrow>
@@ -2011,31 +2015,42 @@ It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
       </mrow>
       <mrow><mi>d</mi>
       </mrow>
-     </msubsup>
-     <msub>
-      <mrow><mo> &int; </mo>
-      </mrow>
-      <mrow>
-       <mstyle mathvariant='double-struck'><mi>R</mi>
-       </mstyle>
-      </mrow>
-     </msub><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+     </msubsup><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-     <mrow><mo>-</mo><mi> &beta; </mi>
-      <msup>
-       <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+     <mrow>
+      <msub>
+       <mrow><mo> &int; </mo>
+       </mrow>
+       <mrow>
+        <mstyle mathvariant='double-struck'><mi>R</mi>
+        </mstyle>
+       </mrow>
+      </msub><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-        <mrow>
-         <msub>
-          <mrow><mi>h</mi>
-          </mrow>
-          <mrow><mi>j</mi>
-          </mrow>
-         </msub><mo>-</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+      <mrow><mo>-</mo><mi> &beta; </mi>
+       <msup>
+        <mrow><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-         <mrow><mo>-</mo><mi>i</mi><mi> &omega; </mi><mo>/</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+         <mrow>
+          <msub>
+           <mrow><mi>h</mi>
+           </mrow>
+           <mrow><mi>j</mi>
+           </mrow>
+          </msub><mo>-</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
 
-          <mrow><mn>2</mn><mi> &beta; </mi>
+          <mrow><mo>-</mo><mi>i</mi>
+           <msub>
+            <mrow><mi> &omega; </mi>
+            </mrow>
+            <mrow><mi>j</mi>
+            </mrow>
+           </msub><mo>/</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+           <mrow><mn>2</mn><mi> &beta; </mi>
+           </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
           </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
@@ -2043,31 +2058,49 @@ It is <math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
         </mrow>
+        <mrow><mn>2</mn>
+        </mrow>
+       </msup>
+      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
+      <mstyle mathvariant='normal'><mi>d</mi>
+      </mstyle>
+      <msub>
+       <mrow><mi>h</mi>
        </mrow>
-       <mrow><mn>2</mn>
+       <mrow><mi>j</mi>
        </mrow>
-      </msup>
+      </msub><mo> exp </mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+      <mrow><mo>-</mo>
+       <msubsup>
+        <mrow><mi> &omega; </mi>
+        </mrow>
+        <mrow><mi>j</mi>
+        </mrow>
+        <mrow><mn>2</mn>
+        </mrow>
+       </msubsup><mo>/</mo><mo form='prefix' fence='true' stretchy='true' symmetric='true'>(</mo>
+
+       <mrow><mn>4</mn><mi> &beta; </mi>
+       </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
+      </mrow>
+<mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
+
      </mrow>
 <mo form='postfix' fence='true' stretchy='true' symmetric='true'>)</mo>
 
-     <mstyle mathvariant='normal'><mi>d</mi>
-     </mstyle>
-     <msub>
-      <mrow><mi>h</mi>
-      </mrow>
-      <mrow><mi>j</mi>
-      </mrow>
-     </msub>
     </mrow>
    </mtd>
   </mtr>
   <mtr>
-   <mtd><mrow/>
+   <mtd><mo>=</mo>
    </mtd>
    <mtd>
-    <mrow><mo>=</mo>
+    <mrow>
      <msup>
       <mrow><mi> &sigma; </mi>
       </mrow>
